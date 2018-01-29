@@ -1,0 +1,498 @@
+﻿/* ==========================
+Written by: Ashtonio Walsh
+Written for: Volkswagen
+Date: 14/11/2016
+Theme Used: Scale
+
+Swatch Colors:
+Primary Blue: 2274ac
+Primary Grey: eaeeed
+Secondary Grey: bac2c5
+Secondary Blue lt: 00b1eb
+Secondary Blue dk: 4080bb
+
+    == INDEX ==
+    01. Fonts
+    02. Resets & Overrides
+    03. Links & Typography 
+    04. Page Structure
+    05. Navigation
+    06. Forms
+    07. Padding & Margin
+    08. Tables
+    09. Modals
+    10. Extras
+========================== */
+/* ----------------------------------*/
+/* ---------->>> Fonts <<<-----------*/
+/* ----------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+/*@font-face {
+    font-family: src('')
+}*/
+
+.font-raleway {
+    font-family: 'Raleway', sans-serif;
+}
+
+.font-arial {
+    font-family: Arial, sans-serif;
+}
+
+.fw400 {
+    font-weight: 400;
+}
+
+.fw500 {
+    font-weight: 500;
+}
+
+.fw600 {
+    font-weight: 600;
+}
+
+.fw700 {
+    font-weight: 700;
+}
+
+.fw800 {
+    font-weight: 800;
+}
+/* -----------------------------------------------*/
+/* ---------->>> Resets & Overrides <<<-----------*/
+/* -----------------------------------------------*/
+/*h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+}*/
+/* -----------------------------------------------*/
+/* ---------->>> Links & Typography <<<-----------*/
+/* -----------------------------------------------*/
+.breadcrumb > .active {
+    color: #2274ac !important;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+h3.h3-custom-heading {
+    color: #f2f2f2;
+    background: #177bbb;
+    /*font-size: 75px;*/
+    /*line-height: 74px;*/
+    font-weight: 700;
+    margin: 0 5px 24px;
+    float: left;
+    padding: 10px;
+}
+
+p.p-custom-heading {
+    color: #177bbb;
+    background: #e9edf4;
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 700;
+    margin: 0 5px 24px;
+    float: left;
+    padding: 10px;
+}
+/* -------------------------------------------*/
+/* ---------->>> Page Structure <<<-----------*/
+/* -------------------------------------------*/
+
+.haserror {
+    border-style: solid;
+    border-width: thin;
+    border-color: red !important;
+}
+
+.middle {
+    float: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1080px !important;
+}
+
+.middle-sm {
+    float: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 600px !important;
+}
+/* ---------------------------------------*/
+/* ---------->>> Navigation <<<-----------*/
+/* ---------------------------------------*/
+
+/* ----------------------------------*/
+/* ---------->>> Forms <<<-----------*/
+/* ----------------------------------*/
+/* Select2 style override (single) : Start */
+.select2-container .select2-selection--single {
+    height: 30px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #555;
+    /*line-height: 30px;*/
+}
+
+.select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid #cbd5dd;
+    border-radius: 2px;
+}
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow b {
+        margin-top: 0px;
+    }
+/* Select2 style override (single) : End */
+
+/* Select2 style override (multiple) : Start */
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+    border: solid #cbd5dd 1px;
+    outline: 0;
+}
+
+.select2-container--default .select2-selection--multiple {
+    background-color: white;
+    border: 1px solid #cbd5dd;
+    border-radius: 2px;
+    cursor: text;
+}
+/* Select2 style override (multiple) : End */
+/* ---------------------------------------------*/
+/* ---------->>> Padding & Margin <<<-----------*/
+/* ---------------------------------------------*/
+/* Margin
+==================== */
+.mn {
+    margin: 0;
+}
+
+.mtn {
+    margin-top: 0;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt15 {
+    margin-top: 15px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mt25 {
+    margin-top: 25px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.mbn {
+    margin-bottom: 0;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mb15 {
+    margin-bottom: 15px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.mb25 {
+    margin-bottom: 25px;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+.mln {
+    margin-left: 0;
+}
+
+.mrn {
+    margin-right: 0;
+}
+
+.mrln {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.mtbn {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.mtb10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.mtb15 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.mtb20 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* Padding
+==================== */
+.pn {
+    padding: 0;
+}
+
+.ptn {
+    padding-top: 0;
+}
+
+.pt10 {
+    padding-top: 10px;
+}
+
+.pt15 {
+    padding-top: 15px;
+}
+
+.pt20 {
+    padding-top: 20px;
+}
+
+.pt25 {
+    padding-top: 25px;
+}
+
+.pbn {
+    padding-bottom: 0;
+}
+
+.mb10 {
+    padding-bottom: 10px;
+}
+
+.pb15 {
+    padding-bottom: 15px;
+}
+
+.pb20 {
+    padding-bottom: 20px;
+}
+
+.pb25 {
+    padding-bottom: 25px;
+}
+
+.pb30 {
+    padding-bottom: 30px;
+}
+
+.pln {
+    padding-left: 0;
+}
+
+.pl20 {
+    padding-left: 20px;
+}
+
+.pl50 {
+    padding-left: 50px;
+}
+
+.prn {
+    padding-right: 0;
+}
+
+.prln {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.ptbn {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.ptb10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.ptb15 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.ptb20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+
+.p15 {
+    padding: 15px !important;
+}
+
+/* -----------------------------------*/
+/* ---------->>> Tables <<<-----------*/
+/* -----------------------------------*/
+
+/* Table Fix
+==================== */
+/*.CustomTableResponsiveFix {
+    overflow: hidden;
+}
+
+    .CustomTableResponsiveFix .table-responsive {
+        overflow-x: auto;
+    }*/
+
+/* fix table responsive issues
+==================== */
+/*.panel > .table-responsive {
+    margin-bottom: 0;
+    border: 0;
+    overflow-y: hidden;
+}*/
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.valign-middle {
+    vertical-align: middle !important;
+}
+
+/* Table Actions Column
+==================== */
+.minw300 {
+    min-width: 300px;
+}
+
+.w300 {
+    width: 300px;
+}
+
+.minw250 {
+    min-width: 250px;
+}
+
+.w250 {
+    width: 250px;
+}
+
+.minw200 {
+    min-width: 200px;
+}
+
+.w200 {
+    width: 200px;
+}
+
+.minw150 {
+    min-width: 150px;
+}
+
+.w150 {
+    width: 150px;
+}
+
+.minw100 {
+    min-width: 100px;
+}
+
+.w100 {
+    width: 100px;
+}
+
+.minw80 {
+    min-width: 80px;
+}
+
+.w80 {
+    width: 80px;
+}
+
+.minw50 {
+    min-width: 50px;
+}
+
+.w50 {
+    width: 50px;
+}
+
+/* Added by Clement le Roux max width */
+.maxw300 {
+    max-width: 300px;
+}
+
+.maxw250 {
+    max-width: 250px;
+}
+
+.maxw200 {
+    max-width: 200px;
+}
+
+.maxw150 {
+    max-width: 150px;
+}
+.maxw100 {
+    max-width: 100px;
+}
+.maxw80 {
+    max-width: 80px;
+}
+
+/* -----------------------------------*/
+/* ---------->>> Modals <<<-----------*/
+/* -----------------------------------*/
+/* Fix modal scroll
+==================== */
+.modal-body {
+    max-height: calc(100vh - 212px);
+    overflow-y: auto;
+}
+/* ------------------------------------*/
+/* ---------->>> Extras <<<-----------*/
+/* -----------------------------------*/
+.tabdrop a:hover {
+    cursor: pointer !important;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    border: none !important;
+}
+
+.nav-tabs > li.active > a {
+    border-color: none !important;
+    border-bottom-color: #fff !important;
+}
+
+.line-dashed.custom {
+    border: 1px dashed #e1e6ef;
+}
+
+.line-dashed.customBlue {
+    border: 1px dashed #177bbb;
+    margin: 45px 0;
+}
+
+.brdr-n {
+    border: none !important;
+}

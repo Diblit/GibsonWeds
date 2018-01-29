@@ -1,0 +1,1309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VolkswagenModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="VolkswagenEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="db_Body" EntityType="VolkswagenModel.db_Body" />
+    <EntitySet Name="db_BrakeControl" EntityType="VolkswagenModel.db_BrakeControl" />
+    <EntitySet Name="db_Brakes" EntityType="VolkswagenModel.db_Brakes" />
+    <EntitySet Name="db_BrakeService" EntityType="VolkswagenModel.db_BrakeService" />
+    <EntitySet Name="db_Deriv" EntityType="VolkswagenModel.db_Deriv" />
+    <EntitySet Name="db_Engine" EntityType="VolkswagenModel.db_Engine" />
+    <EntitySet Name="db_Engine_Aspiration" EntityType="VolkswagenModel.db_Engine_Aspiration" />
+    <EntitySet Name="db_Engine_ConfigCode" EntityType="VolkswagenModel.db_Engine_ConfigCode" />
+    <EntitySet Name="db_Engine_FuelFeedCode" EntityType="VolkswagenModel.db_Engine_FuelFeedCode" />
+    <EntitySet Name="db_Engine_MotivePwr" EntityType="VolkswagenModel.db_Engine_MotivePwr" />
+    <EntitySet Name="db_ListVehicle" EntityType="VolkswagenModel.db_ListVehicle" />
+    <EntitySet Name="db_LocalRep" EntityType="VolkswagenModel.db_LocalRep" />
+    <EntitySet Name="db_Marque" EntityType="VolkswagenModel.db_Marque" />
+    <EntitySet Name="db_Model" EntityType="VolkswagenModel.db_Model" />
+    <EntitySet Name="db_Model_Change" EntityType="VolkswagenModel.db_Model_Change" />
+    <EntitySet Name="db_Model_MIBs" EntityType="VolkswagenModel.db_Model_MIBs" />
+    <EntitySet Name="db_Model_Plant" EntityType="VolkswagenModel.db_Model_Plant" />
+    <EntitySet Name="db_Model_SOE" EntityType="VolkswagenModel.db_Model_SOE" />
+    <EntitySet Name="db_Model_WMI" EntityType="VolkswagenModel.db_Model_WMI" />
+    <EntitySet Name="db_NatisError" EntityType="VolkswagenModel.db_NatisError" />
+    <EntitySet Name="db_NatisVehicleCat" EntityType="VolkswagenModel.db_NatisVehicleCat" />
+    <EntitySet Name="db_Photo" EntityType="VolkswagenModel.db_Photo" />
+    <EntitySet Name="db_Plant" EntityType="VolkswagenModel.db_Plant" />
+    <EntitySet Name="db_PowerAssist" EntityType="VolkswagenModel.db_PowerAssist" />
+    <EntitySet Name="db_Rim" EntityType="VolkswagenModel.db_Rim" />
+    <EntitySet Name="db_StandardDescrip" EntityType="VolkswagenModel.db_StandardDescrip" />
+    <EntitySet Name="db_SuspensionType" EntityType="VolkswagenModel.db_SuspensionType" />
+    <EntitySet Name="db_TestHouse" EntityType="VolkswagenModel.db_TestHouse" />
+    <EntitySet Name="db_Transmission" EntityType="VolkswagenModel.db_Transmission" />
+    <EntitySet Name="db_Tyre" EntityType="VolkswagenModel.db_Tyre" />
+    <EntitySet Name="db_User" EntityType="VolkswagenModel.db_User" />
+    <EntitySet Name="db_Variant" EntityType="VolkswagenModel.db_Variant" />
+    <EntitySet Name="db_Variant_Inspection" EntityType="VolkswagenModel.db_Variant_Inspection" />
+    <EntitySet Name="db_VehicleCat" EntityType="VolkswagenModel.db_VehicleCat" />
+    <EntitySet Name="db_WMI" EntityType="VolkswagenModel.db_WMI" />
+    <EntitySet Name="db_Wording" EntityType="VolkswagenModel.db_Wording" />
+    <AssociationSet Name="FK_db_Variant_db_Body" Association="VolkswagenModel.FK_db_Variant_db_Body">
+      <End Role="db_Body" EntitySet="db_Body" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_BrakeControl" Association="VolkswagenModel.FK_db_Variant_db_BrakeControl">
+      <End Role="db_BrakeControl" EntitySet="db_BrakeControl" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_Brakes" Association="VolkswagenModel.FK_db_Variant_db_Brakes">
+      <End Role="db_Brakes" EntitySet="db_Brakes" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_Brakes1" Association="VolkswagenModel.FK_db_Variant_db_Brakes1">
+      <End Role="db_Brakes" EntitySet="db_Brakes" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_BrakeService" Association="VolkswagenModel.FK_db_Variant_db_BrakeService">
+      <End Role="db_BrakeService" EntitySet="db_BrakeService" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_Deriv" Association="VolkswagenModel.FK_db_Variant_db_Deriv">
+      <End Role="db_Deriv" EntitySet="db_Deriv" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Engine_db_Engine_Aspiration" Association="VolkswagenModel.FK_db_Engine_db_Engine_Aspiration">
+      <End Role="db_Engine_Aspiration" EntitySet="db_Engine_Aspiration" />
+      <End Role="db_Engine" EntitySet="db_Engine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Engine_db_Engine_ConfigCode" Association="VolkswagenModel.FK_db_Engine_db_Engine_ConfigCode">
+      <End Role="db_Engine_ConfigCode" EntitySet="db_Engine_ConfigCode" />
+      <End Role="db_Engine" EntitySet="db_Engine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Engine_db_Engine_FuelFeedCode" Association="VolkswagenModel.FK_db_Engine_db_Engine_FuelFeedCode">
+      <End Role="db_Engine_FuelFeedCode" EntitySet="db_Engine_FuelFeedCode" />
+      <End Role="db_Engine" EntitySet="db_Engine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Engine_db_Engine_MotivePwr" Association="VolkswagenModel.FK_db_Engine_db_Engine_MotivePwr">
+      <End Role="db_Engine_MotivePwr" EntitySet="db_Engine_MotivePwr" />
+      <End Role="db_Engine" EntitySet="db_Engine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_Engine" Association="VolkswagenModel.FK_db_Variant_db_Engine">
+      <End Role="db_Engine" EntitySet="db_Engine" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_ConversionReport_db_Variant" Association="VolkswagenModel.FK_db_ConversionReport_db_Variant">
+      <End Role="db_Variant" EntitySet="db_Variant" />
+      <End Role="db_ListVehicle" EntitySet="db_ListVehicle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Model_db_LocalRep" Association="VolkswagenModel.FK_db_Model_db_LocalRep">
+      <End Role="db_LocalRep" EntitySet="db_LocalRep" />
+      <End Role="db_Model" EntitySet="db_Model" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Model_MIBs_db_LocalRep" Association="VolkswagenModel.FK_db_Model_MIBs_db_LocalRep">
+      <End Role="db_LocalRep" EntitySet="db_LocalRep" />
+      <End Role="db_Model_MIBs" EntitySet="db_Model_MIBs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Model_db_Marque" Association="VolkswagenModel.FK_db_Model_db_Marque">
+      <End Role="db_Marque" EntitySet="db_Marque" />
+      <End Role="db_Model" EntitySet="db_Model" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Model_Change_db_Model" Association="VolkswagenModel.FK_db_Model_Change_db_Model">
+      <End Role="db_Model" EntitySet="db_Model" />
+      <End Role="db_Model_Change" EntitySet="db_Model_Change" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Model_db_VehicleCat" Association="VolkswagenModel.FK_db_Model_db_VehicleCat">
+      <End Role="db_VehicleCat" EntitySet="db_VehicleCat" />
+      <End Role="db_Model" EntitySet="db_Model" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Model_MIBs_db_Model" Association="VolkswagenModel.FK_db_Model_MIBs_db_Model">
+      <End Role="db_Model" EntitySet="db_Model" />
+      <End Role="db_Model_MIBs" EntitySet="db_Model_MIBs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Model_Plant_db_Model" Association="VolkswagenModel.FK_db_Model_Plant_db_Model">
+      <End Role="db_Model" EntitySet="db_Model" />
+      <End Role="db_Model_Plant" EntitySet="db_Model_Plant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Model_SOE_db_Model" Association="VolkswagenModel.FK_db_Model_SOE_db_Model">
+      <End Role="db_Model" EntitySet="db_Model" />
+      <End Role="db_Model_SOE" EntitySet="db_Model_SOE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Model_WMI_db_Model" Association="VolkswagenModel.FK_db_Model_WMI_db_Model">
+      <End Role="db_Model" EntitySet="db_Model" />
+      <End Role="db_Model_WMI" EntitySet="db_Model_WMI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_Model" Association="VolkswagenModel.FK_db_Variant_db_Model">
+      <End Role="db_Model" EntitySet="db_Model" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Model_Plant_db_Plant" Association="VolkswagenModel.FK_db_Model_Plant_db_Plant">
+      <End Role="db_Plant" EntitySet="db_Plant" />
+      <End Role="db_Model_Plant" EntitySet="db_Model_Plant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Model_SOE_db_StandardDescrip" Association="VolkswagenModel.FK_db_Model_SOE_db_StandardDescrip">
+      <End Role="db_StandardDescrip" EntitySet="db_StandardDescrip" />
+      <End Role="db_Model_SOE" EntitySet="db_Model_SOE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Model_SOE_db_TestHouse" Association="VolkswagenModel.FK_db_Model_SOE_db_TestHouse">
+      <End Role="db_TestHouse" EntitySet="db_TestHouse" />
+      <End Role="db_Model_SOE" EntitySet="db_Model_SOE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Model_WMI_db_WMI" Association="VolkswagenModel.FK_db_Model_WMI_db_WMI">
+      <End Role="db_WMI" EntitySet="db_WMI" />
+      <End Role="db_Model_WMI" EntitySet="db_Model_WMI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_NatisError_db_Variant" Association="VolkswagenModel.FK_db_NatisError_db_Variant">
+      <End Role="db_Variant" EntitySet="db_Variant" />
+      <End Role="db_NatisError" EntitySet="db_NatisError" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_NatisVehicleCat" Association="VolkswagenModel.FK_db_Variant_db_NatisVehicleCat">
+      <End Role="db_NatisVehicleCat" EntitySet="db_NatisVehicleCat" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_Photo" Association="VolkswagenModel.FK_db_Variant_db_Photo">
+      <End Role="db_Photo" EntitySet="db_Photo" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_PowerAssist" Association="VolkswagenModel.FK_db_Variant_db_PowerAssist">
+      <End Role="db_PowerAssist" EntitySet="db_PowerAssist" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_Rim" Association="VolkswagenModel.FK_db_Variant_db_Rim">
+      <End Role="db_Rim" EntitySet="db_Rim" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_Rim1" Association="VolkswagenModel.FK_db_Variant_db_Rim1">
+      <End Role="db_Rim" EntitySet="db_Rim" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_SuspensionType" Association="VolkswagenModel.FK_db_Variant_db_SuspensionType">
+      <End Role="db_SuspensionType" EntitySet="db_SuspensionType" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_SuspensionType1" Association="VolkswagenModel.FK_db_Variant_db_SuspensionType1">
+      <End Role="db_SuspensionType" EntitySet="db_SuspensionType" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_Transmission" Association="VolkswagenModel.FK_db_Variant_db_Transmission">
+      <End Role="db_Transmission" EntitySet="db_Transmission" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_Tyre" Association="VolkswagenModel.FK_db_Variant_db_Tyre">
+      <End Role="db_Tyre" EntitySet="db_Tyre" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_Tyre1" Association="VolkswagenModel.FK_db_Variant_db_Tyre1">
+      <End Role="db_Tyre" EntitySet="db_Tyre" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_Inspection_db_Variant" Association="VolkswagenModel.FK_db_Variant_Inspection_db_Variant">
+      <End Role="db_Variant" EntitySet="db_Variant" />
+      <End Role="db_Variant_Inspection" EntitySet="db_Variant_Inspection" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="db_Body">
+    <Key>
+      <PropertyRef Name="bodyID" />
+    </Key>
+    <Property Name="bodyID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BodyName" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="db_Variant" Relationship="VolkswagenModel.FK_db_Variant_db_Body" FromRole="db_Body" ToRole="db_Variant" />
+  </EntityType>
+  <EntityType Name="db_BrakeControl">
+    <Key>
+      <PropertyRef Name="brakeControlCode" />
+    </Key>
+    <Property Name="brakeControlCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Descrip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="db_Variant" Relationship="VolkswagenModel.FK_db_Variant_db_BrakeControl" FromRole="db_BrakeControl" ToRole="db_Variant" />
+  </EntityType>
+  <EntityType Name="db_Brakes">
+    <Key>
+      <PropertyRef Name="brakeID" />
+    </Key>
+    <Property Name="brakeID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BrakePRno" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="VehClass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HomolDesc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HomolComment" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FAM" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="db_Variant" Relationship="VolkswagenModel.FK_db_Variant_db_Brakes" FromRole="db_Brakes" ToRole="db_Variant" />
+    <NavigationProperty Name="db_Variant1" Relationship="VolkswagenModel.FK_db_Variant_db_Brakes1" FromRole="db_Brakes" ToRole="db_Variant" />
+  </EntityType>
+  <EntityType Name="db_BrakeService">
+    <Key>
+      <PropertyRef Name="serviceBrakeCode" />
+    </Key>
+    <Property Name="serviceBrakeCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Descrip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="db_Variant" Relationship="VolkswagenModel.FK_db_Variant_db_BrakeService" FromRole="db_BrakeService" ToRole="db_Variant" />
+  </EntityType>
+  <EntityType Name="db_Deriv">
+    <Key>
+      <PropertyRef Name="derivID" />
+    </Key>
+    <Property Name="derivID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="derivCode" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="derivDesc" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="db_Variant" Relationship="VolkswagenModel.FK_db_Variant_db_Deriv" FromRole="db_Deriv" ToRole="db_Variant" />
+  </EntityType>
+  <EntityType Name="db_Engine">
+    <Key>
+      <PropertyRef Name="engineID" />
+    </Key>
+    <Property Name="engineID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EngineNo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Location" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="Capacity" Type="Int32" />
+    <Property Name="engineConfigCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="engineMotivePwrCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Power_kW_rpm" Type="Int32" />
+    <Property Name="PwrRPM" Type="Int32" />
+    <Property Name="engineFuelFeedCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="engineAspirationCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PRNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="db_Engine_Aspiration" Relationship="VolkswagenModel.FK_db_Engine_db_Engine_Aspiration" FromRole="db_Engine" ToRole="db_Engine_Aspiration" />
+    <NavigationProperty Name="db_Engine_ConfigCode" Relationship="VolkswagenModel.FK_db_Engine_db_Engine_ConfigCode" FromRole="db_Engine" ToRole="db_Engine_ConfigCode" />
+    <NavigationProperty Name="db_Engine_FuelFeedCode" Relationship="VolkswagenModel.FK_db_Engine_db_Engine_FuelFeedCode" FromRole="db_Engine" ToRole="db_Engine_FuelFeedCode" />
+    <NavigationProperty Name="db_Engine_MotivePwr" Relationship="VolkswagenModel.FK_db_Engine_db_Engine_MotivePwr" FromRole="db_Engine" ToRole="db_Engine_MotivePwr" />
+    <NavigationProperty Name="db_Variant" Relationship="VolkswagenModel.FK_db_Variant_db_Engine" FromRole="db_Engine" ToRole="db_Variant" />
+  </EntityType>
+  <EntityType Name="db_Engine_Aspiration">
+    <Key>
+      <PropertyRef Name="engineAspirationCode" />
+    </Key>
+    <Property Name="engineAspirationCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Descrip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="db_Engine" Relationship="VolkswagenModel.FK_db_Engine_db_Engine_Aspiration" FromRole="db_Engine_Aspiration" ToRole="db_Engine" />
+  </EntityType>
+  <EntityType Name="db_Engine_ConfigCode">
+    <Key>
+      <PropertyRef Name="engineConfigCode" />
+    </Key>
+    <Property Name="engineConfigCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Descrip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="db_Engine" Relationship="VolkswagenModel.FK_db_Engine_db_Engine_ConfigCode" FromRole="db_Engine_ConfigCode" ToRole="db_Engine" />
+  </EntityType>
+  <EntityType Name="db_Engine_FuelFeedCode">
+    <Key>
+      <PropertyRef Name="engineFuelFeedCode" />
+    </Key>
+    <Property Name="engineFuelFeedCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Descrip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="db_Engine" Relationship="VolkswagenModel.FK_db_Engine_db_Engine_FuelFeedCode" FromRole="db_Engine_FuelFeedCode" ToRole="db_Engine" />
+  </EntityType>
+  <EntityType Name="db_Engine_MotivePwr">
+    <Key>
+      <PropertyRef Name="engineMotivePwrCode" />
+    </Key>
+    <Property Name="engineMotivePwrCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Decrip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="db_Engine" Relationship="VolkswagenModel.FK_db_Engine_db_Engine_MotivePwr" FromRole="db_Engine_MotivePwr" ToRole="db_Engine" />
+  </EntityType>
+  <EntityType Name="db_ListVehicle">
+    <Key>
+      <PropertyRef Name="conversionID" />
+    </Key>
+    <Property Name="conversionID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="isExpGen" Type="Boolean" />
+    <Property Name="isExpNZ" Type="Boolean" />
+    <Property Name="isConversion" Type="Boolean" />
+    <Property Name="isOther" Type="Boolean" />
+    <Property Name="VIN" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="MBVCode" Type="Int32" />
+    <Property Name="MY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateEntered" Type="DateTime" Precision="3" />
+    <Property Name="DateCompleted" Type="DateTime" Precision="3" />
+    <Property Name="DateDisposed" Type="DateTime" Precision="3" />
+    <Property Name="ExemptNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RepYear" Type="Int32" />
+    <Property Name="variantID" Type="Int64" Nullable="false" />
+    <Property Name="NatisDate" Type="DateTime" Precision="3" />
+    <Property Name="NatisNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="db_Variant" Relationship="VolkswagenModel.FK_db_ConversionReport_db_Variant" FromRole="db_ListVehicle" ToRole="db_Variant" />
+  </EntityType>
+  <EntityType Name="db_LocalRep">
+    <Key>
+      <PropertyRef Name="localRepID" />
+    </Key>
+    <Property Name="localRepID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Initials" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IDNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Position" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Place" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MIBName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MIBRegNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ImporterCodeNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StreetAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PostalAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TelNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CellNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FaxNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TelexNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Signature" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="isVWRep" Type="Boolean" Nullable="false" />
+    <Property Name="isBodyBuilder" Type="Boolean" Nullable="false" />
+    <Property Name="isTestHouse" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="db_Model" Relationship="VolkswagenModel.FK_db_Model_db_LocalRep" FromRole="db_LocalRep" ToRole="db_Model" />
+    <NavigationProperty Name="db_Model_MIBs" Relationship="VolkswagenModel.FK_db_Model_MIBs_db_LocalRep" FromRole="db_LocalRep" ToRole="db_Model_MIBs" />
+  </EntityType>
+  <EntityType Name="db_Marque">
+    <Key>
+      <PropertyRef Name="MarqueSymbol" />
+    </Key>
+    <Property Name="MarqueSymbol" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MarqueDesc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="db_Model" Relationship="VolkswagenModel.FK_db_Model_db_Marque" FromRole="db_Marque" ToRole="db_Model" />
+  </EntityType>
+  <EntityType Name="db_Model">
+    <Key>
+      <PropertyRef Name="modelID" />
+    </Key>
+    <Property Name="modelID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="localRepID" Type="Int64" Nullable="false" />
+    <Property Name="Make" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="MarqueSymbol" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModelName" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="vehicleCatID" Type="Int64" />
+    <Property Name="ManufacturersName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ManufacturersAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestedHomolDate" Type="DateTime" Precision="3" />
+    <Property Name="SampleVehAvailabilityDate" Type="DateTime" Precision="3" />
+    <Property Name="ModelIntroDate" Type="DateTime" Precision="3" />
+    <Property Name="ModelDeletionDate" Type="DateTime" Precision="3" />
+    <Property Name="HomolDate" Type="DateTime" Precision="3" />
+    <Property Name="HomolRefNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VersionCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VersionKey" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModDerDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="isCBU" Type="Boolean" Nullable="false" />
+    <Property Name="isSKD" Type="Boolean" Nullable="false" />
+    <Property Name="isCKD" Type="Boolean" Nullable="false" />
+    <Property Name="isLocal" Type="Boolean" Nullable="false" />
+    <Property Name="VIN_Typical" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="VIN_ChangeSymbol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VIN_Position" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="light_MainbeamNo" Type="Int32" />
+    <Property Name="light_MainBeamCol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_MainBeamChange" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_DippedBeamNo" Type="Int32" />
+    <Property Name="light_DippedBeamCol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_DippedbeamChange" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_FrontFogLampNo" Type="Int32" />
+    <Property Name="light_FrontFogLampCol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_FrontFoglampChange" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_ReversingLightNo" Type="Int32" />
+    <Property Name="light_ReversingLightCol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_ReversingLightChange" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_DirectionIndicatorFrtNo" Type="Int32" />
+    <Property Name="light_DirectionIndicatorFrtCol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_DirectionIndicatorFrtChange" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_DirectionIndicatorRrNo" Type="Int32" />
+    <Property Name="light_DirectionIndicatorRrCol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_DirectionIndicatorRrChange" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_DirectionIndicatorSideNo" Type="Int32" />
+    <Property Name="light_DirectionIndicatorSideCol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_DirectionIndicatorSideChange" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_HazardWarningSignalCol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_HazardWarningSignalChange" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_StopLightNo" Type="Int32" />
+    <Property Name="light_StopLightCol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_StopLightChange" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_RrRegPlatelightNo" Type="Int32" />
+    <Property Name="light_RrRegPlatelightCol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_RrRegPlatelightChange" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_FrontPositionSideNo" Type="Int32" />
+    <Property Name="light_FrontPositionSideCol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_FrontPositionChange" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_RrPositionSideNo" Type="Int32" />
+    <Property Name="light_RrPositionSideCol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_RrPositionChange" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_RrFogLightNo" Type="Int32" />
+    <Property Name="light_RrFogLightCol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_RrFogLightChange" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_ParkLightFrtNo" Type="Int32" />
+    <Property Name="light_ParkLightFrtCol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_ParkLightFrtChange" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_ParkLightRrNo" Type="Int32" />
+    <Property Name="light_ParkLightRrCol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_ParkLightRrChange" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_ParkLightSideNo" Type="Int32" />
+    <Property Name="light_ParkLightSideCol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_ParkLightSideChange" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_EndOutMarkerLightFrtNo" Type="Int32" />
+    <Property Name="light_EndOutMarkerLightFrtCol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_EndOutMarkerLightFrtChange" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_EndOutMarkerLightRrNo" Type="Int32" />
+    <Property Name="light_EndOutMarkerLightRrCol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_EndOutMarkerLightRrChange" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_RrRetroReflectorNo" Type="Int32" />
+    <Property Name="light_RrRetroReflectorCol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_RrRetroReflectorChange" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_FrtRetroReflectorNo" Type="Int32" />
+    <Property Name="light_FrtRetroReflectorCol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_FrtRetroReflectorChange" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_SideRetroReflectorNo" Type="Int32" />
+    <Property Name="light_SideRetroReflectorCol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_SideRetroReflectorChange" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_DayRunningLightNo" Type="Int32" />
+    <Property Name="light_DayRunningLightCol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_DayRunningLightChange" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_HighmountedStopLightNo" Type="Int32" />
+    <Property Name="light_HighmountedStopLightCol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_HighmountedStopLightChange" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_ChevronNo" Type="Int32" />
+    <Property Name="light_ChevronCol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="light_ChevronChange" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="change_GeneralInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="conf_1ProdSystem" Type="Boolean" />
+    <Property Name="conf_1ProdSystemDetail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="conf_2IndependantAudit" Type="Boolean" />
+    <Property Name="conf_2IndependantAuditDetail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="conf_3PersonAssuringCompliance" Type="Boolean" />
+    <Property Name="conf_3PersonAssuringPosition" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="conf_3PersonAssuringName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="conf_4DesignAuthLocal" Type="Boolean" />
+    <Property Name="conf_4DesignAuthNotLocalName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="conf_4DesignAuthNotLocalAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="conf_5CompReqAvai" Type="Boolean" />
+    <Property Name="conf_5CompReqAvaiLocation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="conf_5CompReqAvaiPerson" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="conf_6ChangeVerified" Type="Boolean" />
+    <NavigationProperty Name="db_LocalRep" Relationship="VolkswagenModel.FK_db_Model_db_LocalRep" FromRole="db_Model" ToRole="db_LocalRep" />
+    <NavigationProperty Name="db_Marque" Relationship="VolkswagenModel.FK_db_Model_db_Marque" FromRole="db_Model" ToRole="db_Marque" />
+    <NavigationProperty Name="db_Model_Change" Relationship="VolkswagenModel.FK_db_Model_Change_db_Model" FromRole="db_Model" ToRole="db_Model_Change" />
+    <NavigationProperty Name="db_VehicleCat" Relationship="VolkswagenModel.FK_db_Model_db_VehicleCat" FromRole="db_Model" ToRole="db_VehicleCat" />
+    <NavigationProperty Name="db_Model_MIBs" Relationship="VolkswagenModel.FK_db_Model_MIBs_db_Model" FromRole="db_Model" ToRole="db_Model_MIBs" />
+    <NavigationProperty Name="db_Model_Plant" Relationship="VolkswagenModel.FK_db_Model_Plant_db_Model" FromRole="db_Model" ToRole="db_Model_Plant" />
+    <NavigationProperty Name="db_Model_SOE" Relationship="VolkswagenModel.FK_db_Model_SOE_db_Model" FromRole="db_Model" ToRole="db_Model_SOE" />
+    <NavigationProperty Name="db_Model_WMI" Relationship="VolkswagenModel.FK_db_Model_WMI_db_Model" FromRole="db_Model" ToRole="db_Model_WMI" />
+    <NavigationProperty Name="db_Variant" Relationship="VolkswagenModel.FK_db_Variant_db_Model" FromRole="db_Model" ToRole="db_Variant" />
+  </EntityType>
+  <EntityType Name="db_Model_Change">
+    <Key>
+      <PropertyRef Name="modelChangeID" />
+    </Key>
+    <Property Name="modelChangeID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ChangeNo" Type="Int32" Nullable="false" />
+    <Property Name="modelID" Type="Int64" Nullable="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="db_Model" Relationship="VolkswagenModel.FK_db_Model_Change_db_Model" FromRole="db_Model_Change" ToRole="db_Model" />
+  </EntityType>
+  <EntityType Name="db_Model_MIBs">
+    <Key>
+      <PropertyRef Name="modelID" />
+      <PropertyRef Name="localRepID" />
+    </Key>
+    <Property Name="modelID" Type="Int64" Nullable="false" />
+    <Property Name="localRepID" Type="Int64" Nullable="false" />
+    <Property Name="DateAdded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="db_LocalRep" Relationship="VolkswagenModel.FK_db_Model_MIBs_db_LocalRep" FromRole="db_Model_MIBs" ToRole="db_LocalRep" />
+    <NavigationProperty Name="db_Model" Relationship="VolkswagenModel.FK_db_Model_MIBs_db_Model" FromRole="db_Model_MIBs" ToRole="db_Model" />
+  </EntityType>
+  <EntityType Name="db_Model_Plant">
+    <Key>
+      <PropertyRef Name="modelID" />
+      <PropertyRef Name="plantID" />
+    </Key>
+    <Property Name="modelID" Type="Int64" Nullable="false" />
+    <Property Name="plantID" Type="Int64" Nullable="false" />
+    <Property Name="DateAdded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="db_Model" Relationship="VolkswagenModel.FK_db_Model_Plant_db_Model" FromRole="db_Model_Plant" ToRole="db_Model" />
+    <NavigationProperty Name="db_Plant" Relationship="VolkswagenModel.FK_db_Model_Plant_db_Plant" FromRole="db_Model_Plant" ToRole="db_Plant" />
+  </EntityType>
+  <EntityType Name="db_Model_SOE">
+    <Key>
+      <PropertyRef Name="model_SoeID" />
+    </Key>
+    <Property Name="model_SoeID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="modelID" Type="Int64" />
+    <Property Name="standardDescripID" Type="Int64" />
+    <Property Name="ApprovalType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ReportNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="isCriticalApproval" Type="Boolean" Nullable="false" />
+    <Property Name="testHouseID" Type="Int64" />
+    <Property Name="TestDate" Type="DateTime" Precision="3" />
+    <Property Name="isSAHomol" Type="Boolean" Nullable="false" />
+    <Property Name="ChangeSymbol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="db_Model" Relationship="VolkswagenModel.FK_db_Model_SOE_db_Model" FromRole="db_Model_SOE" ToRole="db_Model" />
+    <NavigationProperty Name="db_StandardDescrip" Relationship="VolkswagenModel.FK_db_Model_SOE_db_StandardDescrip" FromRole="db_Model_SOE" ToRole="db_StandardDescrip" />
+    <NavigationProperty Name="db_TestHouse" Relationship="VolkswagenModel.FK_db_Model_SOE_db_TestHouse" FromRole="db_Model_SOE" ToRole="db_TestHouse" />
+  </EntityType>
+  <EntityType Name="db_Model_WMI">
+    <Key>
+      <PropertyRef Name="modelID" />
+      <PropertyRef Name="wmiCode" />
+    </Key>
+    <Property Name="modelID" Type="Int64" Nullable="false" />
+    <Property Name="wmiCode" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="DateAdded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="db_Model" Relationship="VolkswagenModel.FK_db_Model_WMI_db_Model" FromRole="db_Model_WMI" ToRole="db_Model" />
+    <NavigationProperty Name="db_WMI" Relationship="VolkswagenModel.FK_db_Model_WMI_db_WMI" FromRole="db_Model_WMI" ToRole="db_WMI" />
+  </EntityType>
+  <EntityType Name="db_NatisError">
+    <Key>
+      <PropertyRef Name="natisErrorID" />
+    </Key>
+    <Property Name="natisErrorID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="variantID" Type="Int64" Nullable="false" />
+    <Property Name="Field" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IncorrectEntry" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CorrectEntry" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="DateCorrected" Type="DateTime" Precision="3" />
+    <Property Name="isDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="db_Variant" Relationship="VolkswagenModel.FK_db_NatisError_db_Variant" FromRole="db_NatisError" ToRole="db_Variant" />
+  </EntityType>
+  <EntityType Name="db_NatisVehicleCat">
+    <Key>
+      <PropertyRef Name="natisVehicleCatID" />
+    </Key>
+    <Property Name="natisVehicleCatID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VehCat" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="db_Variant" Relationship="VolkswagenModel.FK_db_Variant_db_NatisVehicleCat" FromRole="db_NatisVehicleCat" ToRole="db_Variant" />
+  </EntityType>
+  <EntityType Name="db_Photo">
+    <Key>
+      <PropertyRef Name="photoID" />
+    </Key>
+    <Property Name="photoID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FriendlyName" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Path" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="db_Variant" Relationship="VolkswagenModel.FK_db_Variant_db_Photo" FromRole="db_Photo" ToRole="db_Variant" />
+  </EntityType>
+  <EntityType Name="db_Plant">
+    <Key>
+      <PropertyRef Name="plantID" />
+    </Key>
+    <Property Name="plantID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="plantCode" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="PlantName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="db_Model_Plant" Relationship="VolkswagenModel.FK_db_Model_Plant_db_Plant" FromRole="db_Plant" ToRole="db_Model_Plant" />
+  </EntityType>
+  <EntityType Name="db_PowerAssist">
+    <Key>
+      <PropertyRef Name="powerAssistCode" />
+    </Key>
+    <Property Name="powerAssistCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="db_Variant" Relationship="VolkswagenModel.FK_db_Variant_db_PowerAssist" FromRole="db_PowerAssist" ToRole="db_Variant" />
+  </EntityType>
+  <EntityType Name="db_Rim">
+    <Key>
+      <PropertyRef Name="rimID" />
+    </Key>
+    <Property Name="rimID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RimSize" Type="Int32" Nullable="false" />
+    <Property Name="Offset" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="db_Variant" Relationship="VolkswagenModel.FK_db_Variant_db_Rim" FromRole="db_Rim" ToRole="db_Variant" />
+    <NavigationProperty Name="db_Variant1" Relationship="VolkswagenModel.FK_db_Variant_db_Rim1" FromRole="db_Rim" ToRole="db_Variant" />
+  </EntityType>
+  <EntityType Name="db_StandardDescrip">
+    <Key>
+      <PropertyRef Name="standardDescripID" />
+    </Key>
+    <Property Name="standardDescripID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Para" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Req" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="M1ComplianceStd" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="M1Sec" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="M1EquivStd" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="M1TARef" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="M2ComplianceStd" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="M2Sec" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="M2EquivStd" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="N1ComplianceStd" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="N1EquivStd" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="N1Sec" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SAAccreditation" Type="Boolean" Nullable="false" />
+    <Property Name="N2ComplianceStd" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="N2Sec" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="N2EquivStd" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="BasicReq" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="SSMA_TimeStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="db_Model_SOE" Relationship="VolkswagenModel.FK_db_Model_SOE_db_StandardDescrip" FromRole="db_StandardDescrip" ToRole="db_Model_SOE" />
+  </EntityType>
+  <EntityType Name="db_SuspensionType">
+    <Key>
+      <PropertyRef Name="suspensionTypeID" />
+    </Key>
+    <Property Name="suspensionTypeID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Descrip" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="db_Variant" Relationship="VolkswagenModel.FK_db_Variant_db_SuspensionType" FromRole="db_SuspensionType" ToRole="db_Variant" />
+    <NavigationProperty Name="db_Variant1" Relationship="VolkswagenModel.FK_db_Variant_db_SuspensionType1" FromRole="db_SuspensionType" ToRole="db_Variant" />
+  </EntityType>
+  <EntityType Name="db_TestHouse">
+    <Key>
+      <PropertyRef Name="testHouseID" />
+    </Key>
+    <Property Name="testHouseID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TestHouse" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="db_Model_SOE" Relationship="VolkswagenModel.FK_db_Model_SOE_db_TestHouse" FromRole="db_TestHouse" ToRole="db_Model_SOE" />
+  </EntityType>
+  <EntityType Name="db_Transmission">
+    <Key>
+      <PropertyRef Name="transmissionID" />
+    </Key>
+    <Property Name="transmissionID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PRno" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="HomolDesc" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HomolComment" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FAM" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="db_Variant" Relationship="VolkswagenModel.FK_db_Variant_db_Transmission" FromRole="db_Transmission" ToRole="db_Variant" />
+  </EntityType>
+  <EntityType Name="db_Tyre">
+    <Key>
+      <PropertyRef Name="tyreID" />
+    </Key>
+    <Property Name="tyreID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tyre" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="PRNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Plyrating" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="db_Variant" Relationship="VolkswagenModel.FK_db_Variant_db_Tyre" FromRole="db_Tyre" ToRole="db_Variant" />
+    <NavigationProperty Name="db_Variant1" Relationship="VolkswagenModel.FK_db_Variant_db_Tyre1" FromRole="db_Tyre" ToRole="db_Variant" />
+  </EntityType>
+  <EntityType Name="db_User">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="passwordHash" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="isActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_Variant">
+    <Key>
+      <PropertyRef Name="variantID" />
+    </Key>
+    <Property Name="variantID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="modelID" Type="Int64" Nullable="false" />
+    <Property Name="derivID" Type="Int64" Nullable="false" />
+    <Property Name="variantNo" Type="Int32" Nullable="false" />
+    <Property Name="isCurrent" Type="Boolean" Nullable="false" />
+    <Property Name="VariantIdentification" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NatisDerivative" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CountryCode" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="bodyID" Type="Int64" />
+    <Property Name="natisVehicleCatID" Type="Int64" />
+    <Property Name="ChangeSymbol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CDNo" Type="Int32" />
+    <Property Name="ModelRef" Type="Int32" />
+    <Property Name="FileRef" Type="Int32" />
+    <Property Name="VehicleDescription" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="engine_engineID" Type="Int64" />
+    <Property Name="engine_EngChange" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="engine_DeletionDate" Type="DateTime" Precision="3" />
+    <Property Name="engine_PRNo" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="transmission_transmissionID" Type="Int64" />
+    <Property Name="transmission_Speed" Type="Int32" />
+    <Property Name="transmission_CO2" Type="Int32" />
+    <Property Name="transmission_FuelConsumption" Type="Double" />
+    <Property Name="transmission_ChangeSymbol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="transmission_Applic" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="dimen_WheelBase" Type="Int32" />
+    <Property Name="dimen_WheelbaseMin" Type="Int32" />
+    <Property Name="dimen_TrackF" Type="Int32" />
+    <Property Name="dimen_TrackR" Type="Int32" />
+    <Property Name="dimen_Length" Type="Int32" />
+    <Property Name="dimen_Width" Type="Int32" />
+    <Property Name="dimen_Height" Type="Int32" />
+    <Property Name="dimen_RearOverhang" Type="Int32" />
+    <Property Name="dimen_MinTurningRadius" Type="Double" />
+    <Property Name="dimen_ChangeSymbol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dimen_AxleUnitSpacingM" Type="Double" />
+    <Property Name="dimen_SteeringAxleSpacingM" Type="Double" />
+    <Property Name="mass_MassSortenKode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mass_TareMass" Type="Int32" />
+    <Property Name="mass_TareMax" Type="Int32" />
+    <Property Name="mass_GVM" Type="Int32" />
+    <Property Name="mass_GCM" Type="Int32" />
+    <Property Name="mass_GA_Front" Type="Int32" />
+    <Property Name="mass_GA_Rear" Type="Int32" />
+    <Property Name="mass_GA_Tag" Type="Int32" />
+    <Property Name="mass_A_Front" Type="Int32" />
+    <Property Name="mass_A_Rear" Type="Int32" />
+    <Property Name="mass_A_Tag" Type="Int32" />
+    <Property Name="mass_V" Type="Int32" />
+    <Property Name="mass_D" Type="Int32" />
+    <Property Name="mass_ModelPRNo" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="mass_BodyPRNo" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="mass_ChangeSymbol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="brake_ServiceBrake" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="brake_fr_brakeID" Type="Int64" />
+    <Property Name="brake_rr_brakeID" Type="Int64" />
+    <Property Name="brake_PowerAssistCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="brake_ParkBrake" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="brake_AntiLockSystem" Type="Boolean" />
+    <Property Name="brake_BrakeControlCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="brake_BrakeChange" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mirror_Int" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mirror_ExtRHS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mirror_ExtLHS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mirror_CloseProx" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mirror_WideAngle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mirror_ChangeSymbol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="wheelflap_Fr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="wheelflap_Rr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="door_PRNo" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="door_NoSide" Type="Int32" />
+    <Property Name="door_NoRear" Type="Int32" />
+    <Property Name="seat_PRNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="seat_NoPosBase" Type="Int32" />
+    <Property Name="seat_NoPosOpt1" Type="Int32" />
+    <Property Name="seat_NoPosOpt2" Type="Int32" />
+    <Property Name="seat_ChangeSymbol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dsmw_isM" Type="Boolean" />
+    <Property Name="dsmw_isI" Type="Boolean" />
+    <Property Name="dsmw_isB" Type="Boolean" />
+    <Property Name="dsmw_isAssessed" Type="Boolean" />
+    <Property Name="dsmw_isAssessedNa" Type="Boolean" />
+    <Property Name="axle_NoTot" Type="Int32" />
+    <Property Name="axle_NoDualTyres" Type="Int32" />
+    <Property Name="axle_NoSteerOnly" Type="Int32" />
+    <Property Name="axle_NoDriveOnly" Type="Int32" />
+    <Property Name="axle_NoSteerDrive" Type="Int32" />
+    <Property Name="axle_AxleChangeSymbol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="axle_WheelsF1" Type="Int32" />
+    <Property Name="axle_WheelsF2" Type="Int32" />
+    <Property Name="axle_WheelsR1" Type="Int32" />
+    <Property Name="axle_WheelsR2" Type="Int32" />
+    <Property Name="axle_WheelsR3" Type="Int32" />
+    <Property Name="axle_WheelChangeSymbol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="suspension_fr_suspensionTypeID" Type="Int64" />
+    <Property Name="suspension_rr_suspensionTypeID" Type="Int64" />
+    <Property Name="tyre_fr_tyreID" Type="Int64" />
+    <Property Name="tyre_rr_tyreID" Type="Int64" />
+    <Property Name="tyre_fr_rimID" Type="Int64" />
+    <Property Name="tyre_rr_rimID" Type="Int64" />
+    <Property Name="tyre_ChangeSymbol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="photoID" Type="Int64" />
+    <Property Name="timing_ManufModelCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="timing_ApplicDate" Type="DateTime" Precision="0" />
+    <Property Name="timing_NaTISNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="timing_NaTISEmailDate" Type="DateTime" Precision="0" />
+    <Property Name="timing_NaTISReceivedEmailDate" Type="DateTime" Precision="0" />
+    <Property Name="timing_NaTISUpdateSentDate" Type="DateTime" Precision="0" />
+    <Property Name="timing_AwaitSABSNaTIS" Type="Boolean" />
+    <Property Name="TACode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VWModelCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VehRel" Type="DateTime" Precision="0" />
+    <Property Name="VersionCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NaTISVehCat" Type="Int32" />
+    <Property Name="Comment" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="reports_SABSInspectionDate" Type="DateTime" Precision="3" />
+    <Property Name="WVTANumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="db_Body" Relationship="VolkswagenModel.FK_db_Variant_db_Body" FromRole="db_Variant" ToRole="db_Body" />
+    <NavigationProperty Name="db_BrakeControl" Relationship="VolkswagenModel.FK_db_Variant_db_BrakeControl" FromRole="db_Variant" ToRole="db_BrakeControl" />
+    <NavigationProperty Name="db_Brakes" Relationship="VolkswagenModel.FK_db_Variant_db_Brakes" FromRole="db_Variant" ToRole="db_Brakes" />
+    <NavigationProperty Name="db_Brakes1" Relationship="VolkswagenModel.FK_db_Variant_db_Brakes1" FromRole="db_Variant" ToRole="db_Brakes" />
+    <NavigationProperty Name="db_BrakeService" Relationship="VolkswagenModel.FK_db_Variant_db_BrakeService" FromRole="db_Variant" ToRole="db_BrakeService" />
+    <NavigationProperty Name="db_Deriv" Relationship="VolkswagenModel.FK_db_Variant_db_Deriv" FromRole="db_Variant" ToRole="db_Deriv" />
+    <NavigationProperty Name="db_Engine" Relationship="VolkswagenModel.FK_db_Variant_db_Engine" FromRole="db_Variant" ToRole="db_Engine" />
+    <NavigationProperty Name="db_ListVehicle" Relationship="VolkswagenModel.FK_db_ConversionReport_db_Variant" FromRole="db_Variant" ToRole="db_ListVehicle" />
+    <NavigationProperty Name="db_Model" Relationship="VolkswagenModel.FK_db_Variant_db_Model" FromRole="db_Variant" ToRole="db_Model" />
+    <NavigationProperty Name="db_NatisError" Relationship="VolkswagenModel.FK_db_NatisError_db_Variant" FromRole="db_Variant" ToRole="db_NatisError" />
+    <NavigationProperty Name="db_NatisVehicleCat" Relationship="VolkswagenModel.FK_db_Variant_db_NatisVehicleCat" FromRole="db_Variant" ToRole="db_NatisVehicleCat" />
+    <NavigationProperty Name="db_Photo" Relationship="VolkswagenModel.FK_db_Variant_db_Photo" FromRole="db_Variant" ToRole="db_Photo" />
+    <NavigationProperty Name="db_PowerAssist" Relationship="VolkswagenModel.FK_db_Variant_db_PowerAssist" FromRole="db_Variant" ToRole="db_PowerAssist" />
+    <NavigationProperty Name="db_Rim" Relationship="VolkswagenModel.FK_db_Variant_db_Rim" FromRole="db_Variant" ToRole="db_Rim" />
+    <NavigationProperty Name="db_Rim1" Relationship="VolkswagenModel.FK_db_Variant_db_Rim1" FromRole="db_Variant" ToRole="db_Rim" />
+    <NavigationProperty Name="db_SuspensionType" Relationship="VolkswagenModel.FK_db_Variant_db_SuspensionType" FromRole="db_Variant" ToRole="db_SuspensionType" />
+    <NavigationProperty Name="db_SuspensionType1" Relationship="VolkswagenModel.FK_db_Variant_db_SuspensionType1" FromRole="db_Variant" ToRole="db_SuspensionType" />
+    <NavigationProperty Name="db_Transmission" Relationship="VolkswagenModel.FK_db_Variant_db_Transmission" FromRole="db_Variant" ToRole="db_Transmission" />
+    <NavigationProperty Name="db_Tyre" Relationship="VolkswagenModel.FK_db_Variant_db_Tyre" FromRole="db_Variant" ToRole="db_Tyre" />
+    <NavigationProperty Name="db_Tyre1" Relationship="VolkswagenModel.FK_db_Variant_db_Tyre1" FromRole="db_Variant" ToRole="db_Tyre" />
+    <NavigationProperty Name="db_Variant_Inspection" Relationship="VolkswagenModel.FK_db_Variant_Inspection_db_Variant" FromRole="db_Variant" ToRole="db_Variant_Inspection" />
+  </EntityType>
+  <EntityType Name="db_Variant_Inspection">
+    <Key>
+      <PropertyRef Name="variant_InspectionID" />
+    </Key>
+    <Property Name="variant_InspectionID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="variantID" Type="Int64" Nullable="false" />
+    <Property Name="inspVWDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="inspSABSDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="db_Variant" Relationship="VolkswagenModel.FK_db_Variant_Inspection_db_Variant" FromRole="db_Variant_Inspection" ToRole="db_Variant" />
+  </EntityType>
+  <EntityType Name="db_VehicleCat">
+    <Key>
+      <PropertyRef Name="vehicleCatID" />
+    </Key>
+    <Property Name="vehicleCatID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VehCat" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="db_Model" Relationship="VolkswagenModel.FK_db_Model_db_VehicleCat" FromRole="db_VehicleCat" ToRole="db_Model" />
+  </EntityType>
+  <EntityType Name="db_WMI">
+    <Key>
+      <PropertyRef Name="wmiCode" />
+    </Key>
+    <Property Name="wmiCode" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="WMI" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="db_Model_WMI" Relationship="VolkswagenModel.FK_db_Model_WMI_db_WMI" FromRole="db_WMI" ToRole="db_Model_WMI" />
+  </EntityType>
+  <EntityType Name="db_Wording">
+    <Key>
+      <PropertyRef Name="wordingID" />
+    </Key>
+    <Property Name="wordingID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="240" FixedLength="false" Unicode="true" />
+    <Property Name="Wording" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EmailTo" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EmailCC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EmailTitle" Type="String" MaxLength="240" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_db_Variant_db_Body">
+    <End Type="VolkswagenModel.db_Body" Role="db_Body" Multiplicity="0..1" />
+    <End Type="VolkswagenModel.db_Variant" Role="db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Body">
+        <PropertyRef Name="bodyID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="bodyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_BrakeControl">
+    <End Type="VolkswagenModel.db_BrakeControl" Role="db_BrakeControl" Multiplicity="0..1" />
+    <End Type="VolkswagenModel.db_Variant" Role="db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_BrakeControl">
+        <PropertyRef Name="brakeControlCode" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="brake_BrakeControlCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_Brakes">
+    <End Type="VolkswagenModel.db_Brakes" Role="db_Brakes" Multiplicity="0..1" />
+    <End Type="VolkswagenModel.db_Variant" Role="db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Brakes">
+        <PropertyRef Name="brakeID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="brake_fr_brakeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_Brakes1">
+    <End Type="VolkswagenModel.db_Brakes" Role="db_Brakes" Multiplicity="0..1" />
+    <End Type="VolkswagenModel.db_Variant" Role="db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Brakes">
+        <PropertyRef Name="brakeID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="brake_rr_brakeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_BrakeService">
+    <End Type="VolkswagenModel.db_BrakeService" Role="db_BrakeService" Multiplicity="0..1" />
+    <End Type="VolkswagenModel.db_Variant" Role="db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_BrakeService">
+        <PropertyRef Name="serviceBrakeCode" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="brake_ServiceBrake" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_Deriv">
+    <End Type="VolkswagenModel.db_Deriv" Role="db_Deriv" Multiplicity="1" />
+    <End Type="VolkswagenModel.db_Variant" Role="db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Deriv">
+        <PropertyRef Name="derivID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="derivID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Engine_db_Engine_Aspiration">
+    <End Type="VolkswagenModel.db_Engine_Aspiration" Role="db_Engine_Aspiration" Multiplicity="0..1" />
+    <End Type="VolkswagenModel.db_Engine" Role="db_Engine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Engine_Aspiration">
+        <PropertyRef Name="engineAspirationCode" />
+      </Principal>
+      <Dependent Role="db_Engine">
+        <PropertyRef Name="engineAspirationCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Engine_db_Engine_ConfigCode">
+    <End Type="VolkswagenModel.db_Engine_ConfigCode" Role="db_Engine_ConfigCode" Multiplicity="0..1" />
+    <End Type="VolkswagenModel.db_Engine" Role="db_Engine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Engine_ConfigCode">
+        <PropertyRef Name="engineConfigCode" />
+      </Principal>
+      <Dependent Role="db_Engine">
+        <PropertyRef Name="engineConfigCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Engine_db_Engine_FuelFeedCode">
+    <End Type="VolkswagenModel.db_Engine_FuelFeedCode" Role="db_Engine_FuelFeedCode" Multiplicity="0..1" />
+    <End Type="VolkswagenModel.db_Engine" Role="db_Engine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Engine_FuelFeedCode">
+        <PropertyRef Name="engineFuelFeedCode" />
+      </Principal>
+      <Dependent Role="db_Engine">
+        <PropertyRef Name="engineFuelFeedCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Engine_db_Engine_MotivePwr">
+    <End Type="VolkswagenModel.db_Engine_MotivePwr" Role="db_Engine_MotivePwr" Multiplicity="0..1" />
+    <End Type="VolkswagenModel.db_Engine" Role="db_Engine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Engine_MotivePwr">
+        <PropertyRef Name="engineMotivePwrCode" />
+      </Principal>
+      <Dependent Role="db_Engine">
+        <PropertyRef Name="engineMotivePwrCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_Engine">
+    <End Type="VolkswagenModel.db_Engine" Role="db_Engine" Multiplicity="0..1" />
+    <End Type="VolkswagenModel.db_Variant" Role="db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Engine">
+        <PropertyRef Name="engineID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="engine_engineID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_ConversionReport_db_Variant">
+    <End Type="VolkswagenModel.db_Variant" Role="db_Variant" Multiplicity="1" />
+    <End Type="VolkswagenModel.db_ListVehicle" Role="db_ListVehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Variant">
+        <PropertyRef Name="variantID" />
+      </Principal>
+      <Dependent Role="db_ListVehicle">
+        <PropertyRef Name="variantID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Model_db_LocalRep">
+    <End Type="VolkswagenModel.db_LocalRep" Role="db_LocalRep" Multiplicity="1" />
+    <End Type="VolkswagenModel.db_Model" Role="db_Model" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_LocalRep">
+        <PropertyRef Name="localRepID" />
+      </Principal>
+      <Dependent Role="db_Model">
+        <PropertyRef Name="localRepID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Model_MIBs_db_LocalRep">
+    <End Type="VolkswagenModel.db_LocalRep" Role="db_LocalRep" Multiplicity="1" />
+    <End Type="VolkswagenModel.db_Model_MIBs" Role="db_Model_MIBs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_LocalRep">
+        <PropertyRef Name="localRepID" />
+      </Principal>
+      <Dependent Role="db_Model_MIBs">
+        <PropertyRef Name="localRepID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Model_db_Marque">
+    <End Type="VolkswagenModel.db_Marque" Role="db_Marque" Multiplicity="1" />
+    <End Type="VolkswagenModel.db_Model" Role="db_Model" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Marque">
+        <PropertyRef Name="MarqueSymbol" />
+      </Principal>
+      <Dependent Role="db_Model">
+        <PropertyRef Name="MarqueSymbol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Model_Change_db_Model">
+    <End Type="VolkswagenModel.db_Model" Role="db_Model" Multiplicity="1" />
+    <End Type="VolkswagenModel.db_Model_Change" Role="db_Model_Change" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Model">
+        <PropertyRef Name="modelID" />
+      </Principal>
+      <Dependent Role="db_Model_Change">
+        <PropertyRef Name="modelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Model_db_VehicleCat">
+    <End Type="VolkswagenModel.db_VehicleCat" Role="db_VehicleCat" Multiplicity="0..1" />
+    <End Type="VolkswagenModel.db_Model" Role="db_Model" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_VehicleCat">
+        <PropertyRef Name="vehicleCatID" />
+      </Principal>
+      <Dependent Role="db_Model">
+        <PropertyRef Name="vehicleCatID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Model_MIBs_db_Model">
+    <End Type="VolkswagenModel.db_Model" Role="db_Model" Multiplicity="1" />
+    <End Type="VolkswagenModel.db_Model_MIBs" Role="db_Model_MIBs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Model">
+        <PropertyRef Name="modelID" />
+      </Principal>
+      <Dependent Role="db_Model_MIBs">
+        <PropertyRef Name="modelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Model_Plant_db_Model">
+    <End Type="VolkswagenModel.db_Model" Role="db_Model" Multiplicity="1" />
+    <End Type="VolkswagenModel.db_Model_Plant" Role="db_Model_Plant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Model">
+        <PropertyRef Name="modelID" />
+      </Principal>
+      <Dependent Role="db_Model_Plant">
+        <PropertyRef Name="modelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Model_SOE_db_Model">
+    <End Type="VolkswagenModel.db_Model" Role="db_Model" Multiplicity="0..1" />
+    <End Type="VolkswagenModel.db_Model_SOE" Role="db_Model_SOE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Model">
+        <PropertyRef Name="modelID" />
+      </Principal>
+      <Dependent Role="db_Model_SOE">
+        <PropertyRef Name="modelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Model_WMI_db_Model">
+    <End Type="VolkswagenModel.db_Model" Role="db_Model" Multiplicity="1" />
+    <End Type="VolkswagenModel.db_Model_WMI" Role="db_Model_WMI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Model">
+        <PropertyRef Name="modelID" />
+      </Principal>
+      <Dependent Role="db_Model_WMI">
+        <PropertyRef Name="modelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_Model">
+    <End Type="VolkswagenModel.db_Model" Role="db_Model" Multiplicity="1" />
+    <End Type="VolkswagenModel.db_Variant" Role="db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Model">
+        <PropertyRef Name="modelID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="modelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Model_Plant_db_Plant">
+    <End Type="VolkswagenModel.db_Plant" Role="db_Plant" Multiplicity="1" />
+    <End Type="VolkswagenModel.db_Model_Plant" Role="db_Model_Plant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Plant">
+        <PropertyRef Name="plantID" />
+      </Principal>
+      <Dependent Role="db_Model_Plant">
+        <PropertyRef Name="plantID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Model_SOE_db_StandardDescrip">
+    <End Type="VolkswagenModel.db_StandardDescrip" Role="db_StandardDescrip" Multiplicity="0..1" />
+    <End Type="VolkswagenModel.db_Model_SOE" Role="db_Model_SOE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_StandardDescrip">
+        <PropertyRef Name="standardDescripID" />
+      </Principal>
+      <Dependent Role="db_Model_SOE">
+        <PropertyRef Name="standardDescripID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Model_SOE_db_TestHouse">
+    <End Type="VolkswagenModel.db_TestHouse" Role="db_TestHouse" Multiplicity="0..1" />
+    <End Type="VolkswagenModel.db_Model_SOE" Role="db_Model_SOE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_TestHouse">
+        <PropertyRef Name="testHouseID" />
+      </Principal>
+      <Dependent Role="db_Model_SOE">
+        <PropertyRef Name="testHouseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Model_WMI_db_WMI">
+    <End Type="VolkswagenModel.db_WMI" Role="db_WMI" Multiplicity="1" />
+    <End Type="VolkswagenModel.db_Model_WMI" Role="db_Model_WMI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_WMI">
+        <PropertyRef Name="wmiCode" />
+      </Principal>
+      <Dependent Role="db_Model_WMI">
+        <PropertyRef Name="wmiCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_NatisError_db_Variant">
+    <End Type="VolkswagenModel.db_Variant" Role="db_Variant" Multiplicity="1" />
+    <End Type="VolkswagenModel.db_NatisError" Role="db_NatisError" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Variant">
+        <PropertyRef Name="variantID" />
+      </Principal>
+      <Dependent Role="db_NatisError">
+        <PropertyRef Name="variantID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_NatisVehicleCat">
+    <End Type="VolkswagenModel.db_NatisVehicleCat" Role="db_NatisVehicleCat" Multiplicity="0..1" />
+    <End Type="VolkswagenModel.db_Variant" Role="db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_NatisVehicleCat">
+        <PropertyRef Name="natisVehicleCatID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="natisVehicleCatID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_Photo">
+    <End Type="VolkswagenModel.db_Photo" Role="db_Photo" Multiplicity="0..1" />
+    <End Type="VolkswagenModel.db_Variant" Role="db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Photo">
+        <PropertyRef Name="photoID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="photoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_PowerAssist">
+    <End Type="VolkswagenModel.db_PowerAssist" Role="db_PowerAssist" Multiplicity="0..1" />
+    <End Type="VolkswagenModel.db_Variant" Role="db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_PowerAssist">
+        <PropertyRef Name="powerAssistCode" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="brake_PowerAssistCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_Rim">
+    <End Type="VolkswagenModel.db_Rim" Role="db_Rim" Multiplicity="0..1" />
+    <End Type="VolkswagenModel.db_Variant" Role="db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Rim">
+        <PropertyRef Name="rimID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="tyre_fr_rimID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_Rim1">
+    <End Type="VolkswagenModel.db_Rim" Role="db_Rim" Multiplicity="0..1" />
+    <End Type="VolkswagenModel.db_Variant" Role="db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Rim">
+        <PropertyRef Name="rimID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="tyre_rr_rimID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_SuspensionType">
+    <End Type="VolkswagenModel.db_SuspensionType" Role="db_SuspensionType" Multiplicity="0..1" />
+    <End Type="VolkswagenModel.db_Variant" Role="db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_SuspensionType">
+        <PropertyRef Name="suspensionTypeID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="suspension_fr_suspensionTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_SuspensionType1">
+    <End Type="VolkswagenModel.db_SuspensionType" Role="db_SuspensionType" Multiplicity="0..1" />
+    <End Type="VolkswagenModel.db_Variant" Role="db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_SuspensionType">
+        <PropertyRef Name="suspensionTypeID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="suspension_rr_suspensionTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_Transmission">
+    <End Type="VolkswagenModel.db_Transmission" Role="db_Transmission" Multiplicity="0..1" />
+    <End Type="VolkswagenModel.db_Variant" Role="db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Transmission">
+        <PropertyRef Name="transmissionID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="transmission_transmissionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_Tyre">
+    <End Type="VolkswagenModel.db_Tyre" Role="db_Tyre" Multiplicity="0..1" />
+    <End Type="VolkswagenModel.db_Variant" Role="db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Tyre">
+        <PropertyRef Name="tyreID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="tyre_fr_tyreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_Tyre1">
+    <End Type="VolkswagenModel.db_Tyre" Role="db_Tyre" Multiplicity="0..1" />
+    <End Type="VolkswagenModel.db_Variant" Role="db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Tyre">
+        <PropertyRef Name="tyreID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="tyre_rr_tyreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_Inspection_db_Variant">
+    <End Type="VolkswagenModel.db_Variant" Role="db_Variant" Multiplicity="1" />
+    <End Type="VolkswagenModel.db_Variant_Inspection" Role="db_Variant_Inspection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Variant">
+        <PropertyRef Name="variantID" />
+      </Principal>
+      <Dependent Role="db_Variant_Inspection">
+        <PropertyRef Name="variantID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,58 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutGuest.cshtml";
+
+    @Scripts.Render("~/bundles/js_GuestRegistry")
+    <script id='jsonData' type='text/data'>
+        @Html.Raw(@ViewBag.data)
+    </script>
+}
+<style>
+    .rsvpContact {
+        color: #1d1d1d;
+    }
+</style>
+<header id="fh5co-header" class="fh5co-cover" role="banner" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <div class="display-t">
+                    <div style="height:100px"></div>
+                    <div class="display-tc animate-box" data-animate-effect="fadeIn" style="display:block !important">
+                        <h1>Registry</h1>
+                        <br />
+                        <div class="row"><p>NOTE: When selecting a registry item, it cannot be undone.<br />Contact Melanie if problems occur.</p></div>
+                        <div id="dvLoadRegistry">
+                            @*<div class="row rsvpContact" style="display:flex; align-items:center">
+                                <div class="col-lg-8" style="text-align:right; font-size:13pt">takealot</div>
+                                <div class="col-lg-4">
+                                    <a href="/Guest/WeddingInfo" class="btn btn-default btn-sm" style="background-color:#279a01 !important; color:#fff !important; font-weight:bold"><i class="fa fa-gift" aria-hidden="true"></i> | I want to buy this</a>
+                                </div>
+                            </div>
+                            <div class="row rsvpContact">
+                                <div class="col-lg-8" style="text-align:right; font-size:13pt">Ame Dorfling</div>
+                                <div class="col-lg-4">
+                                    <a href="/Guest/WeddingInfo" class="btn btn-default btn-sm" style="background-color:#9a0101 !important; color:#fff !important; font-weight:bold"><i class="fa fa-gift" aria-hidden="true"></i> | I am buying this</a>
+                                </div>
+                            </div>*@
+                        </div>
+
+                        <br /><br />
+                        @*<div class="row">
+                                <p>NOTE: You cannot change your RSVP option once you have selected one.<br />Contact Melanie if you need to change your option.</p>
+                            </div>*@
+                        @*<div class="row">
+                                <label class="col-md-4 col-xs-4" style="text-align:right"></label><input class="col-md-4 col-xs-4" type="password" placeholder="New Password" />
+                            </div>
+                            <br />
+                            <div class="row">
+                                <label class="col-md-4 col-xs-4" style="text-align:right"></label><input class="col-md-4 col-xs-4" type="password" placeholder="Confirm New Password" />
+                            </div>
+                            <br />
+                            <p><a href="/Guest/WeddingInfo" class="btn btn-default btn-sm" style="background-color:#eea91d !important; color:#fff !important; font-weight:bold">Save New Password</a></p>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

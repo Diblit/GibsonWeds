@@ -1,0 +1,274 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Recoding.Graphics</name>
+    </assembly>
+    <members>
+        <member name="T:Recoding.Graphics.Extensions">
+            <summary>
+            Extension methods for WPF image manipulation
+            </summary>
+        </member>
+        <member name="M:Recoding.Graphics.Extensions.Scale(System.Windows.Media.Imaging.BitmapSource,System.Int32,System.Int32)">
+            <summary>
+            Execute a simple scale of the image. If one of dimensions is 0 it will be resized proportionally to the other.
+            </summary>
+            <param name="Width">Wanted width</param>
+            <param name="Height">Wanted height</param>
+            <param name="Image">Actual image</param>
+            <returns></returns>
+        </member>
+        <member name="M:Recoding.Graphics.Extensions.Crop(System.Windows.Media.Imaging.BitmapSource,System.Int32,System.Int32,Recoding.Graphics.HorizontalAligns,Recoding.Graphics.VerticalAligns)">
+            <summary>
+            Execute a touch-from-inside crop, mantainig image's proportions.
+            </summary>
+            <param name="Width">New viewport width</param>
+            <param name="Height">New viewport height</param>
+            <param name="HAlign">Horizontal align if the viewport results minor of the original width</param>
+            <param name="VAlign">Vertical align if the viewport results minor of the original height</param>
+            <param name="OriginalImage">Actual image</param>
+            <returns></returns>
+        </member>
+        <member name="M:Recoding.Graphics.Extensions.FlipVertical(System.Windows.Media.Imaging.BitmapSource)">
+            <summary>
+            Speculate image vertically.
+            </summary>
+            <param name="Image">Actual image</param>
+            <returns></returns>
+        </member>
+        <member name="M:Recoding.Graphics.Extensions.Rotate(System.Windows.Media.Imaging.BitmapSource,Recoding.Graphics.RotationSteps)">
+            <summary>
+            Allows image rotation by 90° steps.
+            </summary>
+            <param name="Image">Actual image</param>
+            <param name="RotationAngle">Specify the rotation angle</param>
+            <returns></returns>
+        </member>
+        <member name="M:Recoding.Graphics.Extensions.FlipHorizontal(System.Windows.Media.Imaging.BitmapSource)">
+            <summary>
+            Speculate image horizontally.
+            </summary>
+            <param name="Image">Actual image</param>
+            <returns></returns>
+        </member>
+        <member name="M:Recoding.Graphics.Extensions.GrayScale(System.Windows.Media.Imaging.BitmapSource)">
+            <summary>
+            Convert to grayscale image (it will lost alpha channel).
+            </summary>
+            <param name="Image">Actual image</param>
+            <returns></returns>
+        </member>
+        <member name="M:Recoding.Graphics.Extensions.Watermark(System.Windows.Media.Imaging.BitmapSource,System.Uri,Recoding.Graphics.WatermarkPosition)">
+            <summary>
+            Apply an image as watermark on the original image.
+            </summary>
+            <param name="Image">The image to watermark</param>
+            <param name="WatermarkUri">The Uri of image to use as watermark</param>
+            <param name="Position">The watermark position related to the image</param>
+            <returns></returns>
+        </member>
+        <member name="M:Recoding.Graphics.Extensions.Round(System.Windows.Media.Imaging.BitmapSource,System.Int32)">
+            <summary>
+            Rounds the corners of the image.
+            </summary>
+            <param name="Image">Original image</param>
+            <param name="CornerRadius">Radius of the corner (if equals to half of original sizes, is a circle!)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Recoding.Graphics.Extensions.GetStream(System.Windows.Media.Imaging.BitmapSource)">
+            <summary>
+            Returns a MemoryStream from Image. Usefull for testing with tools like LINQPad!
+            </summary>
+            <param name="Image">Actual image</param>
+            <returns></returns>
+        </member>
+        <member name="M:Recoding.Graphics.Extensions.SaveAs(System.Windows.Media.Imaging.BitmapSource,System.String)">
+            <summary>
+            Save the given image in a physical path.
+            The encoder to use is determined by the given extension.
+            </summary>
+            <param name="Image">Actual image</param>
+            <param name="DestinationFilename"></param>
+        </member>
+        <member name="T:Recoding.Graphics.ProcessTypes">
+            <summary>
+            The process to apply to the image
+            </summary>
+        </member>
+        <member name="F:Recoding.Graphics.ProcessTypes.Scale">
+            <summary>
+            Resize the image, if one dimension is 0, it's recalculated proportionally to the other.
+            </summary>
+        </member>
+        <member name="F:Recoding.Graphics.ProcessTypes.Crop">
+            <summary>
+            Make a touch-from-inside crop.
+            </summary>
+        </member>
+        <member name="T:Recoding.Graphics.WatermarkPosition">
+            <summary>
+            Determines where to place the watermark on the image.
+            </summary>
+        </member>
+        <member name="F:Recoding.Graphics.WatermarkPosition.bottom_right">
+            <summary>
+            Bottom right of the viewport
+            </summary>
+        </member>
+        <member name="F:Recoding.Graphics.WatermarkPosition.top">
+            <summary>
+            Top center of the viewport
+            </summary>
+        </member>
+        <member name="F:Recoding.Graphics.WatermarkPosition.top_right">
+            <summary>
+            Top right of the viewport
+            </summary>
+        </member>
+        <member name="F:Recoding.Graphics.WatermarkPosition.right">
+            <summary>
+            Right middle of the viewport
+            </summary>
+        </member>
+        <member name="F:Recoding.Graphics.WatermarkPosition.bottom">
+            <summary>
+            Bottom center of the viewport
+            </summary>
+        </member>
+        <member name="F:Recoding.Graphics.WatermarkPosition.bottom_left">
+            <summary>
+            Bottom left of the viewport
+            </summary>
+        </member>
+        <member name="F:Recoding.Graphics.WatermarkPosition.left">
+            <summary>
+            Left middle of the viewport
+            </summary>
+        </member>
+        <member name="F:Recoding.Graphics.WatermarkPosition.top_left">
+            <summary>
+            Top left of the viewport
+            </summary>
+        </member>
+        <member name="F:Recoding.Graphics.WatermarkPosition.center">
+            <summary>
+            Center of the viewport
+            </summary>
+        </member>
+        <member name="T:Recoding.Graphics.FlipTypes">
+            <summary>
+            How to flip image.
+            </summary>
+        </member>
+        <member name="F:Recoding.Graphics.FlipTypes.None">
+            <summary>
+            No flipping
+            </summary>
+        </member>
+        <member name="F:Recoding.Graphics.FlipTypes.FlipHorizontal">
+            <summary>
+            Horizontal flip
+            </summary>
+        </member>
+        <member name="F:Recoding.Graphics.FlipTypes.FlipVertical">
+            <summary>
+            Vertical flip
+            </summary>
+        </member>
+        <member name="F:Recoding.Graphics.FlipTypes.FlipBoth">
+            <summary>
+            Flip on both dimensions
+            </summary>
+        </member>
+        <member name="T:Recoding.Graphics.ImageEffects">
+            <summary>
+            Effect to apply on image
+            </summary>
+        </member>
+        <member name="F:Recoding.Graphics.ImageEffects.None">
+            <summary>
+            Bypass effect
+            </summary>
+        </member>
+        <member name="F:Recoding.Graphics.ImageEffects.GrayScale">
+            <summary>
+            Convert image to grayscale
+            </summary>
+        </member>
+        <member name="T:Recoding.Graphics.RotationSteps">
+            <summary>
+            Amount of rotation to apply
+            </summary>
+        </member>
+        <member name="F:Recoding.Graphics.RotationSteps.Rotate0">
+            <summary>
+            0 degrees
+            </summary>
+        </member>
+        <member name="F:Recoding.Graphics.RotationSteps.Rotate180">
+            <summary>
+            180 degrees
+            </summary>
+        </member>
+        <member name="F:Recoding.Graphics.RotationSteps.Rotate270">
+            <summary>
+            270 degrees
+            </summary>
+        </member>
+        <member name="F:Recoding.Graphics.RotationSteps.Rotate90">
+            <summary>
+            90 degrees
+            </summary>
+        </member>
+        <member name="T:Recoding.Graphics.HorizontalAligns">
+            <summary>
+            How to align horizontally a cropped image
+            </summary>
+        </member>
+        <member name="F:Recoding.Graphics.HorizontalAligns.Center">
+            <summary>
+            To the center
+            </summary>
+        </member>
+        <member name="F:Recoding.Graphics.HorizontalAligns.Left">
+            <summary>
+            To the left
+            </summary>
+        </member>
+        <member name="F:Recoding.Graphics.HorizontalAligns.NotSet">
+            <summary>
+            Not setted
+            </summary>
+        </member>
+        <member name="F:Recoding.Graphics.HorizontalAligns.Right">
+            <summary>
+            To the right
+            </summary>
+        </member>
+        <member name="T:Recoding.Graphics.VerticalAligns">
+            <summary>
+            How to align vertically a cropped image
+            </summary>
+        </member>
+        <member name="F:Recoding.Graphics.VerticalAligns.Bottom">
+            <summary>
+            To the bottom
+            </summary>
+        </member>
+        <member name="F:Recoding.Graphics.VerticalAligns.Middle">
+            <summary>
+            To the middle
+            </summary>
+        </member>
+        <member name="F:Recoding.Graphics.VerticalAligns.NotSet">
+            <summary>
+            Not setted
+            </summary>
+        </member>
+        <member name="F:Recoding.Graphics.VerticalAligns.Top">
+            <summary>
+            To the top
+            </summary>
+        </member>
+    </members>
+</doc>

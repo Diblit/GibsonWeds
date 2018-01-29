@@ -1,0 +1,622 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VolkswagenModelStoreContainer" CdmEntityContainer="VolkswagenEntities">
+    <EntitySetMapping Name="db_Body">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_Body">
+        <MappingFragment StoreEntitySet="db_Body">
+          <ScalarProperty Name="BodyName" ColumnName="BodyName" />
+          <ScalarProperty Name="bodyID" ColumnName="bodyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_BrakeControl">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_BrakeControl">
+        <MappingFragment StoreEntitySet="db_BrakeControl">
+          <ScalarProperty Name="Descrip" ColumnName="Descrip" />
+          <ScalarProperty Name="brakeControlCode" ColumnName="brakeControlCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_Brakes">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_Brakes">
+        <MappingFragment StoreEntitySet="db_Brakes">
+          <ScalarProperty Name="FAM" ColumnName="FAM" />
+          <ScalarProperty Name="HomolComment" ColumnName="HomolComment" />
+          <ScalarProperty Name="HomolDesc" ColumnName="HomolDesc" />
+          <ScalarProperty Name="VehClass" ColumnName="VehClass" />
+          <ScalarProperty Name="BrakePRno" ColumnName="BrakePRno" />
+          <ScalarProperty Name="brakeID" ColumnName="brakeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_BrakeService">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_BrakeService">
+        <MappingFragment StoreEntitySet="db_BrakeService">
+          <ScalarProperty Name="Descrip" ColumnName="Descrip" />
+          <ScalarProperty Name="serviceBrakeCode" ColumnName="serviceBrakeCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_Deriv">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_Deriv">
+        <MappingFragment StoreEntitySet="db_Deriv">
+          <ScalarProperty Name="derivDesc" ColumnName="derivDesc" />
+          <ScalarProperty Name="derivCode" ColumnName="derivCode" />
+          <ScalarProperty Name="derivID" ColumnName="derivID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_Engine">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_Engine">
+        <MappingFragment StoreEntitySet="db_Engine">
+          <ScalarProperty Name="PRNo" ColumnName="PRNo" />
+          <ScalarProperty Name="engineAspirationCode" ColumnName="engineAspirationCode" />
+          <ScalarProperty Name="engineFuelFeedCode" ColumnName="engineFuelFeedCode" />
+          <ScalarProperty Name="PwrRPM" ColumnName="PwrRPM" />
+          <ScalarProperty Name="Power_kW_rpm" ColumnName="Power_kW_rpm" />
+          <ScalarProperty Name="engineMotivePwrCode" ColumnName="engineMotivePwrCode" />
+          <ScalarProperty Name="engineConfigCode" ColumnName="engineConfigCode" />
+          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="EngineNo" ColumnName="EngineNo" />
+          <ScalarProperty Name="engineID" ColumnName="engineID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_Engine_Aspiration">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_Engine_Aspiration">
+        <MappingFragment StoreEntitySet="db_Engine_Aspiration">
+          <ScalarProperty Name="Descrip" ColumnName="Descrip" />
+          <ScalarProperty Name="engineAspirationCode" ColumnName="engineAspirationCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_Engine_ConfigCode">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_Engine_ConfigCode">
+        <MappingFragment StoreEntitySet="db_Engine_ConfigCode">
+          <ScalarProperty Name="Descrip" ColumnName="Descrip" />
+          <ScalarProperty Name="engineConfigCode" ColumnName="engineConfigCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_Engine_FuelFeedCode">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_Engine_FuelFeedCode">
+        <MappingFragment StoreEntitySet="db_Engine_FuelFeedCode">
+          <ScalarProperty Name="Descrip" ColumnName="Descrip" />
+          <ScalarProperty Name="engineFuelFeedCode" ColumnName="engineFuelFeedCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_Engine_MotivePwr">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_Engine_MotivePwr">
+        <MappingFragment StoreEntitySet="db_Engine_MotivePwr">
+          <ScalarProperty Name="Decrip" ColumnName="Decrip" />
+          <ScalarProperty Name="engineMotivePwrCode" ColumnName="engineMotivePwrCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_ListVehicle">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_ListVehicle">
+        <MappingFragment StoreEntitySet="db_ListVehicle">
+          <ScalarProperty Name="NatisNo" ColumnName="NatisNo" />
+          <ScalarProperty Name="NatisDate" ColumnName="NatisDate" />
+          <ScalarProperty Name="variantID" ColumnName="variantID" />
+          <ScalarProperty Name="RepYear" ColumnName="RepYear" />
+          <ScalarProperty Name="ExemptNo" ColumnName="ExemptNo" />
+          <ScalarProperty Name="DateDisposed" ColumnName="DateDisposed" />
+          <ScalarProperty Name="DateCompleted" ColumnName="DateCompleted" />
+          <ScalarProperty Name="DateEntered" ColumnName="DateEntered" />
+          <ScalarProperty Name="MY" ColumnName="MY" />
+          <ScalarProperty Name="MBVCode" ColumnName="MBVCode" />
+          <ScalarProperty Name="VIN" ColumnName="VIN" />
+          <ScalarProperty Name="isOther" ColumnName="isOther" />
+          <ScalarProperty Name="isConversion" ColumnName="isConversion" />
+          <ScalarProperty Name="isExpNZ" ColumnName="isExpNZ" />
+          <ScalarProperty Name="isExpGen" ColumnName="isExpGen" />
+          <ScalarProperty Name="conversionID" ColumnName="conversionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_LocalRep">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_LocalRep">
+        <MappingFragment StoreEntitySet="db_LocalRep">
+          <ScalarProperty Name="isTestHouse" ColumnName="isTestHouse" />
+          <ScalarProperty Name="isBodyBuilder" ColumnName="isBodyBuilder" />
+          <ScalarProperty Name="isVWRep" ColumnName="isVWRep" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Signature" ColumnName="Signature" />
+          <ScalarProperty Name="TelexNo" ColumnName="TelexNo" />
+          <ScalarProperty Name="FaxNo" ColumnName="FaxNo" />
+          <ScalarProperty Name="CellNo" ColumnName="CellNo" />
+          <ScalarProperty Name="TelNo" ColumnName="TelNo" />
+          <ScalarProperty Name="PCode" ColumnName="PCode" />
+          <ScalarProperty Name="PostalAddress" ColumnName="PostalAddress" />
+          <ScalarProperty Name="SCode" ColumnName="SCode" />
+          <ScalarProperty Name="StreetAddress" ColumnName="StreetAddress" />
+          <ScalarProperty Name="ImporterCodeNo" ColumnName="ImporterCodeNo" />
+          <ScalarProperty Name="MIBRegNo" ColumnName="MIBRegNo" />
+          <ScalarProperty Name="MIBName" ColumnName="MIBName" />
+          <ScalarProperty Name="Place" ColumnName="Place" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="IDNumber" ColumnName="IDNumber" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Initials" ColumnName="Initials" />
+          <ScalarProperty Name="localRepID" ColumnName="localRepID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_Marque">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_Marque">
+        <MappingFragment StoreEntitySet="db_Marque">
+          <ScalarProperty Name="MarqueDesc" ColumnName="MarqueDesc" />
+          <ScalarProperty Name="MarqueSymbol" ColumnName="MarqueSymbol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_Model">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_Model">
+        <MappingFragment StoreEntitySet="db_Model">
+          <ScalarProperty Name="conf_6ChangeVerified" ColumnName="conf_6ChangeVerified" />
+          <ScalarProperty Name="conf_5CompReqAvaiPerson" ColumnName="conf_5CompReqAvaiPerson" />
+          <ScalarProperty Name="conf_5CompReqAvaiLocation" ColumnName="conf_5CompReqAvaiLocation" />
+          <ScalarProperty Name="conf_5CompReqAvai" ColumnName="conf_5CompReqAvai" />
+          <ScalarProperty Name="conf_4DesignAuthNotLocalAddress" ColumnName="conf_4DesignAuthNotLocalAddress" />
+          <ScalarProperty Name="conf_4DesignAuthNotLocalName" ColumnName="conf_4DesignAuthNotLocalName" />
+          <ScalarProperty Name="conf_4DesignAuthLocal" ColumnName="conf_4DesignAuthLocal" />
+          <ScalarProperty Name="conf_3PersonAssuringName" ColumnName="conf_3PersonAssuringName" />
+          <ScalarProperty Name="conf_3PersonAssuringPosition" ColumnName="conf_3PersonAssuringPosition" />
+          <ScalarProperty Name="conf_3PersonAssuringCompliance" ColumnName="conf_3PersonAssuringCompliance" />
+          <ScalarProperty Name="conf_2IndependantAuditDetail" ColumnName="conf_2IndependantAuditDetail" />
+          <ScalarProperty Name="conf_2IndependantAudit" ColumnName="conf_2IndependantAudit" />
+          <ScalarProperty Name="conf_1ProdSystemDetail" ColumnName="conf_1ProdSystemDetail" />
+          <ScalarProperty Name="conf_1ProdSystem" ColumnName="conf_1ProdSystem" />
+          <ScalarProperty Name="change_GeneralInfo" ColumnName="change_GeneralInfo" />
+          <ScalarProperty Name="light_ChevronChange" ColumnName="light_ChevronChange" />
+          <ScalarProperty Name="light_ChevronCol" ColumnName="light_ChevronCol" />
+          <ScalarProperty Name="light_ChevronNo" ColumnName="light_ChevronNo" />
+          <ScalarProperty Name="light_HighmountedStopLightChange" ColumnName="light_HighmountedStopLightChange" />
+          <ScalarProperty Name="light_HighmountedStopLightCol" ColumnName="light_HighmountedStopLightCol" />
+          <ScalarProperty Name="light_HighmountedStopLightNo" ColumnName="light_HighmountedStopLightNo" />
+          <ScalarProperty Name="light_DayRunningLightChange" ColumnName="light_DayRunningLightChange" />
+          <ScalarProperty Name="light_DayRunningLightCol" ColumnName="light_DayRunningLightCol" />
+          <ScalarProperty Name="light_DayRunningLightNo" ColumnName="light_DayRunningLightNo" />
+          <ScalarProperty Name="light_SideRetroReflectorChange" ColumnName="light_SideRetroReflectorChange" />
+          <ScalarProperty Name="light_SideRetroReflectorCol" ColumnName="light_SideRetroReflectorCol" />
+          <ScalarProperty Name="light_SideRetroReflectorNo" ColumnName="light_SideRetroReflectorNo" />
+          <ScalarProperty Name="light_FrtRetroReflectorChange" ColumnName="light_FrtRetroReflectorChange" />
+          <ScalarProperty Name="light_FrtRetroReflectorCol" ColumnName="light_FrtRetroReflectorCol" />
+          <ScalarProperty Name="light_FrtRetroReflectorNo" ColumnName="light_FrtRetroReflectorNo" />
+          <ScalarProperty Name="light_RrRetroReflectorChange" ColumnName="light_RrRetroReflectorChange" />
+          <ScalarProperty Name="light_RrRetroReflectorCol" ColumnName="light_RrRetroReflectorCol" />
+          <ScalarProperty Name="light_RrRetroReflectorNo" ColumnName="light_RrRetroReflectorNo" />
+          <ScalarProperty Name="light_EndOutMarkerLightRrChange" ColumnName="light_EndOutMarkerLightRrChange" />
+          <ScalarProperty Name="light_EndOutMarkerLightRrCol" ColumnName="light_EndOutMarkerLightRrCol" />
+          <ScalarProperty Name="light_EndOutMarkerLightRrNo" ColumnName="light_EndOutMarkerLightRrNo" />
+          <ScalarProperty Name="light_EndOutMarkerLightFrtChange" ColumnName="light_EndOutMarkerLightFrtChange" />
+          <ScalarProperty Name="light_EndOutMarkerLightFrtCol" ColumnName="light_EndOutMarkerLightFrtCol" />
+          <ScalarProperty Name="light_EndOutMarkerLightFrtNo" ColumnName="light_EndOutMarkerLightFrtNo" />
+          <ScalarProperty Name="light_ParkLightSideChange" ColumnName="light_ParkLightSideChange" />
+          <ScalarProperty Name="light_ParkLightSideCol" ColumnName="light_ParkLightSideCol" />
+          <ScalarProperty Name="light_ParkLightSideNo" ColumnName="light_ParkLightSideNo" />
+          <ScalarProperty Name="light_ParkLightRrChange" ColumnName="light_ParkLightRrChange" />
+          <ScalarProperty Name="light_ParkLightRrCol" ColumnName="light_ParkLightRrCol" />
+          <ScalarProperty Name="light_ParkLightRrNo" ColumnName="light_ParkLightRrNo" />
+          <ScalarProperty Name="light_ParkLightFrtChange" ColumnName="light_ParkLightFrtChange" />
+          <ScalarProperty Name="light_ParkLightFrtCol" ColumnName="light_ParkLightFrtCol" />
+          <ScalarProperty Name="light_ParkLightFrtNo" ColumnName="light_ParkLightFrtNo" />
+          <ScalarProperty Name="light_RrFogLightChange" ColumnName="light_RrFogLightChange" />
+          <ScalarProperty Name="light_RrFogLightCol" ColumnName="light_RrFogLightCol" />
+          <ScalarProperty Name="light_RrFogLightNo" ColumnName="light_RrFogLightNo" />
+          <ScalarProperty Name="light_RrPositionChange" ColumnName="light_RrPositionChange" />
+          <ScalarProperty Name="light_RrPositionSideCol" ColumnName="light_RrPositionSideCol" />
+          <ScalarProperty Name="light_RrPositionSideNo" ColumnName="light_RrPositionSideNo" />
+          <ScalarProperty Name="light_FrontPositionChange" ColumnName="light_FrontPositionChange" />
+          <ScalarProperty Name="light_FrontPositionSideCol" ColumnName="light_FrontPositionSideCol" />
+          <ScalarProperty Name="light_FrontPositionSideNo" ColumnName="light_FrontPositionSideNo" />
+          <ScalarProperty Name="light_RrRegPlatelightChange" ColumnName="light_RrRegPlatelightChange" />
+          <ScalarProperty Name="light_RrRegPlatelightCol" ColumnName="light_RrRegPlatelightCol" />
+          <ScalarProperty Name="light_RrRegPlatelightNo" ColumnName="light_RrRegPlatelightNo" />
+          <ScalarProperty Name="light_StopLightChange" ColumnName="light_StopLightChange" />
+          <ScalarProperty Name="light_StopLightCol" ColumnName="light_StopLightCol" />
+          <ScalarProperty Name="light_StopLightNo" ColumnName="light_StopLightNo" />
+          <ScalarProperty Name="light_HazardWarningSignalChange" ColumnName="light_HazardWarningSignalChange" />
+          <ScalarProperty Name="light_HazardWarningSignalCol" ColumnName="light_HazardWarningSignalCol" />
+          <ScalarProperty Name="light_DirectionIndicatorSideChange" ColumnName="light_DirectionIndicatorSideChange" />
+          <ScalarProperty Name="light_DirectionIndicatorSideCol" ColumnName="light_DirectionIndicatorSideCol" />
+          <ScalarProperty Name="light_DirectionIndicatorSideNo" ColumnName="light_DirectionIndicatorSideNo" />
+          <ScalarProperty Name="light_DirectionIndicatorRrChange" ColumnName="light_DirectionIndicatorRrChange" />
+          <ScalarProperty Name="light_DirectionIndicatorRrCol" ColumnName="light_DirectionIndicatorRrCol" />
+          <ScalarProperty Name="light_DirectionIndicatorRrNo" ColumnName="light_DirectionIndicatorRrNo" />
+          <ScalarProperty Name="light_DirectionIndicatorFrtChange" ColumnName="light_DirectionIndicatorFrtChange" />
+          <ScalarProperty Name="light_DirectionIndicatorFrtCol" ColumnName="light_DirectionIndicatorFrtCol" />
+          <ScalarProperty Name="light_DirectionIndicatorFrtNo" ColumnName="light_DirectionIndicatorFrtNo" />
+          <ScalarProperty Name="light_ReversingLightChange" ColumnName="light_ReversingLightChange" />
+          <ScalarProperty Name="light_ReversingLightCol" ColumnName="light_ReversingLightCol" />
+          <ScalarProperty Name="light_ReversingLightNo" ColumnName="light_ReversingLightNo" />
+          <ScalarProperty Name="light_FrontFoglampChange" ColumnName="light_FrontFoglampChange" />
+          <ScalarProperty Name="light_FrontFogLampCol" ColumnName="light_FrontFogLampCol" />
+          <ScalarProperty Name="light_FrontFogLampNo" ColumnName="light_FrontFogLampNo" />
+          <ScalarProperty Name="light_DippedbeamChange" ColumnName="light_DippedbeamChange" />
+          <ScalarProperty Name="light_DippedBeamCol" ColumnName="light_DippedBeamCol" />
+          <ScalarProperty Name="light_DippedBeamNo" ColumnName="light_DippedBeamNo" />
+          <ScalarProperty Name="light_MainBeamChange" ColumnName="light_MainBeamChange" />
+          <ScalarProperty Name="light_MainBeamCol" ColumnName="light_MainBeamCol" />
+          <ScalarProperty Name="light_MainbeamNo" ColumnName="light_MainbeamNo" />
+          <ScalarProperty Name="VIN_Position" ColumnName="VIN_Position" />
+          <ScalarProperty Name="VIN_ChangeSymbol" ColumnName="VIN_ChangeSymbol" />
+          <ScalarProperty Name="VIN_Typical" ColumnName="VIN_Typical" />
+          <ScalarProperty Name="isLocal" ColumnName="isLocal" />
+          <ScalarProperty Name="isCKD" ColumnName="isCKD" />
+          <ScalarProperty Name="isSKD" ColumnName="isSKD" />
+          <ScalarProperty Name="isCBU" ColumnName="isCBU" />
+          <ScalarProperty Name="ModDerDesc" ColumnName="ModDerDesc" />
+          <ScalarProperty Name="VersionKey" ColumnName="VersionKey" />
+          <ScalarProperty Name="VersionCode" ColumnName="VersionCode" />
+          <ScalarProperty Name="HomolRefNo" ColumnName="HomolRefNo" />
+          <ScalarProperty Name="HomolDate" ColumnName="HomolDate" />
+          <ScalarProperty Name="ModelDeletionDate" ColumnName="ModelDeletionDate" />
+          <ScalarProperty Name="ModelIntroDate" ColumnName="ModelIntroDate" />
+          <ScalarProperty Name="SampleVehAvailabilityDate" ColumnName="SampleVehAvailabilityDate" />
+          <ScalarProperty Name="RequestedHomolDate" ColumnName="RequestedHomolDate" />
+          <ScalarProperty Name="ManufacturersAddress" ColumnName="ManufacturersAddress" />
+          <ScalarProperty Name="ManufacturersName" ColumnName="ManufacturersName" />
+          <ScalarProperty Name="vehicleCatID" ColumnName="vehicleCatID" />
+          <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+          <ScalarProperty Name="MarqueSymbol" ColumnName="MarqueSymbol" />
+          <ScalarProperty Name="Make" ColumnName="Make" />
+          <ScalarProperty Name="localRepID" ColumnName="localRepID" />
+          <ScalarProperty Name="modelID" ColumnName="modelID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_Model_Change">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_Model_Change">
+        <MappingFragment StoreEntitySet="db_Model_Change">
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="modelID" ColumnName="modelID" />
+          <ScalarProperty Name="ChangeNo" ColumnName="ChangeNo" />
+          <ScalarProperty Name="modelChangeID" ColumnName="modelChangeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_Model_MIBs">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_Model_MIBs">
+        <MappingFragment StoreEntitySet="db_Model_MIBs">
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="localRepID" ColumnName="localRepID" />
+          <ScalarProperty Name="modelID" ColumnName="modelID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_Model_Plant">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_Model_Plant">
+        <MappingFragment StoreEntitySet="db_Model_Plant">
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="plantID" ColumnName="plantID" />
+          <ScalarProperty Name="modelID" ColumnName="modelID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_Model_SOE">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_Model_SOE">
+        <MappingFragment StoreEntitySet="db_Model_SOE">
+          <ScalarProperty Name="ChangeSymbol" ColumnName="ChangeSymbol" />
+          <ScalarProperty Name="isSAHomol" ColumnName="isSAHomol" />
+          <ScalarProperty Name="TestDate" ColumnName="TestDate" />
+          <ScalarProperty Name="testHouseID" ColumnName="testHouseID" />
+          <ScalarProperty Name="isCriticalApproval" ColumnName="isCriticalApproval" />
+          <ScalarProperty Name="ReportNo" ColumnName="ReportNo" />
+          <ScalarProperty Name="ApprovalType" ColumnName="ApprovalType" />
+          <ScalarProperty Name="standardDescripID" ColumnName="standardDescripID" />
+          <ScalarProperty Name="modelID" ColumnName="modelID" />
+          <ScalarProperty Name="model_SoeID" ColumnName="model_SoeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_Model_WMI">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_Model_WMI">
+        <MappingFragment StoreEntitySet="db_Model_WMI">
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="wmiCode" ColumnName="wmiCode" />
+          <ScalarProperty Name="modelID" ColumnName="modelID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_NatisError">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_NatisError">
+        <MappingFragment StoreEntitySet="db_NatisError">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="DateCorrected" ColumnName="DateCorrected" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="CorrectEntry" ColumnName="CorrectEntry" />
+          <ScalarProperty Name="IncorrectEntry" ColumnName="IncorrectEntry" />
+          <ScalarProperty Name="Field" ColumnName="Field" />
+          <ScalarProperty Name="variantID" ColumnName="variantID" />
+          <ScalarProperty Name="natisErrorID" ColumnName="natisErrorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_NatisVehicleCat">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_NatisVehicleCat">
+        <MappingFragment StoreEntitySet="db_NatisVehicleCat">
+          <ScalarProperty Name="VehCat" ColumnName="VehCat" />
+          <ScalarProperty Name="natisVehicleCatID" ColumnName="natisVehicleCatID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_Photo">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_Photo">
+        <MappingFragment StoreEntitySet="db_Photo">
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="FriendlyName" ColumnName="FriendlyName" />
+          <ScalarProperty Name="photoID" ColumnName="photoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_Plant">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_Plant">
+        <MappingFragment StoreEntitySet="db_Plant">
+          <ScalarProperty Name="PlantName" ColumnName="PlantName" />
+          <ScalarProperty Name="plantCode" ColumnName="plantCode" />
+          <ScalarProperty Name="plantID" ColumnName="plantID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_PowerAssist">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_PowerAssist">
+        <MappingFragment StoreEntitySet="db_PowerAssist">
+          <ScalarProperty Name="powerAssistCode" ColumnName="powerAssistCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_Rim">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_Rim">
+        <MappingFragment StoreEntitySet="db_Rim">
+          <ScalarProperty Name="Offset" ColumnName="Offset" />
+          <ScalarProperty Name="RimSize" ColumnName="RimSize" />
+          <ScalarProperty Name="rimID" ColumnName="rimID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_StandardDescrip">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_StandardDescrip">
+        <MappingFragment StoreEntitySet="db_StandardDescrip">
+          <ScalarProperty Name="SSMA_TimeStamp" ColumnName="SSMA_TimeStamp" />
+          <ScalarProperty Name="BasicReq" ColumnName="BasicReq" />
+          <ScalarProperty Name="N2EquivStd" ColumnName="N2EquivStd" />
+          <ScalarProperty Name="N2Sec" ColumnName="N2Sec" />
+          <ScalarProperty Name="N2ComplianceStd" ColumnName="N2ComplianceStd" />
+          <ScalarProperty Name="SAAccreditation" ColumnName="SAAccreditation" />
+          <ScalarProperty Name="N1Sec" ColumnName="N1Sec" />
+          <ScalarProperty Name="N1EquivStd" ColumnName="N1EquivStd" />
+          <ScalarProperty Name="N1ComplianceStd" ColumnName="N1ComplianceStd" />
+          <ScalarProperty Name="M2EquivStd" ColumnName="M2EquivStd" />
+          <ScalarProperty Name="M2Sec" ColumnName="M2Sec" />
+          <ScalarProperty Name="M2ComplianceStd" ColumnName="M2ComplianceStd" />
+          <ScalarProperty Name="M1TARef" ColumnName="M1TARef" />
+          <ScalarProperty Name="M1EquivStd" ColumnName="M1EquivStd" />
+          <ScalarProperty Name="M1Sec" ColumnName="M1Sec" />
+          <ScalarProperty Name="M1ComplianceStd" ColumnName="M1ComplianceStd" />
+          <ScalarProperty Name="Req" ColumnName="Req" />
+          <ScalarProperty Name="Para" ColumnName="Para" />
+          <ScalarProperty Name="standardDescripID" ColumnName="standardDescripID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_SuspensionType">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_SuspensionType">
+        <MappingFragment StoreEntitySet="db_SuspensionType">
+          <ScalarProperty Name="Descrip" ColumnName="Descrip" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="suspensionTypeID" ColumnName="suspensionTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_TestHouse">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_TestHouse">
+        <MappingFragment StoreEntitySet="db_TestHouse">
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="TestHouse" ColumnName="TestHouse" />
+          <ScalarProperty Name="testHouseID" ColumnName="testHouseID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_Transmission">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_Transmission">
+        <MappingFragment StoreEntitySet="db_Transmission">
+          <ScalarProperty Name="FAM" ColumnName="FAM" />
+          <ScalarProperty Name="HomolComment" ColumnName="HomolComment" />
+          <ScalarProperty Name="HomolDesc" ColumnName="HomolDesc" />
+          <ScalarProperty Name="PRno" ColumnName="PRno" />
+          <ScalarProperty Name="transmissionID" ColumnName="transmissionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_Tyre">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_Tyre">
+        <MappingFragment StoreEntitySet="db_Tyre">
+          <ScalarProperty Name="Plyrating" ColumnName="Plyrating" />
+          <ScalarProperty Name="PRNo" ColumnName="PRNo" />
+          <ScalarProperty Name="Tyre" ColumnName="Tyre" />
+          <ScalarProperty Name="tyreID" ColumnName="tyreID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_User">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_User">
+        <MappingFragment StoreEntitySet="db_User">
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="passwordHash" ColumnName="passwordHash" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_Variant">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_Variant">
+        <MappingFragment StoreEntitySet="db_Variant">
+          <ScalarProperty Name="WVTANumber" ColumnName="WVTANumber" />
+          <ScalarProperty Name="reports_SABSInspectionDate" ColumnName="reports_SABSInspectionDate" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="NaTISVehCat" ColumnName="NaTISVehCat" />
+          <ScalarProperty Name="VersionCode" ColumnName="VersionCode" />
+          <ScalarProperty Name="VehRel" ColumnName="VehRel" />
+          <ScalarProperty Name="VWModelCode" ColumnName="VWModelCode" />
+          <ScalarProperty Name="TACode" ColumnName="TACode" />
+          <ScalarProperty Name="timing_AwaitSABSNaTIS" ColumnName="timing_AwaitSABSNaTIS" />
+          <ScalarProperty Name="timing_NaTISUpdateSentDate" ColumnName="timing_NaTISUpdateSentDate" />
+          <ScalarProperty Name="timing_NaTISReceivedEmailDate" ColumnName="timing_NaTISReceivedEmailDate" />
+          <ScalarProperty Name="timing_NaTISEmailDate" ColumnName="timing_NaTISEmailDate" />
+          <ScalarProperty Name="timing_NaTISNo" ColumnName="timing_NaTISNo" />
+          <ScalarProperty Name="timing_ApplicDate" ColumnName="timing_ApplicDate" />
+          <ScalarProperty Name="timing_ManufModelCode" ColumnName="timing_ManufModelCode" />
+          <ScalarProperty Name="photoID" ColumnName="photoID" />
+          <ScalarProperty Name="tyre_ChangeSymbol" ColumnName="tyre_ChangeSymbol" />
+          <ScalarProperty Name="tyre_rr_rimID" ColumnName="tyre_rr_rimID" />
+          <ScalarProperty Name="tyre_fr_rimID" ColumnName="tyre_fr_rimID" />
+          <ScalarProperty Name="tyre_rr_tyreID" ColumnName="tyre_rr_tyreID" />
+          <ScalarProperty Name="tyre_fr_tyreID" ColumnName="tyre_fr_tyreID" />
+          <ScalarProperty Name="suspension_rr_suspensionTypeID" ColumnName="suspension_rr_suspensionTypeID" />
+          <ScalarProperty Name="suspension_fr_suspensionTypeID" ColumnName="suspension_fr_suspensionTypeID" />
+          <ScalarProperty Name="axle_WheelChangeSymbol" ColumnName="axle_WheelChangeSymbol" />
+          <ScalarProperty Name="axle_WheelsR3" ColumnName="axle_WheelsR3" />
+          <ScalarProperty Name="axle_WheelsR2" ColumnName="axle_WheelsR2" />
+          <ScalarProperty Name="axle_WheelsR1" ColumnName="axle_WheelsR1" />
+          <ScalarProperty Name="axle_WheelsF2" ColumnName="axle_WheelsF2" />
+          <ScalarProperty Name="axle_WheelsF1" ColumnName="axle_WheelsF1" />
+          <ScalarProperty Name="axle_AxleChangeSymbol" ColumnName="axle_AxleChangeSymbol" />
+          <ScalarProperty Name="axle_NoSteerDrive" ColumnName="axle_NoSteerDrive" />
+          <ScalarProperty Name="axle_NoDriveOnly" ColumnName="axle_NoDriveOnly" />
+          <ScalarProperty Name="axle_NoSteerOnly" ColumnName="axle_NoSteerOnly" />
+          <ScalarProperty Name="axle_NoDualTyres" ColumnName="axle_NoDualTyres" />
+          <ScalarProperty Name="axle_NoTot" ColumnName="axle_NoTot" />
+          <ScalarProperty Name="dsmw_isAssessedNa" ColumnName="dsmw_isAssessedNa" />
+          <ScalarProperty Name="dsmw_isAssessed" ColumnName="dsmw_isAssessed" />
+          <ScalarProperty Name="dsmw_isB" ColumnName="dsmw_isB" />
+          <ScalarProperty Name="dsmw_isI" ColumnName="dsmw_isI" />
+          <ScalarProperty Name="dsmw_isM" ColumnName="dsmw_isM" />
+          <ScalarProperty Name="seat_ChangeSymbol" ColumnName="seat_ChangeSymbol" />
+          <ScalarProperty Name="seat_NoPosOpt2" ColumnName="seat_NoPosOpt2" />
+          <ScalarProperty Name="seat_NoPosOpt1" ColumnName="seat_NoPosOpt1" />
+          <ScalarProperty Name="seat_NoPosBase" ColumnName="seat_NoPosBase" />
+          <ScalarProperty Name="seat_PRNo" ColumnName="seat_PRNo" />
+          <ScalarProperty Name="door_NoRear" ColumnName="door_NoRear" />
+          <ScalarProperty Name="door_NoSide" ColumnName="door_NoSide" />
+          <ScalarProperty Name="door_PRNo" ColumnName="door_PRNo" />
+          <ScalarProperty Name="wheelflap_Rr" ColumnName="wheelflap_Rr" />
+          <ScalarProperty Name="wheelflap_Fr" ColumnName="wheelflap_Fr" />
+          <ScalarProperty Name="mirror_ChangeSymbol" ColumnName="mirror_ChangeSymbol" />
+          <ScalarProperty Name="mirror_WideAngle" ColumnName="mirror_WideAngle" />
+          <ScalarProperty Name="mirror_CloseProx" ColumnName="mirror_CloseProx" />
+          <ScalarProperty Name="mirror_ExtLHS" ColumnName="mirror_ExtLHS" />
+          <ScalarProperty Name="mirror_ExtRHS" ColumnName="mirror_ExtRHS" />
+          <ScalarProperty Name="mirror_Int" ColumnName="mirror_Int" />
+          <ScalarProperty Name="brake_BrakeChange" ColumnName="brake_BrakeChange" />
+          <ScalarProperty Name="brake_BrakeControlCode" ColumnName="brake_BrakeControlCode" />
+          <ScalarProperty Name="brake_AntiLockSystem" ColumnName="brake_AntiLockSystem" />
+          <ScalarProperty Name="brake_ParkBrake" ColumnName="brake_ParkBrake" />
+          <ScalarProperty Name="brake_PowerAssistCode" ColumnName="brake_PowerAssistCode" />
+          <ScalarProperty Name="brake_rr_brakeID" ColumnName="brake_rr_brakeID" />
+          <ScalarProperty Name="brake_fr_brakeID" ColumnName="brake_fr_brakeID" />
+          <ScalarProperty Name="brake_ServiceBrake" ColumnName="brake_ServiceBrake" />
+          <ScalarProperty Name="mass_ChangeSymbol" ColumnName="mass_ChangeSymbol" />
+          <ScalarProperty Name="mass_BodyPRNo" ColumnName="mass_BodyPRNo" />
+          <ScalarProperty Name="mass_ModelPRNo" ColumnName="mass_ModelPRNo" />
+          <ScalarProperty Name="mass_D" ColumnName="mass_D" />
+          <ScalarProperty Name="mass_V" ColumnName="mass_V" />
+          <ScalarProperty Name="mass_A_Tag" ColumnName="mass_A_Tag" />
+          <ScalarProperty Name="mass_A_Rear" ColumnName="mass_A_Rear" />
+          <ScalarProperty Name="mass_A_Front" ColumnName="mass_A_Front" />
+          <ScalarProperty Name="mass_GA_Tag" ColumnName="mass_GA_Tag" />
+          <ScalarProperty Name="mass_GA_Rear" ColumnName="mass_GA_Rear" />
+          <ScalarProperty Name="mass_GA_Front" ColumnName="mass_GA_Front" />
+          <ScalarProperty Name="mass_GCM" ColumnName="mass_GCM" />
+          <ScalarProperty Name="mass_GVM" ColumnName="mass_GVM" />
+          <ScalarProperty Name="mass_TareMax" ColumnName="mass_TareMax" />
+          <ScalarProperty Name="mass_TareMass" ColumnName="mass_TareMass" />
+          <ScalarProperty Name="mass_MassSortenKode" ColumnName="mass_MassSortenKode" />
+          <ScalarProperty Name="dimen_SteeringAxleSpacingM" ColumnName="dimen_SteeringAxleSpacingM" />
+          <ScalarProperty Name="dimen_AxleUnitSpacingM" ColumnName="dimen_AxleUnitSpacingM" />
+          <ScalarProperty Name="dimen_ChangeSymbol" ColumnName="dimen_ChangeSymbol" />
+          <ScalarProperty Name="dimen_MinTurningRadius" ColumnName="dimen_MinTurningRadius" />
+          <ScalarProperty Name="dimen_RearOverhang" ColumnName="dimen_RearOverhang" />
+          <ScalarProperty Name="dimen_Height" ColumnName="dimen_Height" />
+          <ScalarProperty Name="dimen_Width" ColumnName="dimen_Width" />
+          <ScalarProperty Name="dimen_Length" ColumnName="dimen_Length" />
+          <ScalarProperty Name="dimen_TrackR" ColumnName="dimen_TrackR" />
+          <ScalarProperty Name="dimen_TrackF" ColumnName="dimen_TrackF" />
+          <ScalarProperty Name="dimen_WheelbaseMin" ColumnName="dimen_WheelbaseMin" />
+          <ScalarProperty Name="dimen_WheelBase" ColumnName="dimen_WheelBase" />
+          <ScalarProperty Name="transmission_Applic" ColumnName="transmission_Applic" />
+          <ScalarProperty Name="transmission_ChangeSymbol" ColumnName="transmission_ChangeSymbol" />
+          <ScalarProperty Name="transmission_FuelConsumption" ColumnName="transmission_FuelConsumption" />
+          <ScalarProperty Name="transmission_CO2" ColumnName="transmission_CO2" />
+          <ScalarProperty Name="transmission_Speed" ColumnName="transmission_Speed" />
+          <ScalarProperty Name="transmission_transmissionID" ColumnName="transmission_transmissionID" />
+          <ScalarProperty Name="engine_PRNo" ColumnName="engine_PRNo" />
+          <ScalarProperty Name="engine_DeletionDate" ColumnName="engine_DeletionDate" />
+          <ScalarProperty Name="engine_EngChange" ColumnName="engine_EngChange" />
+          <ScalarProperty Name="engine_engineID" ColumnName="engine_engineID" />
+          <ScalarProperty Name="VehicleDescription" ColumnName="VehicleDescription" />
+          <ScalarProperty Name="FileRef" ColumnName="FileRef" />
+          <ScalarProperty Name="ModelRef" ColumnName="ModelRef" />
+          <ScalarProperty Name="CDNo" ColumnName="CDNo" />
+          <ScalarProperty Name="ChangeSymbol" ColumnName="ChangeSymbol" />
+          <ScalarProperty Name="natisVehicleCatID" ColumnName="natisVehicleCatID" />
+          <ScalarProperty Name="bodyID" ColumnName="bodyID" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="NatisDerivative" ColumnName="NatisDerivative" />
+          <ScalarProperty Name="VariantIdentification" ColumnName="VariantIdentification" />
+          <ScalarProperty Name="isCurrent" ColumnName="isCurrent" />
+          <ScalarProperty Name="variantNo" ColumnName="variantNo" />
+          <ScalarProperty Name="derivID" ColumnName="derivID" />
+          <ScalarProperty Name="modelID" ColumnName="modelID" />
+          <ScalarProperty Name="variantID" ColumnName="variantID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_Variant_Inspection">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_Variant_Inspection">
+        <MappingFragment StoreEntitySet="db_Variant_Inspection">
+          <ScalarProperty Name="inspSABSDate" ColumnName="inspSABSDate" />
+          <ScalarProperty Name="inspVWDate" ColumnName="inspVWDate" />
+          <ScalarProperty Name="variantID" ColumnName="variantID" />
+          <ScalarProperty Name="variant_InspectionID" ColumnName="variant_InspectionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_VehicleCat">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_VehicleCat">
+        <MappingFragment StoreEntitySet="db_VehicleCat">
+          <ScalarProperty Name="VehCat" ColumnName="VehCat" />
+          <ScalarProperty Name="vehicleCatID" ColumnName="vehicleCatID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_WMI">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_WMI">
+        <MappingFragment StoreEntitySet="db_WMI">
+          <ScalarProperty Name="WMI" ColumnName="WMI" />
+          <ScalarProperty Name="wmiCode" ColumnName="wmiCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="db_Wording">
+      <EntityTypeMapping TypeName="VolkswagenModel.db_Wording">
+        <MappingFragment StoreEntitySet="db_Wording">
+          <ScalarProperty Name="EmailTitle" ColumnName="EmailTitle" />
+          <ScalarProperty Name="EmailCC" ColumnName="EmailCC" />
+          <ScalarProperty Name="EmailTo" ColumnName="EmailTo" />
+          <ScalarProperty Name="Wording" ColumnName="Wording" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="wordingID" ColumnName="wordingID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,44 @@
+﻿<Bundling>
+  <!--========================== Home Starts ===================================-->
+  <Js Name="~/bundles/js_HomeLogin">
+    <Path>~/r/Admin/Views/Login/login.js</Path>
+  </Js>
+  <!--========================== Home Starts ===================================-->
+
+  <!--========================== Guest Starts ===================================-->
+  <Js Name="~/bundles/js_GuestRsvp">
+    <Path>~/r/Admin/Views/RSVP/rsvp.js</Path>
+  </Js>
+  <Js Name="~/bundles/js_GuestResetPassword">
+    <Path>~/r/Admin/Views/ResetPassword/resetpassword.js</Path>
+  </Js>
+  <Js Name="~/bundles/js_GuestRegistry">
+    <Path>~/r/Admin/Views/Registry/guestregistry.js</Path>
+  </Js>
+  <Js Name="~/bundles/js_GuestActivity">
+    <Path>~/r/Admin/Views/Activity/guestactivity.js</Path>
+  </Js>
+  <!--========================== Guest End ===================================-->
+
+  <!--========================== Admin Starts ===================================-->
+  <Js Name="~/bundles/js_AdminGuestList">
+    <Path>~/r/Admin/Views/Guest/guestlist.js</Path>
+  </Js>
+  <Js Name="~/bundles/js_AdminGuestCouples">
+   <Path>~/r/Admin/Views/Guest/guestcouples.js</Path>
+  </Js>
+  <Js Name="~/bundles/js_AdminActivityCategory">
+    <Path>~/r/Admin/Views/Activity/activitycategory.js</Path>
+  </Js>
+  <Js Name="~/bundles/js_AdminActivity">
+    <Path>~/r/Admin/Views/Activity/activitylist.js</Path>
+  </Js>
+  <Js Name="~/bundles/js_AdminRegistry">
+    <Path>~/r/Admin/Views/Registry/registry.js</Path>
+  </Js>
+  <Js Name="~/bundles/js_AdminDash">
+    <Path>~/r/Admin/Views/Dash/admindash.js</Path>
+  </Js>
+  <!--========================== Admin Ends ===================================-->
+
+</Bundling>

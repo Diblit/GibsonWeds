@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bab85e38c95a4564bd82f3c6547f6274" Name="Diagram1">
+        <EntityTypeShape EntityType="GibsonWedsModel.db_Activity" Width="1.5" PointX="5.25" PointY="2.375" />
+        <EntityTypeShape EntityType="GibsonWedsModel.db_ActivityCategory" Width="1.5" PointX="3" PointY="7.5" />
+        <EntityTypeShape EntityType="GibsonWedsModel.db_GroupCouple" Width="1.5" PointX="0.75" PointY="2.625" />
+        <EntityTypeShape EntityType="GibsonWedsModel.db_Registry" Width="1.5" PointX="5.25" PointY="5.125" />
+        <EntityTypeShape EntityType="GibsonWedsModel.db_User" Width="1.5" PointX="3" PointY="1.25" />
+        <EntityTypeShape EntityType="GibsonWedsModel.sysdiagram" Width="1.5" PointX="7.75" PointY="0.75" />
+        <AssociationConnector Association="GibsonWedsModel.FK_db_Activity_db_ActivityCategory" />
+        <AssociationConnector Association="GibsonWedsModel.FK_db_Activity_db_User" />
+        <AssociationConnector Association="GibsonWedsModel.FK_db_User_db_GroupCouple" />
+        <AssociationConnector Association="GibsonWedsModel.FK_db_Registry_db_User" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

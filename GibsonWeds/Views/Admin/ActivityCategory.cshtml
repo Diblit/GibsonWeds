@@ -1,0 +1,192 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Activity Category";
+}
+
+@section head
+{
+    <script id='jsonData' type='text/data'>
+        @Html.Raw(@ViewBag.data)
+    </script>
+    <link href="~/r/Admin/css/theme.extended.css" rel="stylesheet" />
+    <link href="~/r/Admin/js/select2/select2.min.css" rel="stylesheet" />
+    <script src="~/r/Admin/js/select2/select2.min.js"></script>
+
+    @Scripts.Render("~/bundles/js_AdminActivityCategory")
+    <style>
+        h3.h3-custom-heading {
+            color: #f2f2f2;
+            background: #177bbb;
+            /*font-size: 75px;*/
+            /*line-height: 74px;*/
+            font-weight: 700;
+            margin: 0 5px 24px;
+            float: left;
+            padding: 10px;
+        }
+
+        p.p-custom-heading {
+            color: #177bbb;
+            background: #e9edf4;
+            font-size: 15px;
+            line-height: 15px;
+            font-weight: 700;
+            margin: 0 5px 24px;
+            float: left;
+            padding: 10px;
+        }
+    </style>
+}
+
+@section breadcrumb {
+    <div class="col-md-12">
+        <ul class="breadcrumb">
+            <li><a href="~/Admin/AdminDash"><i class="fa fa-home"></i> Home</a></li>
+            <li class="active">Activity Category</li>
+        </ul>
+    </div>
+
+}
+
+<section class="panel panel-default">
+    <header class="panel-heading">
+        <h4>Activity Category</h4>
+    </header>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered table-condensed m-b-none valign-middle" id="tblActivityCategory" data-ride="datatables">
+                @*<thead>
+                    <tr>
+                        <th class="w200 minw200">
+                            Activity Name
+                        </th>
+                        <th class="w200 minw200">
+                            Activity Price
+                        </th>
+                        <th class="text-center w100 minw100">
+                            Actions
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Fishing</td>
+                        <td>R100</td>
+                        <td class="text-center">
+                            <span data-toggle="tooltip" title="Edit">
+                                <a href="#" data-toggle="modal" class="btn btn-sm btn-icon btn-primary i i-pencil"></a>
+                            </span>
+                            <span data-toggle="tooltip" title="Remove">
+                                <a href="javascript:;" class="btn btn-sm btn-icon btn-danger i i-cross2"></a>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>*@
+            </table>
+        </div>
+    </div>
+
+    <div class="panel-footer">
+        <div class="text-center">
+            <a href="#modalAddActCat" data-toggle="modal" class="btn btn-primary" onclick="cancelEdit()">
+                <i class="fa fa-plus" aria-hidden="true"></i>&nbsp;|&nbsp;Add Activity Category
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<div id="modalAddActCat" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <p class="p-custom-heading">Activity Category</p>
+                    </div>
+
+                    <div class="form-group">                       
+                        <div class="col-sm-6">
+                            <div class="">
+                                <label for="" class="control-label fw600">Activity Name: <span class="text-danger">*</span></label>
+                                <input type="text" id="tbActCatNameAdd" class="form-control input-sm" placeholder="" value="" />
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="">
+                                <label for="" class="control-label fw600">Price: </label>
+                                <input type="text" id="tbActCatPriceAdd" class="form-control input-sm" placeholder="" value="" />
+                            </div>
+                        </div>
+                    </div>                    
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <div class="clearfix text-center">
+                    <label class="text-danger" id="lblErrorAdd"></label>
+                </div>
+                <a href="javascript:;" class="btn btn-primary" onclick="SaveActivityCategoryAdd()">
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;|&nbsp;Save
+                </a>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="modalEditActCat" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Edit</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <p class="p-custom-heading">Activity Category</p>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-6">
+                            <div class="">
+                                <label for="" class="control-label fw600">Activity Name: <span class="text-danger">*</span></label>
+                                <input type="text" id="tbActCatNameEdit" class="form-control input-sm" placeholder="" value=""/>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="">
+                                <label for="" class="control-label fw600">Price: </label>
+                                <input type="text" id="tbActCatPriceEdit" class="form-control input-sm" placeholder="" value="" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <div class="clearfix text-center">
+                    <label class="text-danger" id="lblErrorEdit"></label>
+                </div>
+                <a href="javascript:;" class="btn btn-primary" onclick="SaveActivityCategoryEdit()">
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;|&nbsp;Save
+                </a>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GibsonWeddingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="db_Activity">
+    <Key>
+      <PropertyRef Name="activityID" />
+    </Key>
+    <Property Name="activityID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="activityCategoryID" Type="bigint" Nullable="false" />
+    <Property Name="userID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_ActivityCategory">
+    <Key>
+      <PropertyRef Name="activityCategoryID" />
+    </Key>
+    <Property Name="activityCategoryID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Price" Type="money" />
+  </EntityType>
+  <EntityType Name="db_GroupCouple">
+    <Key>
+      <PropertyRef Name="groupCoupleID" />
+    </Key>
+    <Property Name="groupCoupleID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CoupleName" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_Registry">
+    <Key>
+      <PropertyRef Name="registryID" />
+    </Key>
+    <Property Name="registryID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GiftName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="isSelected" Type="bit" />
+    <Property Name="selectedUserID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="db_User">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Cell" Type="nvarchar" MaxLength="50" />
+    <Property Name="allowPlusOne" Type="bit" />
+    <Property Name="isPlusOne" Type="bit" />
+    <Property Name="groupCoupleID" Type="bigint" />
+    <Property Name="isGuest" Type="bit" />
+    <Property Name="isAdmin" Type="bit" />
+    <Property Name="hasRSVPd" Type="bit" />
+    <Property Name="isAttending" Type="bit" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_db_Activity_db_ActivityCategory">
+    <End Role="db_ActivityCategory" Type="Self.db_ActivityCategory" Multiplicity="1" />
+    <End Role="db_Activity" Type="Self.db_Activity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_ActivityCategory">
+        <PropertyRef Name="activityCategoryID" />
+      </Principal>
+      <Dependent Role="db_Activity">
+        <PropertyRef Name="activityCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Activity_db_User">
+    <End Role="db_User" Type="Self.db_User" Multiplicity="1" />
+    <End Role="db_Activity" Type="Self.db_Activity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_User">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="db_Activity">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Registry_db_User">
+    <End Role="db_User" Type="Self.db_User" Multiplicity="0..1" />
+    <End Role="db_Registry" Type="Self.db_Registry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_User">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="db_Registry">
+        <PropertyRef Name="selectedUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_User_db_GroupCouple">
+    <End Role="db_GroupCouple" Type="Self.db_GroupCouple" Multiplicity="0..1" />
+    <End Role="db_User" Type="Self.db_User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_GroupCouple">
+        <PropertyRef Name="groupCoupleID" />
+      </Principal>
+      <Dependent Role="db_User">
+        <PropertyRef Name="groupCoupleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GibsonWeddingModelStoreContainer">
+    <EntitySet Name="db_Activity" EntityType="Self.db_Activity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_ActivityCategory" EntityType="Self.db_ActivityCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_GroupCouple" EntityType="Self.db_GroupCouple" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_Registry" EntityType="Self.db_Registry" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_User" EntityType="Self.db_User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_db_Activity_db_ActivityCategory" Association="Self.FK_db_Activity_db_ActivityCategory">
+      <End Role="db_ActivityCategory" EntitySet="db_ActivityCategory" />
+      <End Role="db_Activity" EntitySet="db_Activity" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Activity_db_User" Association="Self.FK_db_Activity_db_User">
+      <End Role="db_User" EntitySet="db_User" />
+      <End Role="db_Activity" EntitySet="db_Activity" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Registry_db_User" Association="Self.FK_db_Registry_db_User">
+      <End Role="db_User" EntitySet="db_User" />
+      <End Role="db_Registry" EntitySet="db_Registry" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_User_db_GroupCouple" Association="Self.FK_db_User_db_GroupCouple">
+      <End Role="db_GroupCouple" EntitySet="db_GroupCouple" />
+      <End Role="db_User" EntitySet="db_User" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,47 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+    @Scripts.Render("~/bundles/js_HomeLogin")
+    <script type="text/javascript">
+        var returnUrl = '@ViewBag.ReturnUrl';
+    </script>
+}
+@*@section head
+{
+    
+}*@
+@*<div class="col-lg-12">
+    <div class="col-lg-4" style=""></div>
+    <div class="col-lg-4 center-block" style="width:100%; height:300px; border:#fff 1px solid"></div>
+    <div class="col-lg-4" style=""></div>
+</div>*@
+
+<header id="fh5co-header" class="fh5co-cover" role="banner" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <div class="display-t">
+                    <div style="height:100px"></div>
+                    <div class="display-tc animate-box" data-animate-effect="fadeIn" style="display:block !important">
+                        <h1>Login</h1>
+                        <div class="row">
+                            <label class="col-md-4 col-xs-4" style="text-align:right"></label><input id="tbEmail" class="col-md-4 col-xs-4" type="text" placeholder="Email"/>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <label class="col-md-4 col-xs-4" style="text-align:right"></label><input id="tbPassword" class="col-md-4 col-xs-4" type="password" placeholder="Password" />
+                        </div>
+                        <br />
+                        <div class="login-processing-spinner text-center">
+                            <i id="dvProgress" class="fa fa-3x fa-spinner fa-spin text-danger" style="display:none"></i>
+                        </div>
+                        <div class="text-danger text-center">
+                            <label id="lblError"></label>
+                        </div>
+                        <p><a onclick="onLoginClick()" id="btnLogin" class="btn btn-default btn-sm" style="background-color:#eea91d !important; color:#fff !important; font-weight:bold">Login</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

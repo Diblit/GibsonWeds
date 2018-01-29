@@ -1,0 +1,1233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VolkswagenModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="db_Body">
+    <Key>
+      <PropertyRef Name="bodyID" />
+    </Key>
+    <Property Name="bodyID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BodyName" Type="nvarchar" MaxLength="500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_BrakeControl">
+    <Key>
+      <PropertyRef Name="brakeControlCode" />
+    </Key>
+    <Property Name="brakeControlCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Descrip" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="db_Brakes">
+    <Key>
+      <PropertyRef Name="brakeID" />
+    </Key>
+    <Property Name="brakeID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BrakePRno" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="VehClass" Type="nvarchar" MaxLength="50" />
+    <Property Name="HomolDesc" Type="nvarchar" MaxLength="50" />
+    <Property Name="HomolComment" Type="nvarchar" MaxLength="200" />
+    <Property Name="FAM" Type="nvarchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="db_BrakeService">
+    <Key>
+      <PropertyRef Name="serviceBrakeCode" />
+    </Key>
+    <Property Name="serviceBrakeCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Descrip" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="db_Deriv">
+    <Key>
+      <PropertyRef Name="derivID" />
+    </Key>
+    <Property Name="derivID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="derivCode" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="derivDesc" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="db_Engine">
+    <Key>
+      <PropertyRef Name="engineID" />
+    </Key>
+    <Property Name="engineID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EngineNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Location" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Capacity" Type="int" />
+    <Property Name="engineConfigCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="engineMotivePwrCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Power_kW_rpm" Type="int" />
+    <Property Name="PwrRPM" Type="int" />
+    <Property Name="engineFuelFeedCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="engineAspirationCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="PRNo" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="db_Engine_Aspiration">
+    <Key>
+      <PropertyRef Name="engineAspirationCode" />
+    </Key>
+    <Property Name="engineAspirationCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Descrip" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="db_Engine_ConfigCode">
+    <Key>
+      <PropertyRef Name="engineConfigCode" />
+    </Key>
+    <Property Name="engineConfigCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Descrip" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="db_Engine_FuelFeedCode">
+    <Key>
+      <PropertyRef Name="engineFuelFeedCode" />
+    </Key>
+    <Property Name="engineFuelFeedCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Descrip" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="db_Engine_MotivePwr">
+    <Key>
+      <PropertyRef Name="engineMotivePwrCode" />
+    </Key>
+    <Property Name="engineMotivePwrCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Decrip" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="db_ListVehicle">
+    <Key>
+      <PropertyRef Name="conversionID" />
+    </Key>
+    <Property Name="conversionID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="isExpGen" Type="bit" />
+    <Property Name="isExpNZ" Type="bit" />
+    <Property Name="isConversion" Type="bit" />
+    <Property Name="isOther" Type="bit" />
+    <Property Name="VIN" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="MBVCode" Type="int" />
+    <Property Name="MY" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateEntered" Type="datetime" />
+    <Property Name="DateCompleted" Type="datetime" />
+    <Property Name="DateDisposed" Type="datetime" />
+    <Property Name="ExemptNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="RepYear" Type="int" />
+    <Property Name="variantID" Type="bigint" Nullable="false" />
+    <Property Name="NatisDate" Type="datetime" />
+    <Property Name="NatisNo" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="db_LocalRep">
+    <Key>
+      <PropertyRef Name="localRepID" />
+    </Key>
+    <Property Name="localRepID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Initials" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="500" />
+    <Property Name="IDNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Position" Type="nvarchar" MaxLength="200" />
+    <Property Name="Place" Type="nvarchar" MaxLength="50" />
+    <Property Name="MIBName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MIBRegNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="ImporterCodeNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="StreetAddress" Type="nvarchar" MaxLength="500" />
+    <Property Name="SCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="PostalAddress" Type="nvarchar" MaxLength="500" />
+    <Property Name="PCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="TelNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="CellNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="FaxNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="TelexNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Signature" Type="varbinary(max)" />
+    <Property Name="Email" Type="nvarchar" MaxLength="500" />
+    <Property Name="isVWRep" Type="bit" Nullable="false" />
+    <Property Name="isBodyBuilder" Type="bit" Nullable="false" />
+    <Property Name="isTestHouse" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_Marque">
+    <Key>
+      <PropertyRef Name="MarqueSymbol" />
+    </Key>
+    <Property Name="MarqueSymbol" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MarqueDesc" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="db_Model">
+    <Key>
+      <PropertyRef Name="modelID" />
+    </Key>
+    <Property Name="modelID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="localRepID" Type="bigint" Nullable="false" />
+    <Property Name="Make" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="MarqueSymbol" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ModelName" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="vehicleCatID" Type="bigint" />
+    <Property Name="ManufacturersName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ManufacturersAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="RequestedHomolDate" Type="datetime" />
+    <Property Name="SampleVehAvailabilityDate" Type="datetime" />
+    <Property Name="ModelIntroDate" Type="datetime" />
+    <Property Name="ModelDeletionDate" Type="datetime" />
+    <Property Name="HomolDate" Type="datetime" />
+    <Property Name="HomolRefNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="VersionCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="VersionKey" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModDerDesc" Type="nvarchar(max)" />
+    <Property Name="isCBU" Type="bit" Nullable="false" />
+    <Property Name="isSKD" Type="bit" Nullable="false" />
+    <Property Name="isCKD" Type="bit" Nullable="false" />
+    <Property Name="isLocal" Type="bit" Nullable="false" />
+    <Property Name="VIN_Typical" Type="nvarchar" MaxLength="500" />
+    <Property Name="VIN_ChangeSymbol" Type="nvarchar" MaxLength="50" />
+    <Property Name="VIN_Position" Type="nvarchar(max)" />
+    <Property Name="light_MainbeamNo" Type="int" />
+    <Property Name="light_MainBeamCol" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_MainBeamChange" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_DippedBeamNo" Type="int" />
+    <Property Name="light_DippedBeamCol" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_DippedbeamChange" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_FrontFogLampNo" Type="int" />
+    <Property Name="light_FrontFogLampCol" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_FrontFoglampChange" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_ReversingLightNo" Type="int" />
+    <Property Name="light_ReversingLightCol" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_ReversingLightChange" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_DirectionIndicatorFrtNo" Type="int" />
+    <Property Name="light_DirectionIndicatorFrtCol" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_DirectionIndicatorFrtChange" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_DirectionIndicatorRrNo" Type="int" />
+    <Property Name="light_DirectionIndicatorRrCol" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_DirectionIndicatorRrChange" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_DirectionIndicatorSideNo" Type="int" />
+    <Property Name="light_DirectionIndicatorSideCol" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_DirectionIndicatorSideChange" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_HazardWarningSignalCol" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_HazardWarningSignalChange" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_StopLightNo" Type="int" />
+    <Property Name="light_StopLightCol" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_StopLightChange" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_RrRegPlatelightNo" Type="int" />
+    <Property Name="light_RrRegPlatelightCol" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_RrRegPlatelightChange" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_FrontPositionSideNo" Type="int" />
+    <Property Name="light_FrontPositionSideCol" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_FrontPositionChange" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_RrPositionSideNo" Type="int" />
+    <Property Name="light_RrPositionSideCol" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_RrPositionChange" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_RrFogLightNo" Type="int" />
+    <Property Name="light_RrFogLightCol" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_RrFogLightChange" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_ParkLightFrtNo" Type="int" />
+    <Property Name="light_ParkLightFrtCol" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_ParkLightFrtChange" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_ParkLightRrNo" Type="int" />
+    <Property Name="light_ParkLightRrCol" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_ParkLightRrChange" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_ParkLightSideNo" Type="int" />
+    <Property Name="light_ParkLightSideCol" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_ParkLightSideChange" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_EndOutMarkerLightFrtNo" Type="int" />
+    <Property Name="light_EndOutMarkerLightFrtCol" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_EndOutMarkerLightFrtChange" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_EndOutMarkerLightRrNo" Type="int" />
+    <Property Name="light_EndOutMarkerLightRrCol" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_EndOutMarkerLightRrChange" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_RrRetroReflectorNo" Type="int" />
+    <Property Name="light_RrRetroReflectorCol" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_RrRetroReflectorChange" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_FrtRetroReflectorNo" Type="int" />
+    <Property Name="light_FrtRetroReflectorCol" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_FrtRetroReflectorChange" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_SideRetroReflectorNo" Type="int" />
+    <Property Name="light_SideRetroReflectorCol" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_SideRetroReflectorChange" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_DayRunningLightNo" Type="int" />
+    <Property Name="light_DayRunningLightCol" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_DayRunningLightChange" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_HighmountedStopLightNo" Type="int" />
+    <Property Name="light_HighmountedStopLightCol" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_HighmountedStopLightChange" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_ChevronNo" Type="int" />
+    <Property Name="light_ChevronCol" Type="nvarchar" MaxLength="50" />
+    <Property Name="light_ChevronChange" Type="nvarchar" MaxLength="50" />
+    <Property Name="change_GeneralInfo" Type="nvarchar(max)" />
+    <Property Name="conf_1ProdSystem" Type="bit" />
+    <Property Name="conf_1ProdSystemDetail" Type="nvarchar" MaxLength="50" />
+    <Property Name="conf_2IndependantAudit" Type="bit" />
+    <Property Name="conf_2IndependantAuditDetail" Type="nvarchar" MaxLength="50" />
+    <Property Name="conf_3PersonAssuringCompliance" Type="bit" />
+    <Property Name="conf_3PersonAssuringPosition" Type="nvarchar" MaxLength="50" />
+    <Property Name="conf_3PersonAssuringName" Type="nvarchar" MaxLength="50" />
+    <Property Name="conf_4DesignAuthLocal" Type="bit" />
+    <Property Name="conf_4DesignAuthNotLocalName" Type="nvarchar" MaxLength="50" />
+    <Property Name="conf_4DesignAuthNotLocalAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="conf_5CompReqAvai" Type="bit" />
+    <Property Name="conf_5CompReqAvaiLocation" Type="nvarchar" MaxLength="50" />
+    <Property Name="conf_5CompReqAvaiPerson" Type="nvarchar" MaxLength="50" />
+    <Property Name="conf_6ChangeVerified" Type="bit" />
+  </EntityType>
+  <EntityType Name="db_Model_Change">
+    <Key>
+      <PropertyRef Name="modelChangeID" />
+    </Key>
+    <Property Name="modelChangeID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChangeNo" Type="int" Nullable="false" />
+    <Property Name="modelID" Type="bigint" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_Model_MIBs">
+    <Key>
+      <PropertyRef Name="modelID" />
+      <PropertyRef Name="localRepID" />
+    </Key>
+    <Property Name="modelID" Type="bigint" Nullable="false" />
+    <Property Name="localRepID" Type="bigint" Nullable="false" />
+    <Property Name="DateAdded" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_Model_Plant">
+    <Key>
+      <PropertyRef Name="modelID" />
+      <PropertyRef Name="plantID" />
+    </Key>
+    <Property Name="modelID" Type="bigint" Nullable="false" />
+    <Property Name="plantID" Type="bigint" Nullable="false" />
+    <Property Name="DateAdded" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_Model_SOE">
+    <Key>
+      <PropertyRef Name="model_SoeID" />
+    </Key>
+    <Property Name="model_SoeID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="modelID" Type="bigint" />
+    <Property Name="standardDescripID" Type="bigint" />
+    <Property Name="ApprovalType" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReportNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="isCriticalApproval" Type="bit" Nullable="false" />
+    <Property Name="testHouseID" Type="bigint" />
+    <Property Name="TestDate" Type="datetime" />
+    <Property Name="isSAHomol" Type="bit" Nullable="false" />
+    <Property Name="ChangeSymbol" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="db_Model_WMI">
+    <Key>
+      <PropertyRef Name="modelID" />
+      <PropertyRef Name="wmiCode" />
+    </Key>
+    <Property Name="modelID" Type="bigint" Nullable="false" />
+    <Property Name="wmiCode" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="DateAdded" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_NatisError">
+    <Key>
+      <PropertyRef Name="natisErrorID" />
+    </Key>
+    <Property Name="natisErrorID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="variantID" Type="bigint" Nullable="false" />
+    <Property Name="Field" Type="nvarchar" MaxLength="50" />
+    <Property Name="IncorrectEntry" Type="nvarchar" MaxLength="500" />
+    <Property Name="CorrectEntry" Type="nvarchar" MaxLength="500" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="DateCorrected" Type="datetime" />
+    <Property Name="isDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_NatisVehicleCat">
+    <Key>
+      <PropertyRef Name="natisVehicleCatID" />
+    </Key>
+    <Property Name="natisVehicleCatID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VehCat" Type="nvarchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_Photo">
+    <Key>
+      <PropertyRef Name="photoID" />
+    </Key>
+    <Property Name="photoID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FriendlyName" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Path" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_Plant">
+    <Key>
+      <PropertyRef Name="plantID" />
+    </Key>
+    <Property Name="plantID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="plantCode" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="PlantName" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_PowerAssist">
+    <Key>
+      <PropertyRef Name="powerAssistCode" />
+    </Key>
+    <Property Name="powerAssistCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_Rim">
+    <Key>
+      <PropertyRef Name="rimID" />
+    </Key>
+    <Property Name="rimID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RimSize" Type="int" Nullable="false" />
+    <Property Name="Offset" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_StandardDescrip">
+    <Key>
+      <PropertyRef Name="standardDescripID" />
+    </Key>
+    <Property Name="standardDescripID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Para" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Req" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="M1ComplianceStd" Type="nvarchar" MaxLength="100" />
+    <Property Name="M1Sec" Type="nvarchar" MaxLength="50" />
+    <Property Name="M1EquivStd" Type="nvarchar" MaxLength="200" />
+    <Property Name="M1TARef" Type="nvarchar" MaxLength="50" />
+    <Property Name="M2ComplianceStd" Type="nvarchar" MaxLength="150" />
+    <Property Name="M2Sec" Type="nvarchar" MaxLength="50" />
+    <Property Name="M2EquivStd" Type="nvarchar" MaxLength="200" />
+    <Property Name="N1ComplianceStd" Type="nvarchar" MaxLength="150" />
+    <Property Name="N1EquivStd" Type="nvarchar" MaxLength="200" />
+    <Property Name="N1Sec" Type="nvarchar" MaxLength="50" />
+    <Property Name="SAAccreditation" Type="bit" Nullable="false" />
+    <Property Name="N2ComplianceStd" Type="nvarchar" MaxLength="150" />
+    <Property Name="N2Sec" Type="nvarchar" MaxLength="50" />
+    <Property Name="N2EquivStd" Type="nvarchar" MaxLength="200" />
+    <Property Name="BasicReq" Type="nvarchar" MaxLength="2000" />
+    <Property Name="SSMA_TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_SuspensionType">
+    <Key>
+      <PropertyRef Name="suspensionTypeID" />
+    </Key>
+    <Property Name="suspensionTypeID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Descrip" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="db_TestHouse">
+    <Key>
+      <PropertyRef Name="testHouseID" />
+    </Key>
+    <Property Name="testHouseID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TestHouse" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Country" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="db_Transmission">
+    <Key>
+      <PropertyRef Name="transmissionID" />
+    </Key>
+    <Property Name="transmissionID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PRno" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="HomolDesc" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="HomolComment" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="FAM" Type="nvarchar" MaxLength="3" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_Tyre">
+    <Key>
+      <PropertyRef Name="tyreID" />
+    </Key>
+    <Property Name="tyreID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tyre" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="PRNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Plyrating" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="db_User">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Tel" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="passwordHash" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_Variant">
+    <Key>
+      <PropertyRef Name="variantID" />
+    </Key>
+    <Property Name="variantID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="modelID" Type="bigint" Nullable="false" />
+    <Property Name="derivID" Type="bigint" Nullable="false" />
+    <Property Name="variantNo" Type="int" Nullable="false" />
+    <Property Name="isCurrent" Type="bit" Nullable="false" />
+    <Property Name="VariantIdentification" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NatisDerivative" Type="nvarchar" MaxLength="20" />
+    <Property Name="CountryCode" Type="nvarchar" MaxLength="3" />
+    <Property Name="bodyID" Type="bigint" />
+    <Property Name="natisVehicleCatID" Type="bigint" />
+    <Property Name="ChangeSymbol" Type="nvarchar" MaxLength="50" />
+    <Property Name="CDNo" Type="int" />
+    <Property Name="ModelRef" Type="int" />
+    <Property Name="FileRef" Type="int" />
+    <Property Name="VehicleDescription" Type="nvarchar" MaxLength="2000" />
+    <Property Name="engine_engineID" Type="bigint" />
+    <Property Name="engine_EngChange" Type="nvarchar" MaxLength="50" />
+    <Property Name="engine_DeletionDate" Type="datetime" />
+    <Property Name="engine_PRNo" Type="nchar" MaxLength="10" />
+    <Property Name="transmission_transmissionID" Type="bigint" />
+    <Property Name="transmission_Speed" Type="int" />
+    <Property Name="transmission_CO2" Type="int" />
+    <Property Name="transmission_FuelConsumption" Type="float" />
+    <Property Name="transmission_ChangeSymbol" Type="nvarchar" MaxLength="50" />
+    <Property Name="transmission_Applic" Type="varchar" MaxLength="1" />
+    <Property Name="dimen_WheelBase" Type="int" />
+    <Property Name="dimen_WheelbaseMin" Type="int" />
+    <Property Name="dimen_TrackF" Type="int" />
+    <Property Name="dimen_TrackR" Type="int" />
+    <Property Name="dimen_Length" Type="int" />
+    <Property Name="dimen_Width" Type="int" />
+    <Property Name="dimen_Height" Type="int" />
+    <Property Name="dimen_RearOverhang" Type="int" />
+    <Property Name="dimen_MinTurningRadius" Type="float" />
+    <Property Name="dimen_ChangeSymbol" Type="nvarchar" MaxLength="50" />
+    <Property Name="dimen_AxleUnitSpacingM" Type="float" />
+    <Property Name="dimen_SteeringAxleSpacingM" Type="float" />
+    <Property Name="mass_MassSortenKode" Type="nvarchar" MaxLength="50" />
+    <Property Name="mass_TareMass" Type="int" />
+    <Property Name="mass_TareMax" Type="int" />
+    <Property Name="mass_GVM" Type="int" />
+    <Property Name="mass_GCM" Type="int" />
+    <Property Name="mass_GA_Front" Type="int" />
+    <Property Name="mass_GA_Rear" Type="int" />
+    <Property Name="mass_GA_Tag" Type="int" />
+    <Property Name="mass_A_Front" Type="int" />
+    <Property Name="mass_A_Rear" Type="int" />
+    <Property Name="mass_A_Tag" Type="int" />
+    <Property Name="mass_V" Type="int" />
+    <Property Name="mass_D" Type="int" />
+    <Property Name="mass_ModelPRNo" Type="nvarchar" MaxLength="3" />
+    <Property Name="mass_BodyPRNo" Type="nvarchar" MaxLength="3" />
+    <Property Name="mass_ChangeSymbol" Type="nvarchar" MaxLength="50" />
+    <Property Name="brake_ServiceBrake" Type="nvarchar" MaxLength="50" />
+    <Property Name="brake_fr_brakeID" Type="bigint" />
+    <Property Name="brake_rr_brakeID" Type="bigint" />
+    <Property Name="brake_PowerAssistCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="brake_ParkBrake" Type="nvarchar" MaxLength="50" />
+    <Property Name="brake_AntiLockSystem" Type="bit" />
+    <Property Name="brake_BrakeControlCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="brake_BrakeChange" Type="nvarchar" MaxLength="50" />
+    <Property Name="mirror_Int" Type="nvarchar" MaxLength="50" />
+    <Property Name="mirror_ExtRHS" Type="nvarchar" MaxLength="50" />
+    <Property Name="mirror_ExtLHS" Type="nvarchar" MaxLength="50" />
+    <Property Name="mirror_CloseProx" Type="nvarchar" MaxLength="50" />
+    <Property Name="mirror_WideAngle" Type="nvarchar" MaxLength="50" />
+    <Property Name="mirror_ChangeSymbol" Type="nvarchar" MaxLength="50" />
+    <Property Name="wheelflap_Fr" Type="nvarchar" MaxLength="50" />
+    <Property Name="wheelflap_Rr" Type="nvarchar" MaxLength="50" />
+    <Property Name="door_PRNo" Type="nvarchar" MaxLength="3" />
+    <Property Name="door_NoSide" Type="int" />
+    <Property Name="door_NoRear" Type="int" />
+    <Property Name="seat_PRNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="seat_NoPosBase" Type="int" />
+    <Property Name="seat_NoPosOpt1" Type="int" />
+    <Property Name="seat_NoPosOpt2" Type="int" />
+    <Property Name="seat_ChangeSymbol" Type="nvarchar" MaxLength="50" />
+    <Property Name="dsmw_isM" Type="bit" />
+    <Property Name="dsmw_isI" Type="bit" />
+    <Property Name="dsmw_isB" Type="bit" />
+    <Property Name="dsmw_isAssessed" Type="bit" />
+    <Property Name="dsmw_isAssessedNa" Type="bit" />
+    <Property Name="axle_NoTot" Type="int" />
+    <Property Name="axle_NoDualTyres" Type="int" />
+    <Property Name="axle_NoSteerOnly" Type="int" />
+    <Property Name="axle_NoDriveOnly" Type="int" />
+    <Property Name="axle_NoSteerDrive" Type="int" />
+    <Property Name="axle_AxleChangeSymbol" Type="nvarchar" MaxLength="50" />
+    <Property Name="axle_WheelsF1" Type="int" />
+    <Property Name="axle_WheelsF2" Type="int" />
+    <Property Name="axle_WheelsR1" Type="int" />
+    <Property Name="axle_WheelsR2" Type="int" />
+    <Property Name="axle_WheelsR3" Type="int" />
+    <Property Name="axle_WheelChangeSymbol" Type="nvarchar" MaxLength="50" />
+    <Property Name="suspension_fr_suspensionTypeID" Type="bigint" />
+    <Property Name="suspension_rr_suspensionTypeID" Type="bigint" />
+    <Property Name="tyre_fr_tyreID" Type="bigint" />
+    <Property Name="tyre_rr_tyreID" Type="bigint" />
+    <Property Name="tyre_fr_rimID" Type="bigint" />
+    <Property Name="tyre_rr_rimID" Type="bigint" />
+    <Property Name="tyre_ChangeSymbol" Type="nvarchar" MaxLength="50" />
+    <Property Name="photoID" Type="bigint" />
+    <Property Name="timing_ManufModelCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="timing_ApplicDate" Type="datetime2" Precision="0" />
+    <Property Name="timing_NaTISNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="timing_NaTISEmailDate" Type="datetime2" Precision="0" />
+    <Property Name="timing_NaTISReceivedEmailDate" Type="datetime2" Precision="0" />
+    <Property Name="timing_NaTISUpdateSentDate" Type="datetime2" Precision="0" />
+    <Property Name="timing_AwaitSABSNaTIS" Type="bit" />
+    <Property Name="TACode" Type="nvarchar" MaxLength="50" />
+    <Property Name="VWModelCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="VehRel" Type="datetime2" Precision="0" />
+    <Property Name="VersionCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="NaTISVehCat" Type="int" />
+    <Property Name="Comment" Type="nvarchar" MaxLength="250" />
+    <Property Name="reports_SABSInspectionDate" Type="datetime" />
+    <Property Name="WVTANumber" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="db_Variant_Inspection">
+    <Key>
+      <PropertyRef Name="variant_InspectionID" />
+    </Key>
+    <Property Name="variant_InspectionID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="variantID" Type="bigint" Nullable="false" />
+    <Property Name="inspVWDate" Type="datetime" Nullable="false" />
+    <Property Name="inspSABSDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_VehicleCat">
+    <Key>
+      <PropertyRef Name="vehicleCatID" />
+    </Key>
+    <Property Name="vehicleCatID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VehCat" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_WMI">
+    <Key>
+      <PropertyRef Name="wmiCode" />
+    </Key>
+    <Property Name="wmiCode" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="WMI" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="db_Wording">
+    <Key>
+      <PropertyRef Name="wordingID" />
+    </Key>
+    <Property Name="wordingID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="240" Nullable="false" />
+    <Property Name="Wording" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EmailTo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EmailCC" Type="nvarchar(max)" />
+    <Property Name="EmailTitle" Type="nvarchar" MaxLength="240" />
+  </EntityType>
+  <Association Name="FK_db_ConversionReport_db_Variant">
+    <End Role="db_Variant" Type="Self.db_Variant" Multiplicity="1" />
+    <End Role="db_ListVehicle" Type="Self.db_ListVehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Variant">
+        <PropertyRef Name="variantID" />
+      </Principal>
+      <Dependent Role="db_ListVehicle">
+        <PropertyRef Name="variantID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Engine_db_Engine_Aspiration">
+    <End Role="db_Engine_Aspiration" Type="Self.db_Engine_Aspiration" Multiplicity="0..1" />
+    <End Role="db_Engine" Type="Self.db_Engine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Engine_Aspiration">
+        <PropertyRef Name="engineAspirationCode" />
+      </Principal>
+      <Dependent Role="db_Engine">
+        <PropertyRef Name="engineAspirationCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Engine_db_Engine_ConfigCode">
+    <End Role="db_Engine_ConfigCode" Type="Self.db_Engine_ConfigCode" Multiplicity="0..1" />
+    <End Role="db_Engine" Type="Self.db_Engine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Engine_ConfigCode">
+        <PropertyRef Name="engineConfigCode" />
+      </Principal>
+      <Dependent Role="db_Engine">
+        <PropertyRef Name="engineConfigCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Engine_db_Engine_FuelFeedCode">
+    <End Role="db_Engine_FuelFeedCode" Type="Self.db_Engine_FuelFeedCode" Multiplicity="0..1" />
+    <End Role="db_Engine" Type="Self.db_Engine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Engine_FuelFeedCode">
+        <PropertyRef Name="engineFuelFeedCode" />
+      </Principal>
+      <Dependent Role="db_Engine">
+        <PropertyRef Name="engineFuelFeedCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Engine_db_Engine_MotivePwr">
+    <End Role="db_Engine_MotivePwr" Type="Self.db_Engine_MotivePwr" Multiplicity="0..1" />
+    <End Role="db_Engine" Type="Self.db_Engine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Engine_MotivePwr">
+        <PropertyRef Name="engineMotivePwrCode" />
+      </Principal>
+      <Dependent Role="db_Engine">
+        <PropertyRef Name="engineMotivePwrCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Model_Change_db_Model">
+    <End Role="db_Model" Type="Self.db_Model" Multiplicity="1" />
+    <End Role="db_Model_Change" Type="Self.db_Model_Change" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Model">
+        <PropertyRef Name="modelID" />
+      </Principal>
+      <Dependent Role="db_Model_Change">
+        <PropertyRef Name="modelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Model_db_LocalRep">
+    <End Role="db_LocalRep" Type="Self.db_LocalRep" Multiplicity="1" />
+    <End Role="db_Model" Type="Self.db_Model" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_LocalRep">
+        <PropertyRef Name="localRepID" />
+      </Principal>
+      <Dependent Role="db_Model">
+        <PropertyRef Name="localRepID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Model_db_Marque">
+    <End Role="db_Marque" Type="Self.db_Marque" Multiplicity="1" />
+    <End Role="db_Model" Type="Self.db_Model" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Marque">
+        <PropertyRef Name="MarqueSymbol" />
+      </Principal>
+      <Dependent Role="db_Model">
+        <PropertyRef Name="MarqueSymbol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Model_db_VehicleCat">
+    <End Role="db_VehicleCat" Type="Self.db_VehicleCat" Multiplicity="0..1" />
+    <End Role="db_Model" Type="Self.db_Model" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_VehicleCat">
+        <PropertyRef Name="vehicleCatID" />
+      </Principal>
+      <Dependent Role="db_Model">
+        <PropertyRef Name="vehicleCatID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Model_MIBs_db_LocalRep">
+    <End Role="db_LocalRep" Type="Self.db_LocalRep" Multiplicity="1" />
+    <End Role="db_Model_MIBs" Type="Self.db_Model_MIBs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_LocalRep">
+        <PropertyRef Name="localRepID" />
+      </Principal>
+      <Dependent Role="db_Model_MIBs">
+        <PropertyRef Name="localRepID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Model_MIBs_db_Model">
+    <End Role="db_Model" Type="Self.db_Model" Multiplicity="1" />
+    <End Role="db_Model_MIBs" Type="Self.db_Model_MIBs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Model">
+        <PropertyRef Name="modelID" />
+      </Principal>
+      <Dependent Role="db_Model_MIBs">
+        <PropertyRef Name="modelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Model_Plant_db_Model">
+    <End Role="db_Model" Type="Self.db_Model" Multiplicity="1" />
+    <End Role="db_Model_Plant" Type="Self.db_Model_Plant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Model">
+        <PropertyRef Name="modelID" />
+      </Principal>
+      <Dependent Role="db_Model_Plant">
+        <PropertyRef Name="modelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Model_Plant_db_Plant">
+    <End Role="db_Plant" Type="Self.db_Plant" Multiplicity="1" />
+    <End Role="db_Model_Plant" Type="Self.db_Model_Plant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Plant">
+        <PropertyRef Name="plantID" />
+      </Principal>
+      <Dependent Role="db_Model_Plant">
+        <PropertyRef Name="plantID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Model_SOE_db_Model">
+    <End Role="db_Model" Type="Self.db_Model" Multiplicity="0..1" />
+    <End Role="db_Model_SOE" Type="Self.db_Model_SOE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Model">
+        <PropertyRef Name="modelID" />
+      </Principal>
+      <Dependent Role="db_Model_SOE">
+        <PropertyRef Name="modelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Model_SOE_db_StandardDescrip">
+    <End Role="db_StandardDescrip" Type="Self.db_StandardDescrip" Multiplicity="0..1" />
+    <End Role="db_Model_SOE" Type="Self.db_Model_SOE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_StandardDescrip">
+        <PropertyRef Name="standardDescripID" />
+      </Principal>
+      <Dependent Role="db_Model_SOE">
+        <PropertyRef Name="standardDescripID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Model_SOE_db_TestHouse">
+    <End Role="db_TestHouse" Type="Self.db_TestHouse" Multiplicity="0..1" />
+    <End Role="db_Model_SOE" Type="Self.db_Model_SOE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_TestHouse">
+        <PropertyRef Name="testHouseID" />
+      </Principal>
+      <Dependent Role="db_Model_SOE">
+        <PropertyRef Name="testHouseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Model_WMI_db_Model">
+    <End Role="db_Model" Type="Self.db_Model" Multiplicity="1" />
+    <End Role="db_Model_WMI" Type="Self.db_Model_WMI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Model">
+        <PropertyRef Name="modelID" />
+      </Principal>
+      <Dependent Role="db_Model_WMI">
+        <PropertyRef Name="modelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Model_WMI_db_WMI">
+    <End Role="db_WMI" Type="Self.db_WMI" Multiplicity="1" />
+    <End Role="db_Model_WMI" Type="Self.db_Model_WMI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_WMI">
+        <PropertyRef Name="wmiCode" />
+      </Principal>
+      <Dependent Role="db_Model_WMI">
+        <PropertyRef Name="wmiCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_NatisError_db_Variant">
+    <End Role="db_Variant" Type="Self.db_Variant" Multiplicity="1" />
+    <End Role="db_NatisError" Type="Self.db_NatisError" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Variant">
+        <PropertyRef Name="variantID" />
+      </Principal>
+      <Dependent Role="db_NatisError">
+        <PropertyRef Name="variantID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_Body">
+    <End Role="db_Body" Type="Self.db_Body" Multiplicity="0..1" />
+    <End Role="db_Variant" Type="Self.db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Body">
+        <PropertyRef Name="bodyID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="bodyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_BrakeControl">
+    <End Role="db_BrakeControl" Type="Self.db_BrakeControl" Multiplicity="0..1" />
+    <End Role="db_Variant" Type="Self.db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_BrakeControl">
+        <PropertyRef Name="brakeControlCode" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="brake_BrakeControlCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_Brakes">
+    <End Role="db_Brakes" Type="Self.db_Brakes" Multiplicity="0..1" />
+    <End Role="db_Variant" Type="Self.db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Brakes">
+        <PropertyRef Name="brakeID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="brake_fr_brakeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_Brakes1">
+    <End Role="db_Brakes" Type="Self.db_Brakes" Multiplicity="0..1" />
+    <End Role="db_Variant" Type="Self.db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Brakes">
+        <PropertyRef Name="brakeID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="brake_rr_brakeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_BrakeService">
+    <End Role="db_BrakeService" Type="Self.db_BrakeService" Multiplicity="0..1" />
+    <End Role="db_Variant" Type="Self.db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_BrakeService">
+        <PropertyRef Name="serviceBrakeCode" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="brake_ServiceBrake" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_Deriv">
+    <End Role="db_Deriv" Type="Self.db_Deriv" Multiplicity="1" />
+    <End Role="db_Variant" Type="Self.db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Deriv">
+        <PropertyRef Name="derivID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="derivID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_Engine">
+    <End Role="db_Engine" Type="Self.db_Engine" Multiplicity="0..1" />
+    <End Role="db_Variant" Type="Self.db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Engine">
+        <PropertyRef Name="engineID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="engine_engineID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_Model">
+    <End Role="db_Model" Type="Self.db_Model" Multiplicity="1" />
+    <End Role="db_Variant" Type="Self.db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Model">
+        <PropertyRef Name="modelID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="modelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_NatisVehicleCat">
+    <End Role="db_NatisVehicleCat" Type="Self.db_NatisVehicleCat" Multiplicity="0..1" />
+    <End Role="db_Variant" Type="Self.db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_NatisVehicleCat">
+        <PropertyRef Name="natisVehicleCatID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="natisVehicleCatID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_Photo">
+    <End Role="db_Photo" Type="Self.db_Photo" Multiplicity="0..1" />
+    <End Role="db_Variant" Type="Self.db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Photo">
+        <PropertyRef Name="photoID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="photoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_PowerAssist">
+    <End Role="db_PowerAssist" Type="Self.db_PowerAssist" Multiplicity="0..1" />
+    <End Role="db_Variant" Type="Self.db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_PowerAssist">
+        <PropertyRef Name="powerAssistCode" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="brake_PowerAssistCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_Rim">
+    <End Role="db_Rim" Type="Self.db_Rim" Multiplicity="0..1" />
+    <End Role="db_Variant" Type="Self.db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Rim">
+        <PropertyRef Name="rimID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="tyre_fr_rimID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_Rim1">
+    <End Role="db_Rim" Type="Self.db_Rim" Multiplicity="0..1" />
+    <End Role="db_Variant" Type="Self.db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Rim">
+        <PropertyRef Name="rimID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="tyre_rr_rimID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_SuspensionType">
+    <End Role="db_SuspensionType" Type="Self.db_SuspensionType" Multiplicity="0..1" />
+    <End Role="db_Variant" Type="Self.db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_SuspensionType">
+        <PropertyRef Name="suspensionTypeID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="suspension_fr_suspensionTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_SuspensionType1">
+    <End Role="db_SuspensionType" Type="Self.db_SuspensionType" Multiplicity="0..1" />
+    <End Role="db_Variant" Type="Self.db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_SuspensionType">
+        <PropertyRef Name="suspensionTypeID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="suspension_rr_suspensionTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_Transmission">
+    <End Role="db_Transmission" Type="Self.db_Transmission" Multiplicity="0..1" />
+    <End Role="db_Variant" Type="Self.db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Transmission">
+        <PropertyRef Name="transmissionID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="transmission_transmissionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_Tyre">
+    <End Role="db_Tyre" Type="Self.db_Tyre" Multiplicity="0..1" />
+    <End Role="db_Variant" Type="Self.db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Tyre">
+        <PropertyRef Name="tyreID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="tyre_fr_tyreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_db_Tyre1">
+    <End Role="db_Tyre" Type="Self.db_Tyre" Multiplicity="0..1" />
+    <End Role="db_Variant" Type="Self.db_Variant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Tyre">
+        <PropertyRef Name="tyreID" />
+      </Principal>
+      <Dependent Role="db_Variant">
+        <PropertyRef Name="tyre_rr_tyreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Variant_Inspection_db_Variant">
+    <End Role="db_Variant" Type="Self.db_Variant" Multiplicity="1" />
+    <End Role="db_Variant_Inspection" Type="Self.db_Variant_Inspection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_Variant">
+        <PropertyRef Name="variantID" />
+      </Principal>
+      <Dependent Role="db_Variant_Inspection">
+        <PropertyRef Name="variantID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="VolkswagenModelStoreContainer">
+    <EntitySet Name="db_Body" EntityType="Self.db_Body" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_BrakeControl" EntityType="Self.db_BrakeControl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_Brakes" EntityType="Self.db_Brakes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_BrakeService" EntityType="Self.db_BrakeService" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_Deriv" EntityType="Self.db_Deriv" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_Engine" EntityType="Self.db_Engine" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_Engine_Aspiration" EntityType="Self.db_Engine_Aspiration" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_Engine_ConfigCode" EntityType="Self.db_Engine_ConfigCode" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_Engine_FuelFeedCode" EntityType="Self.db_Engine_FuelFeedCode" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_Engine_MotivePwr" EntityType="Self.db_Engine_MotivePwr" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_ListVehicle" EntityType="Self.db_ListVehicle" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_LocalRep" EntityType="Self.db_LocalRep" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_Marque" EntityType="Self.db_Marque" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_Model" EntityType="Self.db_Model" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_Model_Change" EntityType="Self.db_Model_Change" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_Model_MIBs" EntityType="Self.db_Model_MIBs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_Model_Plant" EntityType="Self.db_Model_Plant" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_Model_SOE" EntityType="Self.db_Model_SOE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_Model_WMI" EntityType="Self.db_Model_WMI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_NatisError" EntityType="Self.db_NatisError" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_NatisVehicleCat" EntityType="Self.db_NatisVehicleCat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_Photo" EntityType="Self.db_Photo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_Plant" EntityType="Self.db_Plant" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_PowerAssist" EntityType="Self.db_PowerAssist" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_Rim" EntityType="Self.db_Rim" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_StandardDescrip" EntityType="Self.db_StandardDescrip" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_SuspensionType" EntityType="Self.db_SuspensionType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_TestHouse" EntityType="Self.db_TestHouse" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_Transmission" EntityType="Self.db_Transmission" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_Tyre" EntityType="Self.db_Tyre" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_User" EntityType="Self.db_User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_Variant" EntityType="Self.db_Variant" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_Variant_Inspection" EntityType="Self.db_Variant_Inspection" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_VehicleCat" EntityType="Self.db_VehicleCat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_WMI" EntityType="Self.db_WMI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="db_Wording" EntityType="Self.db_Wording" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_db_ConversionReport_db_Variant" Association="Self.FK_db_ConversionReport_db_Variant">
+      <End Role="db_Variant" EntitySet="db_Variant" />
+      <End Role="db_ListVehicle" EntitySet="db_ListVehicle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Engine_db_Engine_Aspiration" Association="Self.FK_db_Engine_db_Engine_Aspiration">
+      <End Role="db_Engine_Aspiration" EntitySet="db_Engine_Aspiration" />
+      <End Role="db_Engine" EntitySet="db_Engine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Engine_db_Engine_ConfigCode" Association="Self.FK_db_Engine_db_Engine_ConfigCode">
+      <End Role="db_Engine_ConfigCode" EntitySet="db_Engine_ConfigCode" />
+      <End Role="db_Engine" EntitySet="db_Engine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Engine_db_Engine_FuelFeedCode" Association="Self.FK_db_Engine_db_Engine_FuelFeedCode">
+      <End Role="db_Engine_FuelFeedCode" EntitySet="db_Engine_FuelFeedCode" />
+      <End Role="db_Engine" EntitySet="db_Engine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Engine_db_Engine_MotivePwr" Association="Self.FK_db_Engine_db_Engine_MotivePwr">
+      <End Role="db_Engine_MotivePwr" EntitySet="db_Engine_MotivePwr" />
+      <End Role="db_Engine" EntitySet="db_Engine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Model_Change_db_Model" Association="Self.FK_db_Model_Change_db_Model">
+      <End Role="db_Model" EntitySet="db_Model" />
+      <End Role="db_Model_Change" EntitySet="db_Model_Change" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Model_db_LocalRep" Association="Self.FK_db_Model_db_LocalRep">
+      <End Role="db_LocalRep" EntitySet="db_LocalRep" />
+      <End Role="db_Model" EntitySet="db_Model" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Model_db_Marque" Association="Self.FK_db_Model_db_Marque">
+      <End Role="db_Marque" EntitySet="db_Marque" />
+      <End Role="db_Model" EntitySet="db_Model" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Model_db_VehicleCat" Association="Self.FK_db_Model_db_VehicleCat">
+      <End Role="db_VehicleCat" EntitySet="db_VehicleCat" />
+      <End Role="db_Model" EntitySet="db_Model" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Model_MIBs_db_LocalRep" Association="Self.FK_db_Model_MIBs_db_LocalRep">
+      <End Role="db_LocalRep" EntitySet="db_LocalRep" />
+      <End Role="db_Model_MIBs" EntitySet="db_Model_MIBs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Model_MIBs_db_Model" Association="Self.FK_db_Model_MIBs_db_Model">
+      <End Role="db_Model" EntitySet="db_Model" />
+      <End Role="db_Model_MIBs" EntitySet="db_Model_MIBs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Model_Plant_db_Model" Association="Self.FK_db_Model_Plant_db_Model">
+      <End Role="db_Model" EntitySet="db_Model" />
+      <End Role="db_Model_Plant" EntitySet="db_Model_Plant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Model_Plant_db_Plant" Association="Self.FK_db_Model_Plant_db_Plant">
+      <End Role="db_Plant" EntitySet="db_Plant" />
+      <End Role="db_Model_Plant" EntitySet="db_Model_Plant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Model_SOE_db_Model" Association="Self.FK_db_Model_SOE_db_Model">
+      <End Role="db_Model" EntitySet="db_Model" />
+      <End Role="db_Model_SOE" EntitySet="db_Model_SOE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Model_SOE_db_StandardDescrip" Association="Self.FK_db_Model_SOE_db_StandardDescrip">
+      <End Role="db_StandardDescrip" EntitySet="db_StandardDescrip" />
+      <End Role="db_Model_SOE" EntitySet="db_Model_SOE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Model_SOE_db_TestHouse" Association="Self.FK_db_Model_SOE_db_TestHouse">
+      <End Role="db_TestHouse" EntitySet="db_TestHouse" />
+      <End Role="db_Model_SOE" EntitySet="db_Model_SOE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Model_WMI_db_Model" Association="Self.FK_db_Model_WMI_db_Model">
+      <End Role="db_Model" EntitySet="db_Model" />
+      <End Role="db_Model_WMI" EntitySet="db_Model_WMI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Model_WMI_db_WMI" Association="Self.FK_db_Model_WMI_db_WMI">
+      <End Role="db_WMI" EntitySet="db_WMI" />
+      <End Role="db_Model_WMI" EntitySet="db_Model_WMI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_NatisError_db_Variant" Association="Self.FK_db_NatisError_db_Variant">
+      <End Role="db_Variant" EntitySet="db_Variant" />
+      <End Role="db_NatisError" EntitySet="db_NatisError" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_Body" Association="Self.FK_db_Variant_db_Body">
+      <End Role="db_Body" EntitySet="db_Body" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_BrakeControl" Association="Self.FK_db_Variant_db_BrakeControl">
+      <End Role="db_BrakeControl" EntitySet="db_BrakeControl" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_Brakes" Association="Self.FK_db_Variant_db_Brakes">
+      <End Role="db_Brakes" EntitySet="db_Brakes" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_Brakes1" Association="Self.FK_db_Variant_db_Brakes1">
+      <End Role="db_Brakes" EntitySet="db_Brakes" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_BrakeService" Association="Self.FK_db_Variant_db_BrakeService">
+      <End Role="db_BrakeService" EntitySet="db_BrakeService" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_Deriv" Association="Self.FK_db_Variant_db_Deriv">
+      <End Role="db_Deriv" EntitySet="db_Deriv" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_Engine" Association="Self.FK_db_Variant_db_Engine">
+      <End Role="db_Engine" EntitySet="db_Engine" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_Model" Association="Self.FK_db_Variant_db_Model">
+      <End Role="db_Model" EntitySet="db_Model" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_NatisVehicleCat" Association="Self.FK_db_Variant_db_NatisVehicleCat">
+      <End Role="db_NatisVehicleCat" EntitySet="db_NatisVehicleCat" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_Photo" Association="Self.FK_db_Variant_db_Photo">
+      <End Role="db_Photo" EntitySet="db_Photo" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_PowerAssist" Association="Self.FK_db_Variant_db_PowerAssist">
+      <End Role="db_PowerAssist" EntitySet="db_PowerAssist" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_Rim" Association="Self.FK_db_Variant_db_Rim">
+      <End Role="db_Rim" EntitySet="db_Rim" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_Rim1" Association="Self.FK_db_Variant_db_Rim1">
+      <End Role="db_Rim" EntitySet="db_Rim" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_SuspensionType" Association="Self.FK_db_Variant_db_SuspensionType">
+      <End Role="db_SuspensionType" EntitySet="db_SuspensionType" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_SuspensionType1" Association="Self.FK_db_Variant_db_SuspensionType1">
+      <End Role="db_SuspensionType" EntitySet="db_SuspensionType" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_Transmission" Association="Self.FK_db_Variant_db_Transmission">
+      <End Role="db_Transmission" EntitySet="db_Transmission" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_Tyre" Association="Self.FK_db_Variant_db_Tyre">
+      <End Role="db_Tyre" EntitySet="db_Tyre" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_db_Tyre1" Association="Self.FK_db_Variant_db_Tyre1">
+      <End Role="db_Tyre" EntitySet="db_Tyre" />
+      <End Role="db_Variant" EntitySet="db_Variant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Variant_Inspection_db_Variant" Association="Self.FK_db_Variant_Inspection_db_Variant">
+      <End Role="db_Variant" EntitySet="db_Variant" />
+      <End Role="db_Variant_Inspection" EntitySet="db_Variant_Inspection" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

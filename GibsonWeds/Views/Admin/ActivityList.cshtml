@@ -1,0 +1,99 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Activity List";
+}
+
+@section head
+{
+    <script id='jsonData' type='text/data'>
+        @Html.Raw(@ViewBag.data)
+    </script>
+    <link href="~/r/Admin/css/theme.extended.css" rel="stylesheet" />
+    <link href="~/r/Admin/js/select2/select2.min.css" rel="stylesheet" />
+    <script src="~/r/Admin/js/select2/select2.min.js"></script>
+
+    @Scripts.Render("~/bundles/js_AdminActivity")
+    <style>
+        h3.h3-custom-heading {
+            color: #f2f2f2;
+            background: #177bbb;
+            /*font-size: 75px;*/
+            /*line-height: 74px;*/
+            font-weight: 700;
+            margin: 0 5px 24px;
+            float: left;
+            padding: 10px;
+        }
+
+        p.p-custom-heading {
+            color: #177bbb;
+            background: #e9edf4;
+            font-size: 15px;
+            line-height: 15px;
+            font-weight: 700;
+            margin: 0 5px 24px;
+            float: left;
+            padding: 10px;
+        }
+    </style>
+}
+
+@section breadcrumb {
+    <div class="col-md-12">
+        <ul class="breadcrumb">
+            <li><a href="~/Admin/AdminDash"><i class="fa fa-home"></i> Home</a></li>
+            <li class="active">Activity</li>
+        </ul>
+    </div>
+
+}
+
+<section class="panel panel-default">
+    <header class="panel-heading">
+        <h4>Activity List</h4>
+    </header>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered table-condensed m-b-none valign-middle" id="tblActivityList" data-ride="datatables">
+                @*<thead>
+                        <tr>
+                            <th class="w200 minw200">
+                                Activity Name
+                            </th>
+                            <th class="w200 minw200">
+                                Activity Price
+                            </th>
+                            <th class="text-center w100 minw100">
+                                Actions
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Fishing</td>
+                            <td>R100</td>
+                            <td class="text-center">
+                                <span data-toggle="tooltip" title="Edit">
+                                    <a href="#" data-toggle="modal" class="btn btn-sm btn-icon btn-primary i i-pencil"></a>
+                                </span>
+                                <span data-toggle="tooltip" title="Remove">
+                                    <a href="javascript:;" class="btn btn-sm btn-icon btn-danger i i-cross2"></a>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>*@
+            </table>
+        </div>
+    </div>
+
+    @*<div class="panel-footer">
+        <div class="text-center">
+            <a href="#modalAddActList" data-toggle="modal" class="btn btn-primary" onclick="cancelEdit()">
+                <i class="i i-plus2"></i>&nbsp;|&nbsp;Add Guest
+            </a>
+        </div>
+    </div>*@
+</section>
+
+

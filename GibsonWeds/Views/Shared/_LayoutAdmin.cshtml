@@ -1,0 +1,324 @@
+﻿@helper toggle_menu(string url)
+{
+if (url.Equals(Request.Url.AbsolutePath, StringComparison.InvariantCultureIgnoreCase))
+{
+        @("open");
+    }
+    else
+    {
+        @("");
+    }
+}
+
+@helper url_active(string url)
+{
+if (url.Equals(Request.Url.AbsolutePath, StringComparison.InvariantCultureIgnoreCase))
+{
+        @("active");
+    }
+    else
+    {
+        @("");
+    }
+}
+@helper url_startswith(string url, string valueToReturn)
+{
+if (Request.Url.AbsolutePath.StartsWith(url, StringComparison.InvariantCultureIgnoreCase))
+{
+        @(valueToReturn);
+    }
+    else
+    {
+        @("");
+    }
+
+}
+
+@{
+//global layout user details
+//var userInfo = HttpContext.Current.userTicket();
+//ViewBag.base_url = Config.url_relative_path_base;
+}
+
+<!DOCTYPE html>
+<html lang="en" class="app">
+<head>
+    <meta charset="utf-8" />
+
+    <title>The Gibson Wedding System</title>
+
+    <meta name="description" content="The Wedding System" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="author" content="Stephanus Bezuidenhoudt">
+
+    <!-- Favicons -->
+
+    @*<link rel="apple-touch-icon" sizes="180x180" href="~/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="~/r/img/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="~/r/img/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="~/r/img/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="~/r/img/favicons/manifest.json">
+    <link rel="mask-icon" href="~/r/img/favicons/safari-pinned-tab.svg" color="#2274ac">
+    <meta name="theme-color" content="#2274ac">*@
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/r/Admin/css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+    <!-- Theme CSS -->
+    <link href="~/r/Admin/css/animate.css" rel="stylesheet" type="text/css"  />
+    <link href="~/r/Admin/css/font-awesome.min.css" rel="stylesheet" type="text/css"  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/r/Admin/css/icon.css" rel="stylesheet" type="text/css"  />
+    <link href="~/r/Admin/css/font.css" rel="stylesheet" type="text/css" />
+    <link href="~/r/Admin/css/app.css" rel="stylesheet" type="text/css"  />
+    <link href="~/r/Admin/js/datatables/datatables.css" rel="stylesheet" type="text/css"  />
+    @*<link href="~/r/js/datatables/dataTables.bootstrap.min.css" rel="stylesheet" />*@
+    <link href="~/r/Admin/js/datepicker/bootstrap-datepicker.css" rel="stylesheet" type="text/css" />
+
+    <!-- Custom CSS -->
+    <link href="~/r/Admin/css/theme.extended.css" rel="stylesheet" type="text/css" />
+    <link href="~/r/Admin/css/mediaqueries.css" rel="stylesheet" type="text/css" />
+
+    <!--Select2 css-->
+    <link href="~/r/Admin/js/select2/select2.min.css" rel="stylesheet" />
+
+    <!-- JQuery -->
+    <script src="~/r/Admin/js/jquery.min.js"></script>
+
+    <!-- Bootstrap -->    
+    <script src="~/r/Admin/js/bootstrap.js"></script>
+
+    <!-- App -->
+    <script src="~/r/Admin/js/app.js"></script>    
+    <script src="~/r/Admin/js/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="~/r/Admin/js/app.plugin.js"></script>
+    
+    <script src="~/r/Admin/js/datepicker/bootstrap-datepicker.js"></script>
+
+    <!--Helpers-->    
+    <script src="~/r/Admin/js/jquery.json/jquery.json.2-3.min.js"></script>
+    
+    <script src="~/r/Admin/js/datatables/jquery.dataTables.min.js"></script>
+
+    <script src="~/r/Admin/js/helper.datatable.js"></script>
+    <script src="~/r/Admin/js/helper.widgets.js"></script>
+    
+    <script src="~/r/Admin/js/growl/bootstrap-growl.js"></script>
+
+    <!--Select2 js-->    
+    <script src="~/r/Admin/js/select2/select2.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="js/ie/html5shiv.js"></script>
+      <script src="js/ie/respond.min.js"></script>
+      <script src="js/ie/excanvas.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var base_url = 'http://localhost:57881';
+    </script>
+    @*<script src="~/Views/Admin/r/guestlist.js"></script>*@
+    @*@Scripts.Render("~/bundles/js_VariantQuickReferenceModal")*@
+    @RenderSection("head", required: false)
+    <style>
+        @@media (min-width: 768px) {
+            .header-md .navbar-brand img {
+                max-height: 40px;
+            }
+        }
+
+        .user > li .dropdown-toggle {
+            background-color: #4c4c4c;
+        }
+    </style>
+</head>
+<body class="">
+    <section class="vbox">
+        <header class="bg-primary header header-md navbar navbar-fixed-top-xs box-shadow">
+            <div class="navbar-header aside-md dk">
+                <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <a href="~/" class="navbar-brand">
+                    @*<img src="~/r/img/vw/vw-logo-300-alt.png" class="m-r-sm hidden-xs" alt="VW">*@
+                    <span class="pl20 font-arial">
+                        Rory &amp; Melanie                        
+                    </span>
+                </a>
+                <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
+                    <i class="fa fa-cog"></i>
+                </a>
+            </div>
+            <div class="hidden-xs" style="position: absolute; left: 44%; padding-top: 10px;">
+                <h4 class="fw600 text-white font-raleway text-uppercase">The Wedding System</h4>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right m-n hidden-xs nav-user user">
+                <li>
+                    <a href="~/Home/LogOut">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;
+                        Logout
+                    </a>
+                </li>
+                @*<li class="dropdown">
+                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                        
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight">
+                        <li>
+                            <span class="arrow top"></span>
+                            <a href="~/logout">
+                                <i class="i i-logout"></i>&nbsp;
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                </li>*@
+            </ul>
+        </header>
+        <section>
+            <section class="hbox stretch">
+                <!-- .aside -->
+                <aside class="bg-light lt b-r b-light aside-md hidden-print hidden-xs nav-xs" id="nav">
+                    <!-- Added nav-xs -->
+                    <section class="vbox">
+                        <section class="w-f scrollable">
+                            <div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="10px" data-railOpacity="0.2">
+
+
+                                <!-- nav -->
+                                <nav class="nav-primary hidden-xs">
+                                    <div class="text-muted text-sm hidden-nav-xs padder m-t-sm m-b-sm">Start</div>
+                                    <ul class="nav nav-main" data-ride="collapse">
+                                        @*<li class="@url_active("/")">
+                                                <a href="/" class="auto">
+                                                    <i class="i i-statistics icon">
+                                                    </i>
+                                                    <span class="font-bold">Dashboard</span>
+                                                </a>
+                                            </li>*@
+
+                                        <li>
+                                            <a href="~/Admin/AdminDash" class="auto">
+                                                <i class="fa fa-desktop" aria-hidden="true"></i>
+                                                <span class="font-bold">Dash</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="~/Admin/GuestList" class="auto">
+                                                <i class="fa fa-user" aria-hidden="true"></i>
+                                                <span class="font-bold">Guest List</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="~/Admin/ActivityList" class="auto">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <span class="font-bold">Activity List</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="~/Admin/Registry" class="auto">
+                                                <i class="fa fa-gift" aria-hidden="true"></i>
+                                                <span>Registry</span>
+                                            </a>
+                                        </li>  
+
+                                        <li class="">
+                                            <a href="javascript:;" class="auto">
+                                                <span class="pull-right text-muted">
+                                                    <i class="fa fa-caret-right text" aria-hidden="true"></i>
+                                                    <i class="fa fa-caret-right text-active" aria-hidden="true"></i>
+                                                </span>
+                                                <i class="fa fa-cogs" aria-hidden="true"></i>
+                                                <span class="font-bold">Setup</span>
+                                            </a>
+                                            <ul class="nav dk">
+                                                <li class="">
+                                                    <a href="~/Admin/GuestCouples" class="auto">
+                                                        <i class="fa fa-users" aria-hidden="true"></i>
+                                                        <span>Guest Couples</span>
+                                                    </a>
+                                                </li>                                                                                                   
+                                                <li>
+                                                    <a href="~/Admin/ActivityCategory" class="auto">
+                                                        <i class="fa fa-trophy" aria-hidden="true"></i>
+                                                        <span>Activity Category</span>
+                                                    </a>
+                                                </li>                                                  
+                                                
+                                            </ul>
+                                        </li>                                        
+                                    </ul>
+                                    @*<div class="line dk hidden-nav-xs"></div>*@
+                                </nav>
+                                <!-- / nav -->
+                            </div>
+                        </section>
+
+                        <footer class="footer hidden-xs no-padder text-center-nav-xs">
+                            <a href="#nav" data-toggle="class:nav-xs" class="btn btn-icon icon-muted btn-inactive m-l-xs m-r-xs">
+                                <i class="fa fa-bars text" aria-hidden="true"></i>
+                                <i class="fa fa-bars text-active" aria-hidden="true"></i>
+                            </a>
+                        </footer>
+                    </section>
+                </aside>
+                <!-- /.aside -->
+                <section id="content" style="background-image:url(../../r/images/sunflowerFarm_bg.jpg)">
+                    <div style="height:100%;width:100%;position:  absolute;background-color: rgba(255,255,255,0.5);"></div>
+                    <section class="vbox">
+                        @*<header class="header bg-white b-b b-light">
+
+                            </header>*@
+                        <section class="scrollable wrapper w-f">
+                            <div class="row">
+                                @RenderSection("breadcrumb", required: false)
+                                @*<div class="middle">
+                                        @RenderSection("breadcrumbMiddle", required: false)
+                                    </div>*@
+                            </div>
+                            @RenderBody()
+                        </section>
+                        @*<footer class="footer bg-white b-t b-light p15">
+                                <span id="year-copy"></span>&copy; @DateTime.Now.Year <a href="http://www.vw.co.za/" target="_blank">Volkswagen</a>
+
+                            </footer>*@
+                    </section>
+                    <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+                </section>
+            </section>
+        </section>
+    </section>
+</body>
+</html>
+
+
+<!--Modal: Variant Quick Reference-->
+<div id="modalQuickreference" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Variant Quick Reference</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="" class="col-sm-4 control-label fw600">Enter Variant ID: </label>
+                        <div class="col-sm-8">
+                            @*<input type="text" class="form-control input-sm" placeholder="" value="" id="tbVariantQuickReference"/>*@
+                            <select id="selVariantQuickReference" style="width:100%">
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">
+                    <i class="i i-cross2"></i>&nbsp;|&nbsp;Cancel
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>

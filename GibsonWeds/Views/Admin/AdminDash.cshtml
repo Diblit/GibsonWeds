@@ -1,0 +1,82 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Admin Dash";
+}
+
+@section head
+{
+    <script id='jsonData' type='text/data'>
+            @Html.Raw(@ViewBag.data)
+        </script>
+    <link href="~/r/Admin/css/theme.extended.css" rel="stylesheet" />
+    <link href="~/r/Admin/js/select2/select2.min.css" rel="stylesheet" />
+    <script src="~/r/Admin/js/select2/select2.min.js"></script>
+
+    @Scripts.Render("~/bundles/js_AdminDash")
+    <style>
+        h3.h3-custom-heading {
+            color: #f2f2f2;
+            background: #177bbb;
+            /*font-size: 75px;*/
+            /*line-height: 74px;*/
+            font-weight: 700;
+            margin: 0 5px 24px;
+            float: left;
+            padding: 10px;
+        }
+
+        p.p-custom-heading {
+            color: #177bbb;
+            background: #e9edf4;
+            font-size: 15px;
+            line-height: 15px;
+            font-weight: 700;
+            margin: 0 5px 24px;
+            float: left;
+            padding: 10px;
+        }
+
+        .dash-admin-center {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+}
+
+@section breadcrumb {
+    <div class="col-md-12">
+        <ul class="breadcrumb">
+            <li><a href="~/Admin/AdminDash"><i class="fa fa-home"></i> Home</a></li>
+            @*<li class="active">Activity</li>*@
+        </ul>
+    </div>
+
+}
+
+<div class="">
+    <section class="col-lg-4 dash-admin-center">
+        <div class="col-md-10 panel panel-default">
+            <header class="panel-heading">
+                <h4 class="dash-admin-center">Invited Guests</h4>
+            </header>
+            <h1 class="dash-admin-center" id="lblDashInvitedGuests">0</h1>
+        </div>
+    </section>
+    <section class="col-lg-4 dash-admin-center">
+        <div class="col-md-10 panel panel-default">
+            <header class="panel-heading">
+                <h4 class="dash-admin-center">RSVP'd Yes</h4>
+            </header>
+            <h1 class="dash-admin-center" id="lblDashRSVPd">0</h1>
+        </div>
+    </section>
+    <section class="col-lg-4 dash-admin-center">
+        <div class="col-md-10 panel panel-default">
+            <header class="panel-heading">
+                <h4 class="dash-admin-center">Updated Activity Interest</h4>
+            </header>
+            <h1 class="dash-admin-center" id="lblDashActivityInterest">0</h1>
+
+        </div>
+    </section>
+</div>

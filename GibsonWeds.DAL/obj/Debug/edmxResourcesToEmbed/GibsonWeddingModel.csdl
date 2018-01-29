@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GibsonWeddingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="GibsonWeddingEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="db_Activity" EntityType="GibsonWeddingModel.db_Activity" />
+    <EntitySet Name="db_ActivityCategory" EntityType="GibsonWeddingModel.db_ActivityCategory" />
+    <EntitySet Name="db_GroupCouple" EntityType="GibsonWeddingModel.db_GroupCouple" />
+    <EntitySet Name="db_Registry" EntityType="GibsonWeddingModel.db_Registry" />
+    <EntitySet Name="db_User" EntityType="GibsonWeddingModel.db_User" />
+    <EntitySet Name="sysdiagrams" EntityType="GibsonWeddingModel.sysdiagram" />
+    <AssociationSet Name="FK_db_Activity_db_ActivityCategory" Association="GibsonWeddingModel.FK_db_Activity_db_ActivityCategory">
+      <End Role="db_ActivityCategory" EntitySet="db_ActivityCategory" />
+      <End Role="db_Activity" EntitySet="db_Activity" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Activity_db_User" Association="GibsonWeddingModel.FK_db_Activity_db_User">
+      <End Role="db_User" EntitySet="db_User" />
+      <End Role="db_Activity" EntitySet="db_Activity" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_User_db_GroupCouple" Association="GibsonWeddingModel.FK_db_User_db_GroupCouple">
+      <End Role="db_GroupCouple" EntitySet="db_GroupCouple" />
+      <End Role="db_User" EntitySet="db_User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_db_Registry_db_User" Association="GibsonWeddingModel.FK_db_Registry_db_User">
+      <End Role="db_User" EntitySet="db_User" />
+      <End Role="db_Registry" EntitySet="db_Registry" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="db_Activity">
+    <Key>
+      <PropertyRef Name="activityID" />
+    </Key>
+    <Property Name="activityID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="activityCategoryID" Type="Int64" Nullable="false" />
+    <Property Name="userID" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="db_ActivityCategory" Relationship="GibsonWeddingModel.FK_db_Activity_db_ActivityCategory" FromRole="db_Activity" ToRole="db_ActivityCategory" />
+    <NavigationProperty Name="db_User" Relationship="GibsonWeddingModel.FK_db_Activity_db_User" FromRole="db_Activity" ToRole="db_User" />
+  </EntityType>
+  <EntityType Name="db_ActivityCategory">
+    <Key>
+      <PropertyRef Name="activityCategoryID" />
+    </Key>
+    <Property Name="activityCategoryID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="db_Activity" Relationship="GibsonWeddingModel.FK_db_Activity_db_ActivityCategory" FromRole="db_ActivityCategory" ToRole="db_Activity" />
+  </EntityType>
+  <EntityType Name="db_GroupCouple">
+    <Key>
+      <PropertyRef Name="groupCoupleID" />
+    </Key>
+    <Property Name="groupCoupleID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CoupleName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="db_User" Relationship="GibsonWeddingModel.FK_db_User_db_GroupCouple" FromRole="db_GroupCouple" ToRole="db_User" />
+  </EntityType>
+  <EntityType Name="db_Registry">
+    <Key>
+      <PropertyRef Name="registryID" />
+    </Key>
+    <Property Name="registryID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GiftName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="isSelected" Type="Boolean" />
+    <Property Name="selectedUserID" Type="Int64" />
+    <NavigationProperty Name="db_User" Relationship="GibsonWeddingModel.FK_db_Registry_db_User" FromRole="db_Registry" ToRole="db_User" />
+  </EntityType>
+  <EntityType Name="db_User">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordHash" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Cell" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="allowPlusOne" Type="Boolean" />
+    <Property Name="isPlusOne" Type="Boolean" />
+    <Property Name="groupCoupleID" Type="Int64" />
+    <Property Name="isGuest" Type="Boolean" />
+    <Property Name="isAdmin" Type="Boolean" />
+    <Property Name="hasRSVPd" Type="Boolean" />
+    <Property Name="isAttending" Type="Boolean" />
+    <NavigationProperty Name="db_Activity" Relationship="GibsonWeddingModel.FK_db_Activity_db_User" FromRole="db_User" ToRole="db_Activity" />
+    <NavigationProperty Name="db_GroupCouple" Relationship="GibsonWeddingModel.FK_db_User_db_GroupCouple" FromRole="db_User" ToRole="db_GroupCouple" />
+    <NavigationProperty Name="db_Registry" Relationship="GibsonWeddingModel.FK_db_Registry_db_User" FromRole="db_User" ToRole="db_Registry" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_db_Activity_db_ActivityCategory">
+    <End Type="GibsonWeddingModel.db_ActivityCategory" Role="db_ActivityCategory" Multiplicity="1" />
+    <End Type="GibsonWeddingModel.db_Activity" Role="db_Activity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_ActivityCategory">
+        <PropertyRef Name="activityCategoryID" />
+      </Principal>
+      <Dependent Role="db_Activity">
+        <PropertyRef Name="activityCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Activity_db_User">
+    <End Type="GibsonWeddingModel.db_User" Role="db_User" Multiplicity="1" />
+    <End Type="GibsonWeddingModel.db_Activity" Role="db_Activity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_User">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="db_Activity">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_User_db_GroupCouple">
+    <End Type="GibsonWeddingModel.db_GroupCouple" Role="db_GroupCouple" Multiplicity="0..1" />
+    <End Type="GibsonWeddingModel.db_User" Role="db_User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_GroupCouple">
+        <PropertyRef Name="groupCoupleID" />
+      </Principal>
+      <Dependent Role="db_User">
+        <PropertyRef Name="groupCoupleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_db_Registry_db_User">
+    <End Type="GibsonWeddingModel.db_User" Role="db_User" Multiplicity="0..1" />
+    <End Type="GibsonWeddingModel.db_Registry" Role="db_Registry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="db_User">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="db_Registry">
+        <PropertyRef Name="selectedUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
