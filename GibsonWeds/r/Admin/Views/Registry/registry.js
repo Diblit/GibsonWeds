@@ -4,7 +4,6 @@ var registryID;
 $(document).ready(function () {
 
     mainJson = jQuery.parseJSON($('#jsonData').html());
-    debugger;
     InitRegistryTable();
 
     //$('#cmbGuestCategoryAdd').select2({

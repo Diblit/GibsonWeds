@@ -2,9 +2,8 @@
 var dtActivityCategory = null;
 var activityCategoryID;
 $(document).ready(function () {
-debugger;
+
     mainJson = jQuery.parseJSON($('#jsonData').html());
-    debugger;
     InitActivityCategoryTable();
 
     //$('#cmbGuestCategoryAdd').select2({

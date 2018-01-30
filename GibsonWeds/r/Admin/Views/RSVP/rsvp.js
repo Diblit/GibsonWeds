@@ -82,7 +82,6 @@ function GuestNotAtt(userID) {
         });
 }
 function CheckRsvp() {
-    debugger;
     //var isAtt = $('#isAttendingGuest').val();
     var isAtt = isAttendingWed;
 

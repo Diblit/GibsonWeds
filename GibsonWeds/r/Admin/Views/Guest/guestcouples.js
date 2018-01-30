@@ -4,7 +4,6 @@ var groupCoupleID;
 $(document).ready(function () {
 
     mainJson = jQuery.parseJSON($('#jsonData').html());
-    debugger;
     InitGuestCouplesTable();
 
     //$('#cmbGuestCategoryAdd').select2({

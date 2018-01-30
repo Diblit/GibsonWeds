@@ -3,7 +3,6 @@
 $(document).ready(function () {
 
     mainJson = jQuery.parseJSON($('#jsonData').html());
-    debugger;
 
     var InvitedGuests = '';
     var RSVP = '';

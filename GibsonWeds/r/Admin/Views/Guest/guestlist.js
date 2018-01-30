@@ -313,7 +313,6 @@ function Select2CoupleList() {
     $.each(mainJson.CouplesList, function (index, item) {
         GuestCoupleSelectAdd += '<option value="' + item.groupCoupleID + '">' + item.CoupleName + '</option>';
     });
-    debugger;
     $('#cmbGuestGroupCoupleAdd').append(GuestCoupleSelectAdd);
 
     $('#cmbGuestGroupCoupleAdd').select2({
