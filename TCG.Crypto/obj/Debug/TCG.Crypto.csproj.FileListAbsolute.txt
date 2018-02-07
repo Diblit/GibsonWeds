@@ -21,7 +21,7 @@ C:\Users\Stefan\Documents\Projects\GibsonWeds\TCG.Crypto\bin\Debug\EntityFramewo
 C:\Users\Stefan\Documents\Projects\GibsonWeds\TCG.Crypto\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Stefan\Documents\Projects\GibsonWeds\TCG.Crypto\bin\Debug\EntityFramework.xml
 C:\Users\Stefan\Documents\Projects\GibsonWeds\TCG.Crypto\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Stefan\Documents\Projects\GibsonWeds\TCG.Crypto\obj\Debug\TCG.Crypto.dll
-C:\Users\Stefan\Documents\Projects\GibsonWeds\TCG.Crypto\obj\Debug\TCG.Crypto.pdb
 C:\Users\Stefan\Documents\Projects\GibsonWeds\TCG.Crypto\obj\Debug\TCG.Crypto.csprojResolveAssemblyReference.cache
 C:\Users\Stefan\Documents\Projects\GibsonWeds\TCG.Crypto\obj\Debug\TCG.Crypto.csproj.CoreCompileInputs.cache
+C:\Users\Stefan\Documents\Projects\GibsonWeds\TCG.Crypto\obj\Debug\TCG.Crypto.dll
+C:\Users\Stefan\Documents\Projects\GibsonWeds\TCG.Crypto\obj\Debug\TCG.Crypto.pdb

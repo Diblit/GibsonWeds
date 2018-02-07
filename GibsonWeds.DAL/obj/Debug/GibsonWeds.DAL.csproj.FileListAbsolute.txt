@@ -26,6 +26,6 @@ C:\Users\Stefan\Documents\Projects\GibsonWeds\GibsonWeds.DAL\bin\Debug\TCG.Crypt
 C:\Users\Stefan\Documents\Projects\GibsonWeds\GibsonWeds.DAL\bin\Debug\EntityFramework.xml
 C:\Users\Stefan\Documents\Projects\GibsonWeds\GibsonWeds.DAL\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Stefan\Documents\Projects\GibsonWeds\GibsonWeds.DAL\obj\Debug\GibsonWeds.DAL.csprojResolveAssemblyReference.cache
+C:\Users\Stefan\Documents\Projects\GibsonWeds\GibsonWeds.DAL\obj\Debug\GibsonWeds.DAL.csproj.CoreCompileInputs.cache
 C:\Users\Stefan\Documents\Projects\GibsonWeds\GibsonWeds.DAL\obj\Debug\GibsonWeds.DAL.dll
 C:\Users\Stefan\Documents\Projects\GibsonWeds\GibsonWeds.DAL\obj\Debug\GibsonWeds.DAL.pdb
-C:\Users\Stefan\Documents\Projects\GibsonWeds\GibsonWeds.DAL\obj\Debug\GibsonWeds.DAL.csproj.CoreCompileInputs.cache

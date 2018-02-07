@@ -30,5 +30,7 @@ C:\Users\Stefan\Documents\Projects\GibsonWeds\TCG.ImageManipulator\bin\Debug\Ent
 C:\Users\Stefan\Documents\Projects\GibsonWeds\TCG.ImageManipulator\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Stefan\Documents\Projects\GibsonWeds\TCG.ImageManipulator\bin\Debug\Recoding.Graphics.pdb
 C:\Users\Stefan\Documents\Projects\GibsonWeds\TCG.ImageManipulator\bin\Debug\Recoding.Graphics.xml
+C:\Users\Stefan\Documents\Projects\GibsonWeds\TCG.ImageManipulator\obj\Debug\TCG.ImageManipulator.csprojResolveAssemblyReference.cache
+C:\Users\Stefan\Documents\Projects\GibsonWeds\TCG.ImageManipulator\obj\Debug\TCG.ImageManipulator.csproj.CoreCompileInputs.cache
 C:\Users\Stefan\Documents\Projects\GibsonWeds\TCG.ImageManipulator\obj\Debug\TCG.ImageManipulator.dll
 C:\Users\Stefan\Documents\Projects\GibsonWeds\TCG.ImageManipulator\obj\Debug\TCG.ImageManipulator.pdb

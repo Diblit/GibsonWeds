@@ -157,6 +157,6 @@ C:\Users\Stefan\Documents\Projects\GibsonWeds\GibsonWeds\bin\Microsoft.Owin.Secu
 C:\Users\Stefan\Documents\Projects\GibsonWeds\GibsonWeds\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Stefan\Documents\Projects\GibsonWeds\GibsonWeds\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Stefan\Documents\Projects\GibsonWeds\GibsonWeds\obj\Debug\GibsonWeds.csprojResolveAssemblyReference.cache
+C:\Users\Stefan\Documents\Projects\GibsonWeds\GibsonWeds\obj\Debug\GibsonWeds.csproj.CoreCompileInputs.cache
 C:\Users\Stefan\Documents\Projects\GibsonWeds\GibsonWeds\obj\Debug\GibsonWeds.dll
 C:\Users\Stefan\Documents\Projects\GibsonWeds\GibsonWeds\obj\Debug\GibsonWeds.pdb
-C:\Users\Stefan\Documents\Projects\GibsonWeds\GibsonWeds\obj\Debug\GibsonWeds.csproj.CoreCompileInputs.cache
