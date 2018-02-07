@@ -93,9 +93,10 @@
      */
     createElements = function (parameters, countdown) {
         var spanTag;
-
+        
         if (!parameters.inline) {
             return {
+                
                 days: createCountdownElt(countdown, parameters, 'simply-days-section'),
                 hours: createCountdownElt(countdown, parameters, 'simply-hours-section'),
                 minutes: createCountdownElt(countdown, parameters, 'simply-minutes-section'),
@@ -180,6 +181,7 @@
                 refresh;
 
             refresh = function () {
+
                 var dayWord,
                     hourWord,
                     minuteWord,

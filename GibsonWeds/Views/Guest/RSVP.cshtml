@@ -7,6 +7,7 @@
     </script>
     <script>
         var isAttendingWed = '@ViewBag.hasRsvp';
+        var allowPlusOne = '@ViewBag.allowPlusOne'
     </script>
 }
 
@@ -30,32 +31,71 @@
                         </div>
                         <div id="dvLoadRsvp">
                             @*<div class="row rsvpContact">
-                                    <div class="col-lg-6" style="text-align:right; font-size:18pt">Ame Dorfling</div>
-                                    <div class="col-lg-6">
-                                        <a href="/Guest/WeddingInfo" class="btn btn-default btn-sm" style="background-color:#279a01 !important; color:#fff !important; font-weight:bold">Attending</a>
-                                        <a href="/Guest/WeddingInfo" class="btn btn-default btn-sm" style="background-color:#9a0101 !important; color:#fff !important; font-weight:bold">Not Attending</a>
+                <div class="col-lg-6" style="text-align:right; font-size:18pt">Ame Dorfling</div>
+                <div class="col-lg-6">
+                    <a href="/Guest/WeddingInfo" class="btn btn-default btn-sm" style="background-color:#279a01 !important; color:#fff !important; font-weight:bold">Attending</a>
+                    <a href="/Guest/WeddingInfo" class="btn btn-default btn-sm" style="background-color:#9a0101 !important; color:#fff !important; font-weight:bold">Not Attending</a>
+                </div>
+            </div>
+            <div class="row rsvpContact">
+                <div class="col-lg-6" style="text-align:right; font-size:18pt">Stefan Bezuidenhoudt</div>
+                <div class="col-lg-6">
+                    <a href="/Guest/WeddingInfo" class="btn btn-default btn-sm" style="background-color:#279a01 !important; color:#fff !important; font-weight:bold">Attending</a>
+                    <a href="/Guest/WeddingInfo" class="btn btn-default btn-sm" style="background-color:#9a0101 !important; color:#fff !important; font-weight:bold">Not Attending</a>
+                </div>
+            </div>*@
+                        </div>
+                        <div class="guest-plus-one" style="display:none">
+                            <br /><hr style="border-color: #b1b1b1;" /><br />
+                            <h1 style="font-size:40pt;">Plus One</h1>
+                            <div>
+                                <p>NOTE: You have a plus one on your name. <br />Add him/her now.</p>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <div class="">
+                                        <label for="" class="control-label fw600">Name: <span class="text-danger">*</span></label>
+                                        <input type="text" id="tbPlusOneNameAdd" style="background-color:#ffffff; border: solid 1px #777;" class="form-control input-sm" placeholder="" value="" onchange="" />
                                     </div>
                                 </div>
-                                <div class="row rsvpContact">
-                                    <div class="col-lg-6" style="text-align:right; font-size:18pt">Stefan Bezuidenhoudt</div>
-                                    <div class="col-lg-6">
-                                        <a href="/Guest/WeddingInfo" class="btn btn-default btn-sm" style="background-color:#279a01 !important; color:#fff !important; font-weight:bold">Attending</a>
-                                        <a href="/Guest/WeddingInfo" class="btn btn-default btn-sm" style="background-color:#9a0101 !important; color:#fff !important; font-weight:bold">Not Attending</a>
+                                <div class="col-sm-6">
+                                    <div class="">
+                                        <label for="" class="control-label fw600">Surname: </label>
+                                        <input type="text" id="tbPlusOneSurnameAdd" style="background-color:#ffffff; border: solid 1px #777;" class="form-control input-sm" placeholder="" value="" />
                                     </div>
-                                </div>*@
-                        </div>
+                                </div>
+                            </div>
 
-                        <br /><br />
-                        
-                        @*<div class="row">
-                                <label class="col-md-4 col-xs-4" style="text-align:right"></label><input class="col-md-4 col-xs-4" type="password" placeholder="New Password" />
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <div class="">
+                                        <label for="" class="control-label fw600">Email: <span class="text-danger">*</span></label>
+                                        <input type="text" id="tbPlusOneEmailAdd" style="background-color:#ffffff; border: solid 1px #777;" class="form-control input-sm" placeholder="" value="" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="">
+                                        <label for="" class="control-label fw600">Cell: <span class="text-danger">*</span></label>
+                                        <input type="text" id="tbPlusOneCellAdd" style="background-color:#ffffff; border: solid 1px #777;" class="form-control input-sm" placeholder="" value="" />
+                                    </div>
+                                </div>
                             </div>
-                            <br />
-                            <div class="row">
-                                <label class="col-md-4 col-xs-4" style="text-align:right"></label><input class="col-md-4 col-xs-4" type="password" placeholder="Confirm New Password" />
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <div class="">
+                                        <label for="" class="control-label fw600">Note: Your Plus One's Cell number is the default password until reset by Plus One self.</label>
+                                    </div>
+                                </div>
                             </div>
-                            <br />
-                            <p><a href="/Guest/WeddingInfo" class="btn btn-default btn-sm" style="background-color:#eea91d !important; color:#fff !important; font-weight:bold">Save New Password</a></p>*@
+                            <div class="clearfix text-center">
+                                <label class="text-danger" id="lblErrorP1Add"></label>
+                            </div>
+                            <p><a href="javascript:;" onclick="SavePlusOneAdd()" class="btn btn-default btn-sm" style="background-color:#dedede !important; border:solid 1px !important">Add Plus One</a></p>
+                            @*<a href="javascript:;" class="btn btn-primary" onclick="SaveGuestAdd()">
+            <i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;|&nbsp;Save
+        </a>*@
+                        </div>
                     </div>
                 </div>
             </div>

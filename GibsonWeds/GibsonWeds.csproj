@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -263,6 +264,11 @@
     <Content Include="r\Admin\Views\Registry\registry.js" />
     <Content Include="r\Admin\Views\ResetPassword\resetpassword.js" />
     <Content Include="r\Admin\Views\RSVP\rsvp.js" />
+    <Content Include="r\images\mel_background.jpg" />
+    <Content Include="r\images\rm_engaged_15.jpg" />
+    <Content Include="r\images\rm_engaged_16.jpg" />
+    <Content Include="r\images\rm_engaged_19.jpg" />
+    <Content Include="r\images\rm_engaged_23.jpg" />
     <Content Include="r\images\sunflowerFarm_bg.jpg" />
     <Content Include="r\images\sunflower_bg.jpg" />
     <Content Include="Scripts\bootstrap.js" />

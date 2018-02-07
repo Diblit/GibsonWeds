@@ -9,6 +9,7 @@ using TCG.WebUtility;
 using GibsonWeds.DAL.Classes.Admin;
 using GibsonWeds.Models;
 using TCG.Crypto;
+using GibsonWeds.Utility;
 
 namespace GibsonWeds.Api
 {
@@ -75,6 +76,62 @@ namespace GibsonWeds.Api
                     return new { isSuccess = true };
                 }
 
+            }
+            catch (NullReferenceException e)
+            {
+                return new { isSuccess = false, errorText = e.Message };
+
+            }
+
+            catch (Exception ex)
+            {
+                return new { isSuccess = false, errorText = ex.Message };
+            }
+
+            return new { isSuccess = true, errorText = "" };
+        }
+
+        [HttpPost]
+        [Route("api/admin/plusone/add")]
+        public object PlusOneAdd(GuestInfo Info)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                    throw new FormatException();
+
+                var userID = this.loggedInUserID();
+                var checkPerkAndUnassign = bl_GuestList.UnAssignPlusOnePerk(userID);
+                if (checkPerkAndUnassign.hasError == false)
+                {
+                    Info.PasswordHash = PasswordManager.encrypt(Info.Cell);
+
+                    var result = bl_GuestList.Add(new bl_GuestList
+                    {
+                        FirstName = Info.FirstName,
+                        LastName = Info.LastName,
+                        Email = Info.Email,
+                        Cell = Info.Cell,
+                        PasswordHash = Info.PasswordHash,
+                        allowPlusOne = Info.allowPlusOne,
+                        isPlusOne = Info.isPlusOne,
+                        groupCoupleID = Info.groupCoupleID,
+                        isGuest = Info.isGuest,
+                        isAdmin = Info.isAdmin,
+                        hasRSVPd = Info.hasRSVPd,
+                        isAttending = Info.isAttending
+                    });
+
+                    if (result.hasError)
+                    {
+                        return new { isSuccess = false, errorText = result.ErrorText };
+                    }
+                    else
+                    {
+                        return new { isSuccess = true };
+                    }
+
+                }
             }
             catch (NullReferenceException e)
             {

@@ -20,3 +20,5 @@ C:\Users\Stefan\Documents\Projects\GibsonWeds\TCG.WebUtility\bin\Debug\EntityFra
 C:\Users\Stefan\Documents\Projects\GibsonWeds\TCG.WebUtility\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Stefan\Documents\Projects\GibsonWeds\TCG.WebUtility\obj\Debug\TCG.WebUtility.dll
 C:\Users\Stefan\Documents\Projects\GibsonWeds\TCG.WebUtility\obj\Debug\TCG.WebUtility.pdb
+C:\Users\Stefan\Documents\Projects\GibsonWeds\TCG.WebUtility\obj\Debug\TCG.WebUtility.csprojResolveAssemblyReference.cache
+C:\Users\Stefan\Documents\Projects\GibsonWeds\TCG.WebUtility\obj\Debug\TCG.WebUtility.csproj.CoreCompileInputs.cache

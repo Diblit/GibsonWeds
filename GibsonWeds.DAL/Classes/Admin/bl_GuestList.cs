@@ -353,7 +353,7 @@ namespace GibsonWeds.DAL.Classes.Admin
                 if (item == null) throw new NullReferenceException("No Guest found");
 
                 item.hasRSVPd = info.hasRSVPd;
-                item.isAttending = info.isAttending;                
+                item.isAttending = info.isAttending;
 
                 metadata.SaveChanges();
 
@@ -381,7 +381,65 @@ namespace GibsonWeds.DAL.Classes.Admin
                 if (!PasswordManager.verify(oldPassword, qGuest.PasswordHash))
                     return null;
 
-                item.PasswordHash = PasswordManager.encrypt(newPassword);                
+                item.PasswordHash = PasswordManager.encrypt(newPassword);
+
+                metadata.SaveChanges();
+
+                var result = new bl_GuestList_Result
+                {
+                    hasError = false
+                };
+                return result;
+            }
+        }
+        public static bool HasGuestPlusOne(long userID)
+        {
+            using (var metadata = DataAccess.getDesktopMetadata())
+            {
+                var q = (from row in metadata.db_User
+                         where userID == row.userID
+                         select (row.allowPlusOne + "")).FirstOrDefault();
+
+                var returnN = false;
+
+                if (q == "True")
+                {
+                    returnN = true;
+                }
+                else if (q == "False")
+                {
+                    returnN = false;
+                }
+                else
+                {
+                    returnN = false;
+                }
+
+                return returnN;
+            }
+        }
+        public static bl_GuestList_Result UnAssignPlusOnePerk(long userID)
+        {
+            using (var metadata = DataAccess.getDesktopMetadata())
+            {
+                var qU = (from row in metadata.db_User
+                         where row.userID == userID
+                         select row.allowPlusOne).FirstOrDefault();
+
+                if (qU == false)
+                {
+                    var result1 = new bl_GuestList_Result
+                    {
+                        hasError = true
+                    };
+                    return result1;
+                }
+
+                var qUser = (from row in metadata.db_User
+                            where row.userID == userID
+                            select row).FirstOrDefault();
+
+                qUser.allowPlusOne = false;
 
                 metadata.SaveChanges();
 

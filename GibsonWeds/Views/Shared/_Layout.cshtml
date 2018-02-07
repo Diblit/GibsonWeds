@@ -81,7 +81,7 @@
                     <div class="row copyright">
                         <div class="col-md-12 text-center">
                             <p>
-                                <small class="block">&copy; 2017 GibsonWedding - All Rights Reserved.</small>                                
+                                <small class="block">&copy; 2018 Gibson Wedding - All Rights Reserved.</small>                                
                             </p>
                         </div>
                     </div>
@@ -117,9 +117,11 @@
     <script src="~/r/js/simplyCountdown.js"></script>
     <!-- Main -->
     <script src="~/r/js/main.js"></script>
-    <script>
-        var d = new Date("2018-03-24T16:00:00Z");
+    @*<script>
 
+        //var d = new Date("2018-03-24T14:00:00Z");
+        //var dT = new Date("2018", "03", "24", "16:00")
+        var d = new Date(2018, 2, 24, 16, 0, 0, 0).getTime();;
         // default example
         simplyCountdown('.simply-countdown-one', {
             year: d.getFullYear(),
@@ -134,7 +136,66 @@
             day: d.getDate(),
             enableUtc: false
         });
+    </script>*@
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Mar 24, 2018 16:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get todays date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now an the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("countdownerStartPage").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdownerStartPage").innerHTML = "The Gibsons";
+            }
+        }, 1000);
     </script>
+    @*<script>
+        var countDownDate = new Date("Mar 24, 2018 16:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get todays date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now an the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+
+            // If the count down is finished, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>*@
 
 </body>
 </html>

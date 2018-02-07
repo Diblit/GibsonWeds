@@ -40,10 +40,12 @@ namespace GibsonWeds.Controllers
             }
             var userID = this.loggedInUserID();
             var hasRSVPd = bl_GuestList.HasGuestRsvpD(userID);
+            var hasPlusOne = bl_GuestList.HasGuestPlusOne(userID);
 
             var data = bl_GuestList.GetGuest(userID);
             ViewBag.data = new JavaScriptSerializer().Serialize(new { List = data });
             ViewBag.hasRsvp = hasRSVPd;
+            ViewBag.allowPlusOne = hasPlusOne;
             return View();
         }
         public ActionResult Contact()

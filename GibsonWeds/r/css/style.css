@@ -17,10 +17,11 @@ body {
     line-height: 1.7;
     color: #828282;
     background: #fff;
-    background-image: url('../images/sunflowerFarm_bg.jpg');
+    /*background-image: url('../images/sunflowerFarm_bg.jpg');*/
+    background-image: url('../images/rm_engaged_16.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position:center center;
+    background-position: center center;
     background-attachment: fixed;
 }
 
@@ -316,7 +317,7 @@ h1, h2, h3, h4, h5, h6, figure {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.7);
 }
 .fh5co-cover > .fh5co-container {
   position: relative;

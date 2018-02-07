@@ -123,8 +123,8 @@ function SaveGuestAdd() {
             Email: GuestEmailAdd,
             Cell: GuestCellAdd,
             PasswordHash: GuestCellAdd,
-            allowPlusOne: true,
-            groupCoupleID: null,
+            allowPlusOne: GuestAllowPlusOneAdd,
+            groupCoupleID: GuestGroupCoupleAdd,
             isPlusOne: false,
             isGuest: true,
             isAdmin: false,
@@ -181,18 +181,23 @@ function OpenEditModal(row) {
     var LastName = Guest["LastName"];
     var Email = Guest["Email"];
     var Cell = Guest["Cell"];
-    var allowPlusOne = Guest["allowPlusOne"];
+    var allowPlusOne = Guest["allowPlusOne"];    
     var groupCoupleID = Guest["groupCoupleID"];
 
+    var mainValue = null;
+    var mainName = "";
+    
     var GuestCoupleSelectEdit = "<option></option>"
     if (groupCoupleID == null) {
         $.each(mainJson.CouplesList, function (index, item) {
-            GuestCoupleSelectEdit += '<option value="' + item.groupCoupleID + '">' + item.CoupleName + '</option>';
+            GuestCoupleSelectEdit += '<option value="' + item.groupCoupleID + '">' + item.CoupleName + '</option>';            
         });
     } else {
         $.each(mainJson.CouplesList, function (index, item) {
             if (groupCoupleID == item.groupCoupleID) {
                 GuestCoupleSelectEdit += '<option value="' + item.groupCoupleID + '" selected>' + item.CoupleName + '</option>';
+                mainValue = item.groupCoupleID;
+                mainName = item.CoupleName;
             } else {
                 GuestCoupleSelectEdit += '<option value="' + item.groupCoupleID + '">' + item.CoupleName + '</option>';
             }
@@ -205,8 +210,18 @@ function OpenEditModal(row) {
     $("#tbGuestEmailEdit").val(Email);
     $("#tbGuestCellEdit").val(Cell);
     $("#tbGuestAllowPlusOneEdit").prop('checked', allowPlusOne);
-    $("#cmbGuestGroupCoupleEdit").append(GuestCoupleSelectEdit)
-
+    $("#cmbGuestGroupCoupleEdit").append(GuestCoupleSelectEdit);
+    $('#cmbGuestGroupCoupleEdit').select2({
+        placeholder: "Please select",
+        width: "100%",
+        allowClear: true
+    });
+    //$('#').select2().select2('val', mainValue)
+    //$('#cmbGuestGroupCoupleEdit').select2('data', { id: mainValue, a_key: mainName });
+    //$('#cmbGuestGroupCoupleEdit').select2('val', mainValue + "");
+    $("cmbGuestGroupCoupleEdit").val(mainValue).trigger('change');
+    //$("#").val(mainValue);
+   
     
     
 
